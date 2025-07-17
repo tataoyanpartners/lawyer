@@ -1,0 +1,231 @@
+{
+  "TabTitles": {
+    "home": "Lawyer Page"
+  },
+  "Navbar": {
+    "about": "About us",
+    "services": "Services",
+    "partners": "Partners",
+    "news": "News",
+    "contact": "Contact Us",
+    "en": "English",
+    "am": "Armenian"
+  },
+  "Home": {
+    "experiance": "Specialised Attorney With Experiance",
+    "description-experiance": "Volutpa sit'eu o porttito dolor volutpa neque faucib, a praese egesta quisqua ut consect vita neque vita' aliqua, mi et scelerisqu tempus a felis feugiat.",
+    "btn-consulation": "Consulation",
+    "services": "Services We Provide",
+    "description-services": "We deliver expert legal solutions with a commitment to protecting your rights and achieving the best outcomes.",
+    "serviceCard": {
+      "card1": {
+        "title": "Բանկային գործ և ֆինանսներ",
+        "description": "Բանկային գործ և ֆինանսներ ոլորտում առաջարկում ենք հետևյալ ծառայությունները`",
+        "subItems": [
+          "Իրավաբանական խորհրդատվություն բանկային և ֆինանսական գործարքների վերաբերյալ",
+          "Վարկային և ապահովագրական հարցերով իրավական աջակցություն",
+          "Բանկային վեճերի լուծում և ներկայացուցչություն դատարաններում",
+          "Կորպորատիվ ֆինանսավորման և ներդրումային ծրագրերի իրավական ուղեկցում",
+          "Փողի լվացման և ֆինանսական հանցագործությունների կանխարգելման վերաբերյալ խորհրդատվություն",
+          "Լիզինգի, ֆակտորինգի և այլ ֆինանսական գործիքների հետ կապված իրավական աջակցություն",
+          "Ֆինանսական պայմանագրերի պատրաստում, վերանայում և վավերացում",
+          "Տեղական և միջազգային ֆինանսական կարգավորումների համապատասխանության ապահովում"
+        ],
+        "bottomDescription": "Մեր թիմը բաղկացած է փորձառու իրավաբաններից, ովքեր մասնագիտացած են բանկային և ֆինանսական իրավունքի ոլորտում՝ տրամադրելով գործնական, նպատակահարմար և արդյունավետ լուծումներ մեր վստահորդների համար։"
+      },
+      "card2": {
+        "title": "Կորպորատիվ իրավունք",
+        "description": "Կորպորատիվ իրավունքի ոլորտում առաջարկում ենք հետևյալ ծառայությունները`",
+
+        "subiItems": {
+          "item1": {
+            "title": "Իրավական աջակցություն իրավաբանական անձանց",
+            "subiItems": [
+              "Ընկերությունը տրամադրում է իրավական աջակցություն և խորհրդատվություն իրավաբանական անձանց, որը հաճախ պահանջում է խորհրդատվություն մեր վստահորդ կազմակերպությունների առօրյա գործունեությանը, իրենց աշխատանքի տարբեր ժամանակահատվածներում` ռազմավարական ծրագրավորումը ներառյալ: Մեր լավագույն մասնագետները իրականացնում են ընկերւթյան խորհրդատուի պարտականությունները և աջակցում են տարբեր իրավական խնդիրների լուծմանը, որոնք վերաբերվում են գործատու-աշխատակից հարաբերություններին, բիզնեսի կամ ապրանքանշանի/անվանման գրանցմանը, ընկերությունների վերակազմավորմանը, պայմանագրերին և հարկային վեճերին: Մեր մասնագետները մեծ ուշադրություն են դարձնում վստահորդ ընկերության համապատասխանությանը գործող օրենսդրությանը, և վստահորդ քննարկմանն են ներկայացնում օրեսնդրության վերջին փոփոխությունները, ինչպես նաև առաջարկում են համապատասխան լուծումները: Խստագույնս պահպանվում է վստահորդ ընկերության հետ համագործակցության ընթացքում ձեռք բերված տեղեկատվության գաղտնիությունը: Մենք բարձր ենք գնահատում մեր վստահորդների հետ գործընկերությունը:"
+            ]
+          }
+        }
+      },
+      "card3": {
+        "title": "Վարչական իրավունք",
+        "description": "Դատական ներկայացուցչություն վարչական գործերով։ Մեր իրավաբանները վարում են նաև գործեր վարչական ոլորտում` ներկայացնելով վստահորդներին պետական և տեղական ինքնակառավարման մարմիներում, վարչական դատարաններում: Վարչական իրավունքի ոլորտում առաջարկում ենք հետևյալ ծառայությունները`",
+        "subiItems": {
+          "item1": {
+            "title": "Ներկայացուցչյություն վարչական գործերով, այդ թվում՝",
+            "subiItems": [
+              "վարչական մարմինների ակտերի, գործողությունների կամ անգործության բողոքարկում վերադասության կարգով,",
+              "վարչական մարմինների ակտերի, գործողությունների կամ անգործության բողոքարկում վարչական դատարանում վիճարկման, պարտավորեցման, գործողության կատարման, ճանաչման հայցերի շրջանակներում,",
+              "ներկայացուցչություն հատուկ վարույթով քննվող գործերով, այդ թվում՝ նորմատիվ իրավական ակտերի իրավաչափության վիճարկման վերաբերյալ գործերի վարույթներով։"
+            ]
+          }
+        }
+      },
+      "card4": {
+        "title": "Քաղաքացիական իրավունք",
+        "description": "Մեր ընկերության փաստաբանները մեծ փորձ ունեն քաղաքացիական դատավարության ոլորտում, նրանց գործերը ընդգրկում են, բայց չեն սահմանափակվում հետևյալ ոլորտներով՝",
+        "subItems": {
+          "item1": {
+            "title": "Սեփականության հետ կապված վեճեր",
+            "subiItems": [
+              "Սեփականության, այդ թվում` ձեռքբերման վաղեմության ուժով սեփականության իրավունքի ճանաչում,",
+              "հանրության գերակա շահերի ապահովման նպատակով սեփականության օտարման հետ կապված վեճեր,",
+              "ընդհանուր սեփականության հանդիսացող գույքի, այդ թվում՝ ամուսինների համատեղ սեփականության բաժանման հետ կապված վեճեր"
+            ]
+          },
+          "item2": {
+            "title": "Գնման գործընթացի հետ կապված վեճեր",
+            "subiItems": [
+              "պատվիրատուի, գնահատող հանձնաժողովի գործողությունների (անգործության) և որոշումների բողոքարկում և դատական ներկայացուցչություն,",
+              "գնման պայմանագրի միակողմանի լուծման բողոքարկում և դատական ներկայացուցչություն,",
+              "գնման առարկայի բնութագրերը, նախաորակավորման հայտարարության կամ հրավերի պահանջների բողոքարկում և դատական ներկայացուցչություն։"
+            ]
+          },
+          "item3": {
+            "title": "Անձնական ոչ գույքային իրավունքերի և ոչ նյութական վնասի հատուցման կապված վեճեր",
+            "subiItems": [
+              "Պատվի, արժանապատվության, գործարար համբավի պաշտպանություն,",
+              "Արդարացվածին պատճառված ոչ նյութական վնասի հատուցման,",
+              "«Մարդու իրավունքների և հիմնարար ազատությունների պաշտպանության մասին» կոնվենցիայով երաշխավորված հետևյալ հիմնարար իրավունքների (կյանքի խոշտանգման, անմարդկային կամ նվաստացնող վերաբերմունքի կամ պատժի չենթարկվելու անձնական ազատության և անձեռնմխելիության արդար դատաքննության, (…) իրավական պաշտպանության արդյունավետ միջոցների, սեփականության իրավունքների) խախտման հետևանքով պատճառված ոչ նյութական վնաս հատուցման հետ կապված :"
+            ]
+          }
+        }
+      },
+      "card5": {
+        "title": "Քրեական գործերով պաշտպանություն",
+        "description": "Դատական ներկայացուցչություն քրեական գործերով",
+        "bottomDescription": "Մեր ընկերության փաստաբանները ներգրավվում են քրեական գործերով վարույթին` սկսած այն պահից, երբ անձը հրավիրվում է ոստիկանություն որպես վկա, տուժող, կամ մեղադրյալ` նախաքննության փուլից տրամադրելով նրանց իրավական աջակցություն ողջ վարույթի ընթացքում` մասնակցելով բոլոր նախաքննական գործողություններին և հարցաքննություններին: Այնուհետև փաստաբանները գործը վարում են դատաքննության ընթացքում:"
+      },
+      "card6": {
+        "title": "Միջազգային դատական պաշտպանություն",
+        "description": "Միջազգային դատական պաշտպանություն իրականացնելու համար օգտագործվում են տարբեր պաշտպանության միջոցներ և ձևեր, որոնք կիրառվում են կախված գործի բնույթից, իրավասու դատարանից և միջազգային իրավական մեխանիզմներից։",
+        "subiItems": {
+          "item1": {
+            "title": "Պաշտպանության հիմնական միջոցներ",
+            "subiItems": [
+              "Դատական ներկայացուցչություն - Հատուկ փաստաբանների կամ իրավաբանական ընկերությունների միջոցով ներկայացվածություն միջազգային դատարաններում։",
+              "Դիրքային պաշտպանություն - Իրավական փաստարկների ներկայացում՝ հիմնված միջազգային պայմանագրերի, նախադեպային իրավունքի և ազգային օրենսդրության վրա։",
+              "Միջանկյալ (ժամանակավոր) միջոցներ - Միջազգային ատյանների կողմից կիրառվող ժամանակավոր միջոցներ, օրինակ՝ արգելանք որոշ գործողությունների նկատմամբ (Եվրոպական դատարան, ՄԱԿ-ի Միջազգային դատարան և այլն)։",
+              "Ապացույցների ներկայացում և փորձաքննություն - Իրավական փաստերի հիմնավոր ներկայացում, վկայակոչում և փորձագիտական վերլուծություններ։",
+              "Միջազգային միջնորդություն և արբիտրաժ - Վեճերի լուծման այլընտրանքային մեթոդներ՝ առանց դասական դատական վարույթի։",
+              "Պաշտպանության դիմումներ միջազգային կառույցներին - Մարդու իրավունքների պաշտպանության միջազգային մարմիններին դիմում, օրինակ՝ Մարդու իրավունքների եվրոպական դատարան, ՄԱԿ-ի Մարդու իրավունքների հանձնաժողով։"
+            ]
+          },
+          "item2": {
+            "title": "Պաշտպանության ձևերը",
+            "subiItems": [
+              "Քաղաքացիական և առևտրային գործերով պաշտպանություն – Միջազգային առևտրային վեճեր, ներդրումային արբիտրաժ (ICSID, ICC) և միջազգային պայմանագրերի պաշտպանություն։",
+              "Քրեական պաշտպանություն - Միջազգային քրեական դատարաններում (ICC, ICTY, ICTR) իրականացվող պաշտպանություն։",
+              "Մարդու իրավունքների պաշտպանություն - Դիմումներ միջազգային ատյաններ, օրինակ՝ ՄԻԵԴ (ECHR), ՄԱԿ-ի մարդու իրավունքների կոմիտե։",
+              "Պետությունների միջև վեճերի լուծում - Միջազգային դատարաններ (ICJ), տնտեսական կամ դիվանագիտական մեխանիզմներ։",
+              "Վարչական և կարգավորող վեճեր - Գործընթացներ միջազգային ֆինանսական կամ առևտրային կառույցներում (WTO, IMF)։"
+            ]
+          }
+        }
+      },
+      "card7": {
+        "title": "Իրավական Փորձաքննություն",
+        "description": "Իրավական փորձաքննություն և խորհրդատվություն",
+        "bottomDescription": "Մեր ընկերությունը տրամադրում է խորհրդատվություն բազմազան իրավական հարցերի շուրջ և պատրաստում է իրավական եզրակացություն, որը հիմնված է ներկայացված իրավական հարցերի ուսումնասիրության վրա: Մենք հրավիրում ենք տվյալ ասպարեզում ճանաչված մասնագետների, որոնք աշխատում են մեզ հետ և արդյունքում ներկայացնում ենք համապարփակ և բազմակողմանի փորձագիտական եզրակացություն, որը կծառայի վստահորդներին որպես ուղեցույց:"
+      },
+      "card8": {
+        "title": "Վեճերի այլընտրանքային կարգավորում",
+        "description": "Մեր ընկերությունը գտնում է, որ ոչ բոլոր վեճերը պետք է լուծվեն դատարանում: Մենք կողմ ենք վեճերի այլընտրանքային կարգավորմանը, որը ներառում է վեճի կամ խնդրի առարկայի ուսումնասիրությունը, միջնորդությունը և բանակցությունը հակառակորդ կողմի հետ ծախսային տեսանկյունից արդյունավետ լուծումը գտնելու նպատակով: Այժմ դուք կարող եք ձեր ուսերից վայր դնել մտահոգություններն ու խնդիրները` «Թաթոյան և գործընկերներ փաստաբանական գրասենյակ»ընկերությունը կկարգավորի ձեր խնդիրները միջնորդության և բանակցությունների միջոցով, որի արդյունքում կներկայացվեն խնդրի լուծման մի քանի տարբերակ ձեր ընտրությանը:"
+      }
+    },
+    "makes": "MISSION & WHY CHOOSE US",
+    "makes-item1": "Justice",
+    "makes-item2": "Responsibility",
+    "makes-item3": "Rule of Law",
+    "makes-item4": "Flexibility",
+    "attorneys": "Our Attorneys",
+    "attorneys-description": "Our skilled attorneys are dedicated to delivering exceptional legal services, utilizing the latest technology to offer efficient and costeffective solutions tailored to your unique needs.",
+
+    "wil bee lawyers": "=========================================================",
+    "wil bee lawyers": "=========================================================",
+    "wil bee lawyers": "=========================================================",
+    "wil bee lawyers": "=========================================================",
+
+    "experience": "Years of Experience",
+    "case": "Cases Won",
+    "client": "Client Satisfaction",
+
+    "background-title": "Trusted by Many, Proven by Results",
+    "background-description": "We understand that many people may be reluctant to contact a lawyer because they’re worried they won’t be able to afford the fees. They may be tempted to try to handle their legal matter themselves, but that’s often a recipe for a less-than-desirable outcome.",
+    "background-btn": "Get in Toich",
+
+    "clients-say": "Our Clients Say It Best",
+    "clients-description": "Our skilled attorneys are dedicated to delivering exceptional legal services, utilizing the latest technology to offer efficient and cost-effective solutions tailored to your unique needs.",
+    "clents-comments": {
+      "client1": {
+        "name": "William Doyle",
+        "thinks": "Great experience. Very communicative, pleasant, and knowledgeable all the way from the legal secretary to the paralegal to the attorney. Everyone was on the same page at the same time, very refreshing. Everything was done online as I was in NY and my transactions were for the state of AZ. TYVM"
+      },
+      "client2": {
+        "name": "William Doyle",
+        "thinks": "Great experience. Very communicative, pleasant, and knowledgeable all the way from the legal secretary to the paralegal to the attorney. Everyone was on the same page at the same time, very refreshing. Everything was done online as I was in NY and my transactions were for the state of AZ. TYVM"
+      },
+      "client3": {
+        "name": "William Doyle",
+        "thinks": "Great experience. Very communicative, pleasant, and knowledgeable all the way from the legal secretary to the paralegal to the attorney. Everyone was on the same page at the same time, very refreshing. Everything was done online as I was in NY and my transactions were for the state of AZ. TYVM"
+      }
+    },
+
+    "stay": "Stay Informed",
+    "stay-description": "Vel feugiat consectet cum fermentum ex consectetu exercitatio morbi occaecat, vestibulu nam congue exercitati ex minim vestibulu ubi quas-voluptate parturien voluptat ad saep tempor culpa.",
+    "wil bee news": "=========================================================",
+    "wil bee news": "=========================================================",
+    "wil bee news": "=========================================================",
+    "wil bee news": "=========================================================",
+    "btn-learn": "Learn More"
+  },
+  "About": {
+    "title": "Legal Expertise with a Proven Track Record",
+    "titile-description": "Volutpa sit&apos;eu o porttito dolor volutpa neque faucib, apraese egesta quisqua ut consect vita neque vita&apos; aliqua,mi et scelerisqu tempus a felis feugiat.",
+    "titile-description2": "At Tatoyan , we provide expert legal services with a commitment to excellence. Our team of experienced attorneys works tirelessly to ensure that your legal needs are met with professionalism,integrity, and personal attention. With years of experience in various areas of law, we are dedicated to helping individuals and businesses navigate complex legal challenges.",
+    "mission": "Our Mission...",
+    "mission-description": "Our mission is to uphold justice, advocate for our clients, and provide ethical, results-driven legal representation. With dedication and expertise, we protect your rights and guide you through every legal challenge. We aim to deliver reliable, efficient, and compassionate legal solutions tailored to our clients' unique situations.",
+    "btn-get": "Get In Toich"
+  },
+
+  "Services": {
+    "title": "Services We Provide",
+    "title-description": "We deliver expert legal solutions with a commitment to protecting your rights and achieving the best outcomes.",
+    "items": {
+      "all": "All",
+      "item1": {
+        "name": "Civil Right",
+        "description": "Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat."
+      },
+      "item2": {
+        "name": "Corporate law",
+        "description": "Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat."
+      },
+      "item3": {
+        "name": "Administrative law",
+        "description": "Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat."
+      },
+      "item4": {
+        "name": "Criminal Justice",
+        "description": "Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat."
+      }
+    }
+  },
+
+  "Partners": {
+    "title": "Our Trusted Partners",
+    "title-description": "At Tatoyan, we collaborate with a network of highly respected partners across various industries. Our strong partnerships enhance the quality of services we provide, ensuring that our clients receive the best possible legal support."
+  },
+  "News": {
+    "title": "News"
+  },
+
+  "Footer": {
+    "specialised": "Specialised Attorney With Experiance",
+    "address": "Armenia, Erevan, St Abovyan 12/5",
+    "about": "About",
+    "resources": "Resources",
+    "support": "Support",
+    "privacy": "Privacy",
+    "serteficate": "© Copyright 2025. All Rights Reserved"
+  }
+}
