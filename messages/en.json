@@ -19,117 +19,179 @@
     "description-services": "We deliver expert legal solutions with a commitment to protecting your rights and achieving the best outcomes.",
     "serviceCard": {
       "card1": {
-        "title": "Բանկային գործ և ֆինանսներ",
-        "description": "Բանկային գործ և ֆինանսներ ոլորտում առաջարկում ենք հետևյալ ծառայությունները`",
+        "title": "Corporate Law",
+        "description": "Tatoyan and Partners Law Firm provides comprehensive legal services to legal entities, ensuring legal support both in day-to-day operations and strategic planning. Our services include:",
         "subItems": [
-          "Իրավաբանական խորհրդատվություն բանկային և ֆինանսական գործարքների վերաբերյալ",
-          "Վարկային և ապահովագրական հարցերով իրավական աջակցություն",
-          "Բանկային վեճերի լուծում և ներկայացուցչություն դատարաններում",
-          "Կորպորատիվ ֆինանսավորման և ներդրումային ծրագրերի իրավական ուղեկցում",
-          "Փողի լվացման և ֆինանսական հանցագործությունների կանխարգելման վերաբերյալ խորհրդատվություն",
-          "Լիզինգի, ֆակտորինգի և այլ ֆինանսական գործիքների հետ կապված իրավական աջակցություն",
-          "Ֆինանսական պայմանագրերի պատրաստում, վերանայում և վավերացում",
-          "Տեղական և միջազգային ֆինանսական կարգավորումների համապատասխանության ապահովում"
+          "Legal advice on corporate governance, organization, and operational activities",
+          "Ongoing legal support by acting as a company’s legal advisor in resolving various legal matters",
+          "Assistance with labor law issues, including employer-employee relations",
+          "Registration of businesses, trademarks, and trade names",
+          "Corporate restructuring, mergers, demergers, and liquidation",
+          "Full contractual legal support, including drafting, analysis, and legal validation of contracts",
+          "Legal consulting in tax matters and tax-related disputes",
+          "Legal compliance monitoring, including updates on legislative changes and provision of tailored solutions"
         ],
-        "bottomDescription": "Մեր թիմը բաղկացած է փորձառու իրավաբաններից, ովքեր մասնագիտացած են բանկային և ֆինանսական իրավունքի ոլորտում՝ տրամադրելով գործնական, նպատակահարմար և արդյունավետ լուծումներ մեր վստահորդների համար։"
+        "bottomDescription": [
+          "Our professionals place a high priority on each client’s legal security and compliance with applicable laws and regulations. All data and documents received during cooperation are strictly treated with confidentiality.",
+          "We highly value the trust of our clients and strive to build long-term, stable partnerships."
+        ]
       },
       "card2": {
-        "title": "Կորպորատիվ իրավունք",
-        "description": "Կորպորատիվ իրավունքի ոլորտում առաջարկում ենք հետևյալ ծառայությունները`",
-
+        "title": "Administrative Law",
+        "description": "Our attorneys also handle cases in the field of administrative law, representing clients before state and local self-government bodies, as well as in administrative courts. We offer the following services in this area:",
         "subiItems": {
           "item1": {
-            "title": "Իրավական աջակցություն իրավաբանական անձանց",
+            "title": "Legal representation in administrative cases, including:",
             "subiItems": [
-              "Ընկերությունը տրամադրում է իրավական աջակցություն և խորհրդատվություն իրավաբանական անձանց, որը հաճախ պահանջում է խորհրդատվություն մեր վստահորդ կազմակերպությունների առօրյա գործունեությանը, իրենց աշխատանքի տարբեր ժամանակահատվածներում` ռազմավարական ծրագրավորումը ներառյալ: Մեր լավագույն մասնագետները իրականացնում են ընկերւթյան խորհրդատուի պարտականությունները և աջակցում են տարբեր իրավական խնդիրների լուծմանը, որոնք վերաբերվում են գործատու-աշխատակից հարաբերություններին, բիզնեսի կամ ապրանքանշանի/անվանման գրանցմանը, ընկերությունների վերակազմավորմանը, պայմանագրերին և հարկային վեճերին: Մեր մասնագետները մեծ ուշադրություն են դարձնում վստահորդ ընկերության համապատասխանությանը գործող օրենսդրությանը, և վստահորդ քննարկմանն են ներկայացնում օրեսնդրության վերջին փոփոխությունները, ինչպես նաև առաջարկում են համապատասխան լուծումները: Խստագույնս պահպանվում է վստահորդ ընկերության հետ համագործակցության ընթացքում ձեռք բերված տեղեկատվության գաղտնիությունը: Մենք բարձր ենք գնահատում մեր վստահորդների հետ գործընկերությունը:"
+              "Representation before administrative authorities during pre-litigation proceedings",
+              "Appeals against acts, actions, or inaction of administrative bodies through hierarchical (supervisory) procedures",
+              "Challenging acts, actions, or inaction of administrative bodies before administrative courts within the scope of claims for annulment, enforcement, obligation, or recognition",
+              "Representation in special proceedings, including cases concerning the legality of normative legal acts"
             ]
           }
         }
       },
       "card3": {
-        "title": "Վարչական իրավունք",
-        "description": "Դատական ներկայացուցչություն վարչական գործերով։ Մեր իրավաբանները վարում են նաև գործեր վարչական ոլորտում` ներկայացնելով վստահորդներին պետական և տեղական ինքնակառավարման մարմիներում, վարչական դատարաններում: Վարչական իրավունքի ոլորտում առաջարկում ենք հետևյալ ծառայությունները`",
-        "subiItems": {
-          "item1": {
-            "title": "Ներկայացուցչյություն վարչական գործերով, այդ թվում՝",
-            "subiItems": [
-              "վարչական մարմինների ակտերի, գործողությունների կամ անգործության բողոքարկում վերադասության կարգով,",
-              "վարչական մարմինների ակտերի, գործողությունների կամ անգործության բողոքարկում վարչական դատարանում վիճարկման, պարտավորեցման, գործողության կատարման, ճանաչման հայցերի շրջանակներում,",
-              "ներկայացուցչություն հատուկ վարույթով քննվող գործերով, այդ թվում՝ նորմատիվ իրավական ակտերի իրավաչափության վիճարկման վերաբերյալ գործերի վարույթներով։"
-            ]
-          }
-        }
-      },
-      "card4": {
-        "title": "Քաղաքացիական իրավունք",
-        "description": "Մեր ընկերության փաստաբանները մեծ փորձ ունեն քաղաքացիական դատավարության ոլորտում, նրանց գործերը ընդգրկում են, բայց չեն սահմանափակվում հետևյալ ոլորտներով՝",
+        "title": "Civil Law",
+        "description": "Our firm’s lawyers have extensive experience in civil law and civil litigation. Their caseload covers, but is not limited to, the following areas:",
         "subItems": {
           "item1": {
-            "title": "Սեփականության հետ կապված վեճեր",
+            "title": "Property Disputes",
             "subiItems": [
-              "Սեփականության, այդ թվում` ձեռքբերման վաղեմության ուժով սեփականության իրավունքի ճանաչում,",
-              "հանրության գերակա շահերի ապահովման նպատակով սեփականության օտարման հետ կապված վեճեր,",
-              "ընդհանուր սեփականության հանդիսացող գույքի, այդ թվում՝ ամուսինների համատեղ սեփականության բաժանման հետ կապված վեճեր"
+              "Recognition of ownership rights, including through acquisitive prescription; disputes regarding expropriation for public interest; division of jointly owned property, including community property between spouses."
             ]
           },
           "item2": {
-            "title": "Գնման գործընթացի հետ կապված վեճեր",
+            "title": "Procurement-related Disputes",
             "subiItems": [
-              "պատվիրատուի, գնահատող հանձնաժողովի գործողությունների (անգործության) և որոշումների բողոքարկում և դատական ներկայացուցչություն,",
-              "գնման պայմանագրի միակողմանի լուծման բողոքարկում և դատական ներկայացուցչություն,",
-              "գնման առարկայի բնութագրերը, նախաորակավորման հայտարարության կամ հրավերի պահանջների բողոքարկում և դատական ներկայացուցչություն։"
+              "Challenging the actions (or inaction) and decisions of contracting authorities or evaluation committees; legal representation in court; disputes regarding the unilateral termination of procurement contracts; challenging technical specifications or the requirements of prequalification announcements or invitations."
             ]
           },
           "item3": {
-            "title": "Անձնական ոչ գույքային իրավունքերի և ոչ նյութական վնասի հատուցման կապված վեճեր",
+            "title": "Lease and Contractual Obligations",
             "subiItems": [
-              "Պատվի, արժանապատվության, գործարար համբավի պաշտպանություն,",
-              "Արդարացվածին պատճառված ոչ նյութական վնասի հատուցման,",
-              "«Մարդու իրավունքների և հիմնարար ազատությունների պաշտպանության մասին» կոնվենցիայով երաշխավորված հետևյալ հիմնարար իրավունքների (կյանքի խոշտանգման, անմարդկային կամ նվաստացնող վերաբերմունքի կամ պատժի չենթարկվելու անձնական ազատության և անձեռնմխելիության արդար դատաքննության, (…) իրավական պաշտպանության արդյունավետ միջոցների, սեփականության իրավունքների) խախտման հետևանքով պատճառված ոչ նյութական վնաս հատուցման հետ կապված :"
-            ]
-          }
-        }
-      },
-      "card5": {
-        "title": "Քրեական գործերով պաշտպանություն",
-        "description": "Դատական ներկայացուցչություն քրեական գործերով",
-        "bottomDescription": "Մեր ընկերության փաստաբանները ներգրավվում են քրեական գործերով վարույթին` սկսած այն պահից, երբ անձը հրավիրվում է ոստիկանություն որպես վկա, տուժող, կամ մեղադրյալ` նախաքննության փուլից տրամադրելով նրանց իրավական աջակցություն ողջ վարույթի ընթացքում` մասնակցելով բոլոր նախաքննական գործողություններին և հարցաքննություններին: Այնուհետև փաստաբանները գործը վարում են դատաքննության ընթացքում:"
-      },
-      "card6": {
-        "title": "Միջազգային դատական պաշտպանություն",
-        "description": "Միջազգային դատական պաշտպանություն իրականացնելու համար օգտագործվում են տարբեր պաշտպանության միջոցներ և ձևեր, որոնք կիրառվում են կախված գործի բնույթից, իրավասու դատարանից և միջազգային իրավական մեխանիզմներից։",
-        "subiItems": {
-          "item1": {
-            "title": "Պաշտպանության հիմնական միջոցներ",
-            "subiItems": [
-              "Դատական ներկայացուցչություն - Հատուկ փաստաբանների կամ իրավաբանական ընկերությունների միջոցով ներկայացվածություն միջազգային դատարաններում։",
-              "Դիրքային պաշտպանություն - Իրավական փաստարկների ներկայացում՝ հիմնված միջազգային պայմանագրերի, նախադեպային իրավունքի և ազգային օրենսդրության վրա։",
-              "Միջանկյալ (ժամանակավոր) միջոցներ - Միջազգային ատյանների կողմից կիրառվող ժամանակավոր միջոցներ, օրինակ՝ արգելանք որոշ գործողությունների նկատմամբ (Եվրոպական դատարան, ՄԱԿ-ի Միջազգային դատարան և այլն)։",
-              "Ապացույցների ներկայացում և փորձաքննություն - Իրավական փաստերի հիմնավոր ներկայացում, վկայակոչում և փորձագիտական վերլուծություններ։",
-              "Միջազգային միջնորդություն և արբիտրաժ - Վեճերի լուծման այլընտրանքային մեթոդներ՝ առանց դասական դատական վարույթի։",
-              "Պաշտպանության դիմումներ միջազգային կառույցներին - Մարդու իրավունքների պաշտպանության միջազգային մարմիններին դիմում, օրինակ՝ Մարդու իրավունքների եվրոպական դատարան, ՄԱԿ-ի Մարդու իրավունքների հանձնաժողով։"
+              "Disputes concerning violations of lease agreements, unpaid rent; breaches of contracts including debt, loan, gift, and compensation agreements; disputes concerning the performance or termination of legal obligations."
             ]
           },
-          "item2": {
-            "title": "Պաշտպանության ձևերը",
+          "item4": {
+            "title": "Inheritance Law Disputes",
             "subiItems": [
-              "Քաղաքացիական և առևտրային գործերով պաշտպանություն – Միջազգային առևտրային վեճեր, ներդրումային արբիտրաժ (ICSID, ICC) և միջազգային պայմանագրերի պաշտպանություն։",
-              "Քրեական պաշտպանություն - Միջազգային քրեական դատարաններում (ICC, ICTY, ICTR) իրականացվող պաշտպանություն։",
-              "Մարդու իրավունքների պաշտպանություն - Դիմումներ միջազգային ատյաններ, օրինակ՝ ՄԻԵԴ (ECHR), ՄԱԿ-ի մարդու իրավունքների կոմիտե։",
-              "Պետությունների միջև վեճերի լուծում - Միջազգային դատարաններ (ICJ), տնտեսական կամ դիվանագիտական մեխանիզմներ։",
-              "Վարչական և կարգավորող վեճեր - Գործընթացներ միջազգային ֆինանսական կամ առևտրային կառույցներում (WTO, IMF)։"
+              "Legal support for inheritance opening, recognition of inheritance rights, division of inherited property; disputes related to the validity or invalidity of wills."
+            ]
+          },
+          "ite5": {
+            "title": "Non-Pecuniary Damages and Protection of Personal Rights",
+            "subiItems": [
+              "Protection of honor, dignity, and business reputation; claims for compensation of non-material damages caused to the injured party; Claims arising from the violation of fundamental rights guaranteed by the European Convention on Human Rights, including the right to life, protection from torture or inhuman or degrading treatment or punishment, liberty and security, fair trial, effective remedy, and property rights."
+            ]
+          }
+        },
+        "bottomDescription": "Our lawyers approach each case individually, combining a legal assessment with the client’s practical interests. We are committed to delivering effective, prompt, and lawful solutions with a high standard of legal responsibility."
+      },
+      "card4": {
+        "title": "Criminal Law",
+        "description": "Tatoyan and Partners Law Firm provides legal services in criminal matters, offering full legal representation at both the investigative and trial stages. Our lawyers are engaged in the proceedings from the moment an individual is summoned by law enforcement—whether as a witness, victim, suspect, or accused. We provide legal support throughout all stages of the criminal process, ensuring full protection of our clients’ rights and legitimate interests.",
+        "subItems": {
+          "item1": {
+            "title": "Our services include:",
+            "subiItems": [
+              "Legal advice and support during pre-trial investigation",
+              "Representation before the police, investigative authorities, and the prosecutor’s office",
+              "Participation in all investigative actions, including interrogations, confrontations, searches, etc.",
+              "Defense of accused and suspected individuals",
+              "Representation of victims and civil claimants",
+              "Legal representation in all court instances—from trial to appellate and cassation levels"
+            ]
+          }
+        },
+        "bottomDescription": "Our attorneys possess in-depth knowledge and practical experience in criminal procedure, including complex and high-profile cases. We operate on the principle of the supremacy of the client&#39;s rights, acting independently, responsibly, and with high professional integrity."
+      },
+      "card5": {
+        "title": "Banking and Finance",
+        "description": "Tatoyan and Partners Law Firm offers comprehensive legal services in the banking and financial sectors, providing high-level advisory and representation both locally and internationally.",
+        "subiItems": {
+          "item1": {
+            "title": "We offer:",
+            "subiItems": [
+              "Legal advice on banking and financial transactions",
+              "Legal support in credit, insurance, and guarantee-related matters",
+              "Representation in banking disputes before courts and other competent bodies",
+              "Legal assistance in corporate finance, investment projects, and financial transactions",
+              "Consulting on anti-money laundering (AML) and financial crime compliance",
+              "Legal services related to leasing, factoring, and other alternative financial instruments",
+              "Drafting, legal review, and validation of financial contracts",
+              "Ensuring compliance with local and international financial regulations and standards"
+            ]
+          }
+        },
+        "bottomDescription": "Our team includes seasoned legal professionals specializing in banking and financial law who offer practical, efficient, and targeted solutions tailored to each client’s specific needs and business environment."
+      },
+
+      "card6": {
+        "title": "International Legal Representation",
+        "description": "Tatoyan and Partners Law Firm offers services in international legal protection, utilizing treaty-based and precedent-based mechanisms of international law, as well as procedural tools tailored to the nature of the case, the competent jurisdiction, and the relevant field of law.",
+        "subiItems": {
+          "item1": {
+            "title": "Key areas of representation include:",
+            "subiItems": [
+              "Formulation of legal arguments - Based on international treaties, case law, and relevant domestic legal provisions",
+              "Initiating interim measures - Proposals for urgent measures in international courts (e.g., injunctions), including before the European Court of Human Rights (ECtHR), UN International Court of Justice (ICJ), and other bodies",
+              "Evidence presentation and expert support - Substantiated presentation of legal facts, submission of supporting documentation, and coordination of expert assessments",
+              "Alternative dispute resolution - Engagement in international mediation and arbitration processes",
+              "Petitions to international courts - Drafting and submission of applications to international human rights bodies such as the European Court of Human Rights, the UN Human Rights Committee, and other commissions"
             ]
           }
         }
       },
       "card7": {
-        "title": "Իրավական Փորձաքննություն",
-        "description": "Իրավական փորձաքննություն և խորհրդատվություն",
-        "bottomDescription": "Մեր ընկերությունը տրամադրում է խորհրդատվություն բազմազան իրավական հարցերի շուրջ և պատրաստում է իրավական եզրակացություն, որը հիմնված է ներկայացված իրավական հարցերի ուսումնասիրության վրա: Մենք հրավիրում ենք տվյալ ասպարեզում ճանաչված մասնագետների, որոնք աշխատում են մեզ հետ և արդյունքում ներկայացնում ենք համապարփակ և բազմակողմանի փորձագիտական եզրակացություն, որը կծառայի վստահորդներին որպես ուղեցույց:"
+        "title": "Legal Consulting and Expertise",
+        "description": "Tatoyan and Partners Law Firm provides professional legal consulting and expertise across various fields of law.",
+        "subiItems": {
+          "item1": {
+            "title": "We offer ad hoc consultations tailored to each specific case, based on the substance of the issue, applicable legal acts, and factual circumstances.",
+            "subiItems": [
+              "Our expert opinions are prepared following detailed legal research by experienced professionals, resulting in comprehensive, specialized, and multifaceted conclusions. We emphasize in-depth analysis, systematic application of the law, and the examination of all possible legal angles relevant to the client’s issue, ensuring truly valuable and reliable legal support.",
+              "We also have sector-specific expertise in legal examination, including:"
+            ]
+          },
+          "item2": {
+            "title": "Human Rights and Public Law",
+            "subiItems": [
+              "Opinions on human rights violations prepared within the framework of applications to the European Court of Human Rights (ECtHR) and Armenian legislation",
+              "Legal opinions on the lawfulness of public authorities’ actions"
+            ]
+          },
+          "item3": {
+            "title": "Energy and Infrastructure",
+            "subiItems": [
+              "Legal analysis related to renewable energy projects and international investment agreements",
+              "Legally drafted opinions concerning licensing processes for electricity production and distribution"
+            ]
+          },
+          "item4": {
+            "title": "Telecommunications and IT",
+            "subiItems": [
+              "Consulting on the application of international standards in data protection and electronic communications",
+              "Legal opinions on regulatory obligations of telecommunications operators Our experienced lawyers provide in-depth legal expertise and consulting tailored for technology companies, startups, and digital service providers."
+            ]
+          }
+        },
+        "bottomDescription": ""
       },
       "card8": {
-        "title": "Վեճերի այլընտրանքային կարգավորում",
-        "description": "Մեր ընկերությունը գտնում է, որ ոչ բոլոր վեճերը պետք է լուծվեն դատարանում: Մենք կողմ ենք վեճերի այլընտրանքային կարգավորմանը, որը ներառում է վեճի կամ խնդրի առարկայի ուսումնասիրությունը, միջնորդությունը և բանակցությունը հակառակորդ կողմի հետ ծախսային տեսանկյունից արդյունավետ լուծումը գտնելու նպատակով: Այժմ դուք կարող եք ձեր ուսերից վայր դնել մտահոգություններն ու խնդիրները` «Թաթոյան և գործընկերներ փաստաբանական գրասենյակ»ընկերությունը կկարգավորի ձեր խնդիրները միջնորդության և բանակցությունների միջոցով, որի արդյունքում կներկայացվեն խնդրի լուծման մի քանի տարբերակ ձեր ընտրությանը:"
+        "title": "Alternative Dispute Resolution",
+        "description": "Tatoyan and Partners Law Firm is guided by the conviction that not all disputes must be resolved in court. Often, effective and modern solutions are found through alternative dispute resolution (ADR), including mediation, conciliation, negotiation, and comprehensive or extended analysis of the dispute’s subject matter.",
+        "subiItems": {
+          "item1": {
+            "title": "Our team offers high-quality legal support throughout the dispute resolution process, helping parties to:",
+            "subiItems": [
+              "Avoid unnecessary litigation costs",
+              "Prevent lengthy court proceedings",
+              "Find flexible and mutually beneficial solutions"
+            ]
+          }
+        },
+        "bottomDescription": "Through mediation and negotiations, we present several legal and practical options for resolving the issue, from which the client may choose the most suitable solution. By turning to our firm, you can be confident that your matters will receive professional, interest-protecting approaches without escalating the conflict."
       }
     },
     "makes": "MISSION & WHY CHOOSE US",
@@ -139,11 +201,6 @@
     "makes-item4": "Flexibility",
     "attorneys": "Our Attorneys",
     "attorneys-description": "Our skilled attorneys are dedicated to delivering exceptional legal services, utilizing the latest technology to offer efficient and costeffective solutions tailored to your unique needs.",
-
-    "wil bee lawyers": "=========================================================",
-    "wil bee lawyers": "=========================================================",
-    "wil bee lawyers": "=========================================================",
-    "wil bee lawyers": "=========================================================",
 
     "experience": "Years of Experience",
     "case": "Cases Won",
@@ -172,10 +229,6 @@
 
     "stay": "Stay Informed",
     "stay-description": "Vel feugiat consectet cum fermentum ex consectetu exercitatio morbi occaecat, vestibulu nam congue exercitati ex minim vestibulu ubi quas-voluptate parturien voluptat ad saep tempor culpa.",
-    "wil bee news": "=========================================================",
-    "wil bee news": "=========================================================",
-    "wil bee news": "=========================================================",
-    "wil bee news": "=========================================================",
     "btn-learn": "Learn More"
   },
   "About": {
@@ -213,10 +266,24 @@
 
   "Partners": {
     "title": "Our Trusted Partners",
-    "title-description": "At Tatoyan, we collaborate with a network of highly respected partners across various industries. Our strong partnerships enhance the quality of services we provide, ensuring that our clients receive the best possible legal support."
+    "title-description": "At Tatoyan, we collaborate with a network of highly respected partners across various industries. Our strong partnerships enhance the quality of services we provide, ensuring that our clients receive the best possible legal support.",
+    "partner1": {
+      "name": "Union of Banks of Armenia (UBA)",
+      "description": "The Union of Banks of Armenia (UBA) serves as a platform for presenting the activities, initiatives, training programs, and major events of all banks operating in Armenia to the public. Based on Article 9.4.17 of the UBA Charter, and in accordance with the Civil Code of the Republic of Armenia and the Law on Commercial Arbitration, the UBA Board has decided to establish the “Financial Arbitration” institution. For this purpose, the institution’s charter and regulations have been approved. In cooperation with the UBA, Tatoyan and Partners Law Firm has provided legal expert opinion within the scope of legislative analysis."
+    },
+    "partner2": {
+      "name": "DSA Advisory Group CJSC",
+      "description": "Within the framework of a memorandum of cooperation with Tatoyan and Partners, DSA Advisory Group offers the following services: a. Business Consulting Services – consulting on management of client businesses, feasibility and planning of new projects. b. Legal Advisory Services – consulting related to incorporation and legal matters of the client in Armenia and abroad. c. Tax Advisory Services – consulting related to national and international tax systems, regulations, and administration. d. Accounting and Financial Advisory Services – consulting on accounting management and preparation of financial reports, including practical application of both international and national standards."
+    },
+    "partner3": {
+      "name": "Villamontan LLC",
+      "description": "Villamontan LLC promotes the development of tourism and pottery in Armenia and its regions by showcasing the country’s culture and landmarks to both local and foreign visitors. The company also operates hotels in Yerevan, Gyumri, and Syunik province. Tatoyan and Partners Law Firm provides legal advisory services to the company and represents its interests in various legal matters."
+    }
   },
   "News": {
-    "title": "News"
+    "title": "News",
+    "otherNews": "Other News",
+    "backBtn": "Back"
   },
 
   "Footer": {

@@ -7,10 +7,7 @@ import Link from "next/link";
 
 export default function AdminLayer() {
   const pathname = usePathname();
-  const navItems = [
-    { title: "Blog", href: "/admin/blog" },
-    { title: "Our Partners", href: "/admin/partners" },
-  ];
+  const navItems = [{ title: "Blog", href: "/admin/blog" }];
 
   return (
     <section className=" bg-[#d0d0d0] rounded-[10px] h-full">

@@ -79,10 +79,10 @@ export default function News() {
                     />
                     <div className="grid  gap-10">
                       <div className="grid gap-2">
-                        <h3 className="font-semibold text-xl text-muted-light text-center">
+                        <h3 className="font-semibold text-base text-muted-light text-center">
                           {newss[`title_${locale}` as keyof Blogs]}
                         </h3>
-                        <p className=" text-sm font-semibold leading-[120%] text-muted">
+                        <p className=" text-sm font-semibold h-[200px] overflow-hidden leading-[120%] text-muted">
                           {newss[`description_${locale}` as keyof Blogs]}
                         </p>
                       </div>

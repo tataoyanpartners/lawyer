@@ -54,28 +54,28 @@ export const NavBar = () => {
     <nav className=" border-muted flex items-center gap-15 text-[#D0D0D0] sup-lg:flex sup-lg:justify-between sup-lg:gap-6">
       <ul className="mobile:hidden sup-lg:hidden flex flex-row gap-6 text-lg font-medium">
         <li
-          className={`cursor-pointer ${
+          className={`cursor-pointer hover:text-[#6A49A2] ${
             pathname === "/about" ? "text-[#6A49A2]" : ""
           }`}
         >
           <Link href="/about">{t("about")}</Link>
         </li>
         <li
-          className={`cursor-pointer ${
+          className={`cursor-pointer hover:text-[#6A49A2] ${
             pathname === "/services" ? "text-[#6A49A2]" : ""
           }`}
         >
           <Link href="/services">{t("services")}</Link>
         </li>
         <li
-          className={`cursor-pointer ${
+          className={`cursor-pointer hover:text-[#6A49A2] ${
             pathname === "/partners" ? "text-[#6A49A2]" : ""
           }`}
         >
           <Link href="/partners">{t("partners")}</Link>
         </li>
         <li
-          className={`cursor-pointer ${
+          className={`cursor-pointer hover:text-[#6A49A2] ${
             pathname === "/news" ? "text-[#6A49A2]" : ""
           }`}
         >

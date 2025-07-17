@@ -43,7 +43,7 @@ export default function Home() {
     },
     {
       id: 2,
-      name: "Կարինե",
+      name: "Կարինե Հովհաննիսյան",
       image: "/lawyers/anna.JPG",
       description: "lorem ipsum",
     },
@@ -118,7 +118,7 @@ export default function Home() {
             <li>
               <div className="flex flex-col items-center justify-center gap-6 rounded-xl cart-bg-grey py-6 px-4 border border-custom  gradient-border-main ">
                 {React.cloneElement(experienced)}
-                <p className="font-medium text-xl text-muted-light mobile:text-base">
+                <p className="font-medium  text-muted-light mobile:text-base">
                   {t("makes-item1")}
                 </p>
               </div>
@@ -126,7 +126,7 @@ export default function Home() {
             <li>
               <div className="flex flex-col items-center justify-center gap-6 rounded-xl cart-bg-grey py-6 px-4 border border-custom  gradient-border-main ">
                 {afforable}
-                <p className="font-medium text-xl text-muted-light mobile:text-base">
+                <p className="font-medium text-muted-light mobile:text-base">
                   {t("makes-item2")}
                 </p>
               </div>
@@ -134,7 +134,7 @@ export default function Home() {
             <li>
               <div className="flex flex-col items-center justify-center gap-6 rounded-xl cart-bg-grey py-6 px-4 border border-custom  gradient-border-main ">
                 {flexible}
-                <p className="font-medium text-xl text-muted-light mobile:text-base">
+                <p className="font-medium text-muted-light mobile:text-base">
                   {t("makes-item3")}
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function Home() {
             <li>
               <div className="flex flex-col items-center justify-center gap-6 rounded-xl cart-bg-grey py-6 px-4 border border-custom  gradient-border-main ">
                 {approachable}
-                <p className="font-medium text-xl text-muted-light mobile:text-base">
+                <p className="font-medium text-muted-light mobile:text-base">
                   {t("makes-item4")}
                 </p>
               </div>
@@ -186,27 +186,22 @@ export default function Home() {
                     />
                   </div>
 
-                  {/* Overlay */}
                   <div
                     className={`
                     absolute
                     bottom-0 left-[8px] right-[8px]
-                    h-1/3 mobile:h-1/2
+                    h-1/6 mobile:h-1/2
                     bg-[#44424C]
                     rounded-[4px]
                     p-4 flex flex-col gap-3
-
-                    /* hide off-screen and block pointer when closed */
                     ${
                       isOpen
                         ? "translate-y-0 pointer-events-auto"
                         : "translate-y-full pointer-events-none"
                     }
 
-                    /* show on desktop hover */
                     group-hover:translate-y-0 group-hover:pointer-events-auto
 
-                    /* animate */
                     transform transition-transform duration-300
                   `}
                   >
@@ -214,11 +209,13 @@ export default function Home() {
                       <h3 className="text-xl font-semibold text-[#D0D0D0] mobile:text-base">
                         {lawyer.name}
                       </h3>
-                      {arrowUp}
+                      <Link
+                        href="/about"
+                        className="hover:bg-gray-400 hover:cursor-pointer hover:rounded-full p-2"
+                      >
+                        {arrowUp}
+                      </Link>
                     </div>
-                    <p className="text-sm text-[#AEAEAE] font-medium mobile:text-sm">
-                      {lawyer.description}
-                    </p>
                   </div>
                 </Area>
               );
@@ -412,7 +409,7 @@ export default function Home() {
                         <p className="text-muted-light text-xl font-semibold leading-[120%] mobile:text-sm mobile:text-">
                           {news[`title_${locale}` as keyof Blogs]}
                         </p>
-                        <p className="text-muted text-sm font-semibold leading-[120%] mobile:text-sm mobile:text-">
+                        <p className="text-muted text-sm font-semibold leading-[120%] h-[200px] overflow-hidden mobile:text-sm mobile:text-">
                           {news[`description_${locale}` as keyof Blogs]}
                         </p>
                       </div>
@@ -441,9 +438,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full">
+      {/* <section className="w-full">
         <AutoCarousel />
-      </section>
+      </section> */}
     </>
   );
 }

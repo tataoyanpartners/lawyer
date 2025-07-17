@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fetchBlogs } from "@/lib/actions";
 import { Blogs } from "@/types/items";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Area } from "@/custom/Area";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,6 +12,7 @@ import { formatDate } from "@/utils/dateFormatter";
 
 export default function NewsSlugPage() {
   const { slug } = useParams();
+  const t = useTranslations("News");
   const [news, setNews] = useState<Blogs[]>([]);
   const otherNews = news.filter((n) => n._id !== slug);
   const slidesToShow = 3;
@@ -55,7 +56,7 @@ export default function NewsSlugPage() {
           </Area>
           <div className="flex flex-col gap-4 w-full mobile:mx-auto">
             <h3 className="text-xl font-medium text-muted-light mobile:text-lg">
-              Այլ նորություններ
+              {t("otherNews")}
             </h3>
             <div className="overflow-hidden">
               <div className="flex gap-10 p-2">
@@ -104,7 +105,7 @@ export default function NewsSlugPage() {
               strokeLinejoin="round"
             ></path>
           </svg>
-          Վերադառնալ
+          {t("backBtn")}
         </Link>
       </div>
 
@@ -119,34 +120,37 @@ export default function NewsSlugPage() {
             </h1>
             <p className="text-muted-light">{formatDate(post.createTime)}</p>
           </div>
-          <Image
+          <img
             src={post.image}
             alt={`Image ${post._id} not found`}
             width={852}
             height={400}
-            className="object-cover h-[400px] w-full rounded-xl mobile:h-[200px]"
+            className="object-contain h-[400px] w-full rounded-xl mobile:h-[200px]"
           />
           <div className="grid gap-6 mobile:gap-4">
-            <p className="text-xl leading-[100%] font-semibold text-muted-light mobile:text-lg">
+            <p className="text-xl leading-[100%] font-medium text-muted mobile:text-lg">
               {post[`description_${locale}` as keyof Blogs]}
             </p>
           </div>
         </Area>
 
         <div className="flex flex-col gap-4 w-full mobile:px-0 mobile:gap-3">
-          <h3 className="text-xl font-medium text-muted-light mobile:text-lg">
-            Այլ նորություններ
-          </h3>
+          {otherNews.length > 0 && (
+            <h3 className="text-xl font-medium text-muted-light mobile:text-lg">
+              {t("otherNews")}
+            </h3>
+          )}
           <div className="mt-8 mobile:mt-4">
             {/* Desktop carousel */}
             <div className="hidden md:block relative">
-              <button
-                onClick={prevSlide}
-                className="absolute -left-[46px] top-1/2 transform -translate-y-1/2 z-10 rotate-180 bg-[#dac4ff] hover:opacity-95 transition-all duration-300 p-2 rounded-full cursor-pointer"
-              >
-                {arrowRight}
-              </button>
-
+              {otherNews.length > 0 && (
+                <button
+                  onClick={prevSlide}
+                  className="absolute -left-[46px] top-1/2 transform -translate-y-1/2 z-10 rotate-180 bg-[#dac4ff] hover:opacity-95 transition-all duration-300 p-2 rounded-full cursor-pointer"
+                >
+                  {arrowRight}
+                </button>
+              )}{" "}
               <div className="overflow-hidden">
                 <div
                   className="flex gap-10 transition-transform duration-300"
@@ -195,16 +199,16 @@ export default function NewsSlugPage() {
                   ))}
                 </div>
               </div>
-
-              <button
-                onClick={nextSlide}
-                className="absolute -right-[50px] top-1/2 transform -translate-y-1/2 z-10 bg-[#dac4ff] hover:opacity-95 p-2 transition-all duration-300 rounded-full cursor-pointer"
-              >
-                {arrowRight}
-              </button>
+              {otherNews.length > 0 && (
+                <button
+                  onClick={nextSlide}
+                  className="absolute -right-[50px] top-1/2 transform -translate-y-1/2 z-10 bg-[#dac4ff] hover:opacity-95 p-2 transition-all duration-300 rounded-full cursor-pointer"
+                >
+                  {arrowRight}
+                </button>
+              )}
             </div>
 
-            {/* Mobile list fallback */}
             <div className="md:hidden grid gap-4 mobile:px-2">
               {otherNews.map((item) => (
                 <Area
