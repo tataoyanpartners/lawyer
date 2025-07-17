@@ -9,7 +9,6 @@ export default function AdminLayer() {
   const pathname = usePathname();
   const navItems = [
     { title: "Blog", href: "/admin/blog" },
-    { title: "Our Lawyer", href: "/admin/lawyers" },
     { title: "Our Partners", href: "/admin/partners" },
   ];
 

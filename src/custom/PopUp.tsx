@@ -12,7 +12,7 @@ type props = {
 
 export default function PopUp({ onClose }: props) {
   const t = useTranslations("Footer");
-  
+
   const modalRef = useRef<HTMLDivElement | null>(null);
   useOutsideClick(modalRef, onClose);
 
@@ -53,18 +53,27 @@ export default function PopUp({ onClose }: props) {
               </p>
             </div>
             <div className="flex items-center gap-4">
+              {React.cloneElement(telephone_black, {
+                className: "w-[40px] mobile:w-[24px]",
+              })}
+              <p className="font-medium max-w-[600px] text-xl text-[#A2AAB3] mobile:text-base">
+                +374 91 00-60-40 տնօրեն՝ Արմեն Բաղդասարյան, արտոնագրված
+                փաստաբան, արտոնագիր թիվ 689,
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
               {React.cloneElement(mail_black, {
                 className: "w-[40px] mobile:w-[24px]",
               })}
               <p className="font-medium text-xl text-[#A2AAB3] mobile:text-base break-words">
-                tatoyan.partnerc@gmail.com
+                tatoyan.partners@gmail.com
               </p>
             </div>
             <div className="flex items-center gap-4">
               {React.cloneElement(location_black, {
                 className: "w-[40px] mobile:w-[24px]",
               })}
-              <p className="font-medium text-xl text-[#A2AAB3] mobile:text-base break-words">
+              <p className="font-medium max-w-[600px] text-xl text-[#A2AAB3] mobile:text-base break-words">
                 {t("address")}
               </p>
             </div>
