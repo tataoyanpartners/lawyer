@@ -47,7 +47,6 @@ export default function ServicesSection() {
     {
       icon: corporate,
       data: messages.Home.serviceCard.card1,
-      bottom: t("serviceCard.card1.bottomDescription"),
       link: "/services#banking",
     },
     {
@@ -68,7 +67,7 @@ export default function ServicesSection() {
     {
       icon: international,
       data: messages.Home.serviceCard.card5,
-      bottom: t("serviceCard.card5.bottomDescription"),
+
       link: "/services#criminal",
     },
     {
@@ -79,7 +78,7 @@ export default function ServicesSection() {
     {
       icon: legal,
       data: messages.Home.serviceCard.card7,
-      bottom: t("serviceCard.card7.bottomDescription"),
+
       link: "/services#expertise",
     },
     {

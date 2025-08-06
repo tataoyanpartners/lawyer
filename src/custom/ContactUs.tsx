@@ -1,17 +1,18 @@
 import { mail_black, telephone_black } from "@/app/assets/svg";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const ContactUs = () => {
+  const t = useTranslations("contactUs");
   return (
     <section className="flex items-center justify-center py-15 px-10 mobile:p-0 ">
       <div className="flex flex-col gap-4 max-w-[1280px] w-full bg-[#212121] shadow-2xl rounded-2xl p-10 mobile:rounded-tl-none mobile:rounded-tr-none mobile:p-6">
         <h3 className="font-bold text-3xl  text-muted-light mobile:text-xl">
-          Կապ
+          {t("title")}
         </h3>
         <div className="flex flex-col gap-2">
           <p>
-            Մեր գրասենյակը գտնվում է Երևանի կենտրոնում, Հանրապետության 67
-            հասցեում, 3-րդ հարկ, 36 սենյակ
+            {t("addressDescription")}
           </p>
           <div className="flex items-center gap-1">
             {React.cloneElement(telephone_black, {
@@ -36,9 +37,7 @@ const ContactUs = () => {
               >
                 (+37491) 00-60-40{"  "}
               </a>
-              {"  "}
-              Արմեն Բաղդասարյան, արտոնագրված փաստաբան, արտոնագիր թիվ 689,
-              Արմադել Քոնսալթինգ ընկերության հիմնադիր և գործադիր տնօրեն
+              {t("lawyerInfo")}
             </div>
           </div>
           <div className="flex items-center gap-1">

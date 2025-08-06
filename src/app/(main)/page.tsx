@@ -32,24 +32,25 @@ export default function Home() {
   const [news, setNews] = useState<Blogs[] | undefined>([]);
   const [openId, setOpenId] = useState<number | null>(null);
   const t = useTranslations("Home");
+  const members = useTranslations("About.team");
   const locale = useLocale();
 
   const lawyers = [
     {
       id: 1,
-      name: "Արման Թաթոյան",
+      name: members("memberNames.0"),
       image: "/lawyers/tatoyan.JPG",
       description: "lorem ipsum",
     },
     {
       id: 2,
-      name: "Կարինե Հովհաննիսյան",
+      name: members("memberNames.1"),
       image: "/lawyers/anna.JPG",
       description: "lorem ipsum",
     },
     {
       id: 3,
-      name: "Արմեն Բաղդասարյան",
+      name: members("memberNames.2"),
       image: "/lawyers/armen-baghdasaryan.jpg",
       description: "lorem ipsum",
     },
@@ -247,7 +248,7 @@ export default function Home() {
                   className: "mobile:w-[24px] mobile:h-[24px] ",
                 })}
                 <p className="font-medium text-xl mobile:text-sm">
-                  +374 12122112
+                  +374 94 45 00 54
                 </p>
               </div>
               <div className="flex gap-4 items-center">
@@ -255,7 +256,7 @@ export default function Home() {
                   className: "mobile:w-[24px] ",
                 })}
                 <p className="font-medium text-2xl mobile:text-sm">
-                  lawyer@gmail.com
+                  tatoyan.partners@gmail.com
                 </p>
               </div>
             </div>

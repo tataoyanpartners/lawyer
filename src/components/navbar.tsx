@@ -32,23 +32,25 @@ export const NavBar = () => {
       .split("; ")
       .find((row) => row.startsWith("MYNEXTAPP_LOCALE="))
       ?.split("=")[1];
-    if (cookieLocale) {
+    
+    const supportedLocales = ['en', 'am', 'ru'];
+    
+    if (cookieLocale && supportedLocales.includes(cookieLocale)) {
       setLocale(cookieLocale);
     } else {
       const browserLocale = navigator.language.slice(0, 2);
-      setLocale(browserLocale);
-      document.cookie = `MYNEXTAPP_LOCALE=${browserLocale};`;
+      const fallbackLocale = supportedLocales.includes(browserLocale) ? browserLocale : 'am';
+      setLocale(fallbackLocale);
+      document.cookie = `MYNEXTAPP_LOCALE=${fallbackLocale}; path=/; max-age=31536000; SameSite=Lax`;
       router.refresh();
     }
   }, [router]);
 
   const changeLocal = (newLocal: string) => {
     setLocale(newLocal);
-    document.cookie = `MYNEXTAPP_LOCALE=${newLocal};`;
+    document.cookie = `MYNEXTAPP_LOCALE=${newLocal}; path=/; max-age=31536000; SameSite=Lax`;
     router.refresh();
   };
-
-  // sup-lg:grid sup-lg:grid-cols-2 sup-lg:gap-4
 
   return (
     <nav className=" border-muted flex items-center gap-15 text-[#D0D0D0] sup-lg:flex sup-lg:justify-between sup-lg:gap-6">
@@ -102,6 +104,10 @@ export const NavBar = () => {
                 <>
                   🇺🇸 <span>{t("en")}</span>
                 </>
+              ) : locale === "ru" ? (
+                <>
+                  🇷🇺 <span>{t("ru")}</span>
+                </>
               ) : (
                 <>
                   🇦🇲 <span>{t("am")}</span>
@@ -115,6 +121,18 @@ export const NavBar = () => {
             <div className="absolute top-full left-0  w-full bg-[#413e3e] rounded-xl animate-fade-in grid p-1 gap-1">
               <div
                 className={`px-4 py-2 cursor-pointer hover:bg-[#937abd] rounded-xl  flex items-center gap-2 
+                  ${locale === "am" ? "bg-[#6A49A2]" : ""}`}
+                onClick={() => {
+                  changeLocal("am");
+                  setOpen(false);
+                }}
+              >
+                <>
+                  🇦🇲 <span>{t("am")}</span>
+                </>
+              </div>
+              <div
+                className={`px-4 py-2 cursor-pointer hover:bg-[#937abd] rounded-xl  flex items-center gap-2 
                   ${locale === "en" ? "bg-[#6A49A2]" : ""}`}
                 onClick={() => {
                   changeLocal("en");
@@ -125,16 +143,17 @@ export const NavBar = () => {
                   🇺🇸 <span>{t("en")}</span>
                 </>
               </div>
+
               <div
                 className={`px-4 py-2 cursor-pointer hover:bg-[#937abd] rounded-xl  flex items-center gap-2 
-                  ${locale === "am" ? "bg-[#6A49A2]" : ""}`}
+                  ${locale === "ru" ? "bg-[#6A49A2]" : ""}`}
                 onClick={() => {
-                  changeLocal("am");
+                  changeLocal("ru");
                   setOpen(false);
                 }}
               >
                 <>
-                  🇦🇲 <span>{t("am")}</span>
+                  🇷🇺 <span>{t("ru")}</span>
                 </>
               </div>
             </div>
@@ -175,65 +194,7 @@ export const NavBar = () => {
             </ul>
           </div>
 
-          <div className="grid justify-center items-center gap-0">
-            {/* <Button className="w-[200px] h-[50px] text-lg leading-[100%] py-[10px]">
-              {t("contact")}
-            </Button> */}
-
-            {/* <div className="relative  text-lg font-medium flex justify-center items-center w-full h-full">
-              <div>
-                <button
-                  onClick={() => setOpen(!open)}
-                  className="w-full px-4 py-3  rounded-xl bg-none cursor-pointer"
-                >
-                  <span className="text-[#f2f2f2] flex items-center gap-2">
-                    {locale === "en" ? (
-                      <>
-                        🇺🇸 <span>{t("en")}</span>
-                      </>
-                    ) : (
-                      <>
-                        🇦🇲 <span>{t("am")}</span>
-                      </>
-                    )}
-                  </span>
-                </button>
-              </div>
-
-              {open && (
-                <>
-                  <div
-                    className="fixed inset-0 bg-black/40 z-40 md:hidden"
-                    onClick={() => setOpen(false)}
-                  ></div>
-                  <div className=" fixed bottom-0 left-0 w-full h-1/3 bg-[#413e3e] z-50 rounded-t-xl p-4 flex flex-col gap-2 animate-fade-in">
-                    <div
-                      className={`px-4 py-2 cursor-pointer hover:bg-[#937abd] rounded-xl flex items-center gap-5 ${
-                        locale === "en" ? "bg-[#6A49A2]" : ""
-                      }`}
-                      onClick={() => {
-                        changeLocal("en");
-                        setOpen(false);
-                      }}
-                    >
-                      🇺🇸 <span>{t("en")}</span>
-                    </div>
-                    <div
-                      className={`px-4 py-2 cursor-pointer hover:bg-[#937abd] rounded-xl flex items-center gap-5 ${
-                        locale === "am" ? "bg-[#6A49A2]" : ""
-                      }`}
-                      onClick={() => {
-                        changeLocal("am");
-                        setOpen(false);
-                      }}
-                    >
-                      🇦🇲 <span>{t("am")}</span>
-                    </div>
-                  </div>
-                </>
-              )}
-            </div> */}
-          </div>
+          <div className="grid justify-center items-center gap-0"></div>
         </div>
       )}
     </nav>

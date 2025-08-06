@@ -11,7 +11,7 @@ type props = {
 };
 
 export default function PopUp({ onClose }: props) {
-  const t = useTranslations("Footer");
+  const t = useTranslations("contactUs");
 
   const modalRef = useRef<HTMLDivElement | null>(null);
   useOutsideClick(modalRef, onClose);
@@ -39,7 +39,7 @@ export default function PopUp({ onClose }: props) {
         </button>
 
         <h2 className="text-3xl mobile:text-xl font-bold text-[#DAC4FF80] text-start">
-          Կապ մեզ հետ
+          {t("title")}
         </h2>
 
         <div className="text-2xl gap-4 mobile:text-base">
@@ -57,8 +57,7 @@ export default function PopUp({ onClose }: props) {
                 className: "w-[40px] mobile:w-[24px]",
               })}
               <p className="font-medium max-w-[600px] text-xl text-[#A2AAB3] mobile:text-base">
-                +374 91 00-60-40 տնօրեն՝ Արմեն Բաղդասարյան, արտոնագրված
-                փաստաբան, արտոնագիր թիվ 689,
+                +374 91 00-60-40 {t("lawyerInfo")}
               </p>
             </div>
             <div className="flex items-center gap-4">
@@ -82,7 +81,7 @@ export default function PopUp({ onClose }: props) {
 
         <div className="flex items-center gap-6 mobile:gap-4 mobile:justify-center">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/company/tatoyan-partners-law-office/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block p-4 mobile:p-2 bg-[#373639] rounded-4xl"
@@ -90,7 +89,7 @@ export default function PopUp({ onClose }: props) {
             <FaLinkedin className="text-white text-4xl mobile:text-2xl hover:text-[#6A49A2]" />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/tatoyan_and_partners?igsh=MTVkdXh6cjExeGE4ag%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block p-4 mobile:p-2 bg-[#373639] rounded-4xl"
@@ -98,7 +97,7 @@ export default function PopUp({ onClose }: props) {
             <FaInstagram className="text-white text-4xl mobile:text-2xl hover:text-[#6A49A2]" />
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/share/12CcQsbk4jC/?mibextid=wwXIfr"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block p-4 mobile:p-2 bg-[#373639] rounded-4xl"

@@ -68,13 +68,13 @@ export const Footer = () => {
               {React.cloneElement(telephone_black, {
                 className: "mobile:w-[40px]",
               })}
-              <p>+374 12122112</p>
+              <p>+374 94 45 00 54</p>
             </div>
             <div className="flex items-center gap-4">
               {React.cloneElement(mail_black, {
                 className: "mobile:w-[40px]",
               })}
-              <p>Lawyerhelp@gmail.com</p>
+              <p>tatoyan.partners@gmail.com</p>
             </div>
             <div className="flex items-center gap-4">
               {React.cloneElement(location_black, {

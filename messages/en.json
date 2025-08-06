@@ -1,7 +1,46 @@
 {
-  "TabTitles": {
-    "home": "Lawyer Page"
+  "About": {
+    "title": "Tatoyan & Partners",
+    "subtitle": "Law office",
+    "information": {
+      "title": "Why trust the law firm 'Tatoyan and Partners'?",
+      "description": "At Tatoyan and Partners Law Firm, we know how to find the right solutions and achieve the best possible outcomes for you—no matter how complex the legal issue may be. Our experienced lawyers resolve problems promptly and effectively, whether at the negotiation table or in the courtroom. Tatoyan and Partners Law Firm LLC provides legal services to both individuals and legal entities in the following areas: litigation (civil, criminal, commercial, and administrative cases), legal support for individuals and businesses, legal expertise and consulting, alternative dispute resolution, and legal drafting. Our goal is to offer cost-effective and result-oriented solutions while providing full legal protection to our clients. The firm’s attorneys have developed the skill to see problems from the client’s perspective, assess their needs, and identify and analyze all potential issues to offer the most appropriate solutions. Our team consists of highly qualified legal professionals who offer services in Armenian, Russian, English, and French. Tatoyan and Partners Law Firm highly values cooperation and partnership with its clients and stands by them until the full resolution of their legal matters."
+    },
+    "team": {
+      "memberNames": [
+        "Arman Tatoyan",
+        "Armen Baghdasaryan",
+        "Karine Hovhannisyan"
+      ],
+      "memberPositions": ["Chairman of the Board", "Director", "Lawyer"],
+      "membersDescriptions": [
+        "PhD in Law, Associate Professor, Professor. A highly qualified lawyer and advocate with extensive professional experience in governmental, international, and academic institutions. Served as Human Rights Defender (Ombudsman) of the Republic of Armenia (2016), Deputy Minister of Justice of RA, and Deputy Representative of the Government to the European Court of Human Rights. Collaborated with the UN, EU, Council of Europe, and other international organizations in human rights, criminal justice, and judicial reform. Lecturer at Yerevan State University, American University of Armenia, and the Academy of Justice. Author of several scientific monographs and over thirty scientific articles. Graduate of the University of Pennsylvania Law School (USA).",
+
+        "Started legal practice in 1999, specializing in criminal and military cases. Since 2007, has actively worked in human rights protection, representing individuals and legal entities in civil, criminal, and administrative cases in Armenian courts. Experience spans both public and private sectors. Participated in numerous professional trainings abroad, strengthening skills and legal expertise. His years of experience and deep specialization form the foundation for leading a proactive and trustworthy team that maintains high-quality standards.",
+        "Specialist in civil law. Her deep legal knowledge, professional experience, and meticulous attention to detail enable effective and dedicated protection of clients’ interests."
+      ]
+    },
+    "mission": "Our Mission",
+    "missionDescription": "'Tatoyan and Partners Law Office' LLC offers legal services to individuals and legal entities in the following areas: judicial representation (in civil, criminal, economic and administrative cases), legal assistance to citizens and legal entities, legal expertise and consultation, alternative dispute resolution, consultation and preparation of documents related to citizenship and dual citizenship. The goal of our company is to provide cost-effective and expedient solutions, as well as provide legal protection to our clients. The company’s lawyers have acquired the skills to see problems from the perspective of clients, assess and understand their needs, as well as analyze all possible solutions in order to offer the best solution. Our team consists of experienced legal professionals who provide services in Armenian, Russian and English. “Tatoyan and Partners Law Office” highly values partnership and cooperation with its clients, and stands by their rights until all issues are resolved."
   },
+
+  "Partners": {
+    "title": "Our Trusted Partners",
+    "title-description": "At Tatoyan, we collaborate with a network of highly respected partners across various industries. Our strong partnerships enhance the quality of services we provide, ensuring that our clients receive the best possible legal support.",
+    "partner1": {
+      "name": "Union of Banks of Armenia (UBA)",
+      "description": "The Union of Banks of Armenia (UBA) serves as a platform for presenting the activities, initiatives, training programs, and major events of all banks operating in Armenia to the public. Based on Article 9.4.17 of the UBA Charter, and in accordance with the Civil Code of the Republic of Armenia and the Law on Commercial Arbitration, the UBA Board has decided to establish the “Financial Arbitration” institution. For this purpose, the institution’s charter and regulations have been approved. In cooperation with the UBA, Tatoyan and Partners Law Firm has provided legal expert opinion within the scope of legislative analysis."
+    },
+    "partner2": {
+      "name": "DSA Advisory Group CJSC",
+      "description": "Within the framework of a memorandum of cooperation with Tatoyan and Partners, DSA Advisory Group offers the following services: a. Business Consulting Services – consulting on management of client businesses, feasibility and planning of new projects. b. Legal Advisory Services – consulting related to incorporation and legal matters of the client in Armenia and abroad. c. Tax Advisory Services – consulting related to national and international tax systems, regulations, and administration. d. Accounting and Financial Advisory Services – consulting on accounting management and preparation of financial reports, including practical application of both international and national standards."
+    },
+    "partner3": {
+      "name": "Villamontan LLC",
+      "description": "Villamontan LLC promotes the development of tourism and pottery in Armenia and its regions by showcasing the country’s culture and landmarks to both local and foreign visitors. The company also operates hotels in Yerevan, Gyumri, and Syunik province. Tatoyan and Partners Law Firm provides legal advisory services to the company and represents its interests in various legal matters."
+    }
+  },
+
   "Navbar": {
     "about": "About us",
     "services": "Services",
@@ -9,11 +48,12 @@
     "news": "News",
     "contact": "Contact Us",
     "en": "English",
-    "am": "Armenian"
+    "am": "Հայերեն",
+    "ru": "Русский"
   },
   "Home": {
     "experiance": "Specialised Attorney With Experiance",
-    "description-experiance": "Volutpa sit'eu o porttito dolor volutpa neque faucib, a praese egesta quisqua ut consect vita neque vita' aliqua, mi et scelerisqu tempus a felis feugiat.",
+    "description-experiance": "At Tatoyan & Partners Law Firm, they know the right solutions and find the best possible solutions for you, regardless of the complexity of the problem. Our experienced professionals will quickly and effectively resolve issues at the negotiation table or in the courtroom.",
     "btn-consulation": "Consulation",
     "services": "Services We Provide",
     "description-services": "We deliver expert legal solutions with a commitment to protecting your rights and achieving the best outcomes.",
@@ -231,59 +271,18 @@
     "stay-description": "Vel feugiat consectet cum fermentum ex consectetu exercitatio morbi occaecat, vestibulu nam congue exercitati ex minim vestibulu ubi quas-voluptate parturien voluptat ad saep tempor culpa.",
     "btn-learn": "Learn More"
   },
-  "About": {
-    "title": "Legal Expertise with a Proven Track Record",
-    "titile-description": "Volutpa sit&apos;eu o porttito dolor volutpa neque faucib, apraese egesta quisqua ut consect vita neque vita&apos; aliqua,mi et scelerisqu tempus a felis feugiat.",
-    "titile-description2": "At Tatoyan , we provide expert legal services with a commitment to excellence. Our team of experienced attorneys works tirelessly to ensure that your legal needs are met with professionalism,integrity, and personal attention. With years of experience in various areas of law, we are dedicated to helping individuals and businesses navigate complex legal challenges.",
-    "mission": "Our Mission...",
-    "mission-description": "Our mission is to uphold justice, advocate for our clients, and provide ethical, results-driven legal representation. With dedication and expertise, we protect your rights and guide you through every legal challenge. We aim to deliver reliable, efficient, and compassionate legal solutions tailored to our clients' unique situations.",
-    "btn-get": "Get In Toich"
-  },
 
-  "Services": {
-    "title": "Services We Provide",
-    "title-description": "We deliver expert legal solutions with a commitment to protecting your rights and achieving the best outcomes.",
-    "items": {
-      "all": "All",
-      "item1": {
-        "name": "Civil Right",
-        "description": "Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat."
-      },
-      "item2": {
-        "name": "Corporate law",
-        "description": "Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat."
-      },
-      "item3": {
-        "name": "Administrative law",
-        "description": "Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat."
-      },
-      "item4": {
-        "name": "Criminal Justice",
-        "description": "Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat. Ullamcorper in in risus vitae. Parturient cursus egestas sit varius pellentesque nisi. Nulla vitae hendrerit pulvinar egestas amet netus. Purus volutpat et id non sit eget tristique eu tempor. Turpis orci ipsum eu maecenas nullam at. At elit auctor sit tristique gravida id. Vestibulum rhoncus blandit nam viverra consectetur donec. Leo viverra neque suspendisse tempus. Lorem ipsum dolor sit amet consectetur. Massa cras eget tristique scelerisque enim vestibulum arcu consequat."
-      }
-    }
-  },
-
-  "Partners": {
-    "title": "Our Trusted Partners",
-    "title-description": "At Tatoyan, we collaborate with a network of highly respected partners across various industries. Our strong partnerships enhance the quality of services we provide, ensuring that our clients receive the best possible legal support.",
-    "partner1": {
-      "name": "Union of Banks of Armenia (UBA)",
-      "description": "The Union of Banks of Armenia (UBA) serves as a platform for presenting the activities, initiatives, training programs, and major events of all banks operating in Armenia to the public. Based on Article 9.4.17 of the UBA Charter, and in accordance with the Civil Code of the Republic of Armenia and the Law on Commercial Arbitration, the UBA Board has decided to establish the “Financial Arbitration” institution. For this purpose, the institution’s charter and regulations have been approved. In cooperation with the UBA, Tatoyan and Partners Law Firm has provided legal expert opinion within the scope of legislative analysis."
-    },
-    "partner2": {
-      "name": "DSA Advisory Group CJSC",
-      "description": "Within the framework of a memorandum of cooperation with Tatoyan and Partners, DSA Advisory Group offers the following services: a. Business Consulting Services – consulting on management of client businesses, feasibility and planning of new projects. b. Legal Advisory Services – consulting related to incorporation and legal matters of the client in Armenia and abroad. c. Tax Advisory Services – consulting related to national and international tax systems, regulations, and administration. d. Accounting and Financial Advisory Services – consulting on accounting management and preparation of financial reports, including practical application of both international and national standards."
-    },
-    "partner3": {
-      "name": "Villamontan LLC",
-      "description": "Villamontan LLC promotes the development of tourism and pottery in Armenia and its regions by showcasing the country’s culture and landmarks to both local and foreign visitors. The company also operates hotels in Yerevan, Gyumri, and Syunik province. Tatoyan and Partners Law Firm provides legal advisory services to the company and represents its interests in various legal matters."
-    }
-  },
   "News": {
     "title": "News",
     "otherNews": "Other News",
     "backBtn": "Back"
+  },
+
+  "contactUs": {
+    "title": "Contact Us",
+    "lawyerInfo": "Director: Armen Baghdasaryan, Licensed Attorney, License No. 689",
+    "addressDescription": "Our office is located in the center of Yerevan, at 67 Hanrapetutyan Street, 3rd floor, room 36",
+    "address": "67 Hanrapetutyan St., 3rd Floor, Room 306"
   },
 
   "Footer": {
