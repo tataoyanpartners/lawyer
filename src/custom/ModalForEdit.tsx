@@ -18,14 +18,20 @@ type ModalForAddingProps = {
 
 // Helper to make "name_am" => "Name (AM)"
 function formatLabel(key: string): string {
-  return key
-    .split("_")
-    .map((part, index) =>
-      index === 0
-        ? part[0].toUpperCase() + part.slice(1)
-        : `(${part.toUpperCase()})`
-    )
-    .join(" ");
+  const langLabels: { [key: string]: string } = {
+    am: "Հայ",
+    en: "Անգլ", 
+    ru: "Ռուս"
+  };
+  
+  const parts = key.split("_");
+  if (parts.length === 2) {
+    const [field, lang] = parts;
+    const fieldLabel = field[0].toUpperCase() + field.slice(1);
+    return `${fieldLabel} (${langLabels[lang] || lang.toUpperCase()})`;
+  }
+  
+  return key[0].toUpperCase() + key.slice(1);
 }
 
 export default function ModalForEdit({
@@ -81,7 +87,7 @@ export default function ModalForEdit({
     <div className="fixed inset-0 z-50 bg-black/20 flex items-center justify-center">
       <div
         ref={modalRef}
-        className="bg-white p-8 rounded-2xl w-[95%] max-w-[1024px] max-h-[90vh] overflow-y-auto  shadow-lg grid gap-10 animate-fadeIn"
+        className="bg-white p-8 rounded-2xl w-[95%] max-w-[1024px] max-h-[90vh] overflow-y-auto shadow-lg grid gap-10 animate-fadeIn border border-gray-200"
       >
         {/* <button
           onClick={onClose}
@@ -92,12 +98,12 @@ export default function ModalForEdit({
 
         <div className="flex justify-between items-center">
           <div className="pl-[45%]">
-            <h2 className="text-[25px] font-bold text-center">{title}</h2>
+            <h2 className="text-[25px] font-bold text-center text-[#1e3a8a]">{title}</h2>
           </div>
           <div>
             <button
               onClick={onClose}
-              className="  text-[40px] text-gray-500 hover:text-black"
+              className="text-[40px] text-gray-500 hover:text-[#1e3a8a]"
             >
               ✕
             </button>
@@ -111,7 +117,7 @@ export default function ModalForEdit({
               Object.entries(fieldObj).map(([key]) =>
                 key === "image" ? null : (
                   <div key={`${key}-${i}`}>
-                    <label className="block text-gray-700 mb-2 text-base">
+                    <label className="block text-[#1e3a8a] font-medium mb-2 text-base">
                       {formatLabel(key)}
                     </label>
 
@@ -119,7 +125,7 @@ export default function ModalForEdit({
                       <textarea
                         placeholder={formatLabel(key)}
                         value={formData[key] || ""}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 text-base resize-none min-h-[150px]"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 text-base resize-none min-h-[150px] focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
                         onChange={(e) =>
                           setFormData({ ...formData, [key]: e.target.value })
                         }
@@ -129,7 +135,7 @@ export default function ModalForEdit({
                         type="text"
                         placeholder={formatLabel(key)}
                         value={formData[key] || ""}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-100 text-base"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 text-base focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
                         onChange={(e) => handleInputChange(e, key)}
                       />
                     )}
@@ -142,7 +148,7 @@ export default function ModalForEdit({
           {imageRequired && (
             <div className="flex-1 space-y-6">
               <div>
-                <p className="font-medium mb-2">Image Now</p>
+                <p className="font-medium mb-2 text-[#1e3a8a]">Ընթացիկ նկարը</p>
                 <Image
                   src={fields[0].image}
                   width={200}
@@ -154,7 +160,7 @@ export default function ModalForEdit({
 
               {!image ? (
                 <div>
-                  <label className="font-medium mb-2 block">Upload Image</label>
+                  <label className="font-medium mb-2 block text-[#1e3a8a]">Վերբեռնել նկար</label>
                   <input
                     id="file-upload"
                     type="file"
@@ -164,14 +170,14 @@ export default function ModalForEdit({
                   />
                   <label
                     htmlFor="file-upload"
-                    className="block w-full border-2 border-dashed border-gray-300 px-4 py-8 text-center text-sm text-gray-500 bg-gray-100 rounded-lg cursor-pointer hover:border-gray-400 hover:text-black transition"
+                    className="block w-full border-2 border-dashed border-gray-300 px-4 py-8 text-center text-sm text-gray-500 bg-gray-50 rounded-lg cursor-pointer hover:border-[#1e3a8a] hover:text-[#1e3a8a] transition"
                   >
-                    Click to upload or drag file here
+                    Սեղմեք վերբեռնելու կամ քաշեք ֆայլը այստեղ
                   </label>
                 </div>
               ) : (
                 <div>
-                  <p className="font-medium mb-2">Editing Image</p>
+                  <p className="font-medium mb-2 text-[#1e3a8a]">Խմբագրվող նկարը</p>
                   <Image
                     src={URL.createObjectURL(image)}
                     width={200}
@@ -183,7 +189,7 @@ export default function ModalForEdit({
                     onClick={removeImage}
                     className="mt-3 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm"
                   >
-                    Delete Image
+                    Ջնջել նկարը
                   </button>
                 </div>
               )}
@@ -194,9 +200,9 @@ export default function ModalForEdit({
         <div className="text-right">
           <Button
             onClick={() => setIsSaveModalOpen(true)}
-            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-lg"
+            className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white text-lg px-6 py-3 rounded-lg"
           >
-            Save Changes
+            Պահպանել փոփոխությունները
           </Button>
         </div>
 

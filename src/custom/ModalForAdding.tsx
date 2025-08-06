@@ -52,7 +52,7 @@ export default function ModalForAdding({
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: string,
-    lang: "am" | "en"
+    lang: "am" | "en" | "ru"
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -61,7 +61,7 @@ export default function ModalForAdding({
   };
 
   const checkFilles = () => {
-    const hasEmptyField = fields.some((field) => {
+    const hasEmptyRequiredField = fields.some((field) => {
       return (
         !formData[`${field}_am`] ||
         formData[`${field}_am`].trim() === "" ||
@@ -70,35 +70,37 @@ export default function ModalForAdding({
       );
     });
 
-    if (hasEmptyField) {
-      setError("Please fill in all Armenian and English fields.");
+    if (hasEmptyRequiredField) {
+      setError("Խնդրում ենք լրացնել բոլոր հայերեն և անգլերեն դաշտերը (ռուսերենը ոչ պարտադիր է):");
       return;
     }
 
     if (imageRequired && !image) {
-      setError("Image is required.");
+      setError("Նկարը պարտադիր է:");
       return;
     }
 
     setError("");
+    console.log("Form data when saving:", formData);
     setIsSaveModalOpen(true);
   };
 
-  const renderInput = (field: string, lang: "am" | "en") => {
-    const label = `${formatFieldLabel(field)} (${lang === "am" ? "AM" : "EN"})`;
-    const placeholder = `Enter ${formatFieldLabel(field)} in ${
-      lang === "am" ? "AM" : "EN"
-    }`;
+  const renderInput = (field: string, lang: "am" | "en" | "ru") => {
+    const langLabels = { am: "Հայ", en: "Անգլ", ru: "Ռուս (կամավոր)" };
+    const langPlaceholders = { am: "հայերեն", en: "անգլերեն", ru: "ռուսերեն (կամավոր)" };
+    
+    const label = `${formatFieldLabel(field)} (${langLabels[lang]})`;
+    const placeholder = `Մուտքագրեք ${formatFieldLabel(field).toLowerCase()}-ը ${langPlaceholders[lang]}`;
 
     const value = formData[`${field}_${lang}`] || "";
 
     return (
       <div className="w-[250px]">
-        <label className="text-gray-600">{label}</label>
+        <label className="text-[#1e3a8a] font-medium">{label}</label>
         {field.includes("description") ? (
           <textarea
             placeholder={placeholder}
-            className="w-full px-2 py-3 bg-[#F3F4F6] rounded-[15px] min-h-[150px] resize-none"
+            className="w-full px-3 py-3 bg-white border border-gray-300 rounded-lg min-h-[150px] resize-none focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
             value={value}
             onChange={(e) => handleInputChange(e, field, lang)}
           />
@@ -106,7 +108,7 @@ export default function ModalForAdding({
           <input
             type="text"
             placeholder={placeholder}
-            className="w-full px-2 py-3 bg-[#F3F4F6] rounded-[15px]"
+            className="w-full px-3 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
             value={value}
             onChange={(e) => handleInputChange(e, field, lang)}
           />
@@ -121,17 +123,17 @@ export default function ModalForAdding({
     <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
       <div
         ref={modalRef}
-        className="bg-white p-6 rounded-xl shadow-lg h-[650px]  min-w-[1024px] grid gap-5 animate-fadeIn"
+        className="bg-white p-6 rounded-xl shadow-lg h-[650px] min-w-[1200px] grid gap-5 animate-fadeIn border border-gray-200"
       >
-        <div className="text-2xl leading-[100%] grid gap-6 p-5 text-[#1D1D1FCC]">
+        <div className="text-2xl leading-[100%] grid gap-6 p-5 text-[#1e3a8a]">
           <div className="flex justify-between">
             <div className="pl-[45%]">
-              <h2 className="text-[25px] font-bold text-center">{title}</h2>
+              <h2 className="text-[25px] font-bold text-center text-[#1e3a8a]">{title}</h2>
             </div>
             <div>
               <button
                 onClick={onClose}
-                className="text-[40px] text-gray-500 hover:text-black"
+                className="text-[40px] text-gray-500 hover:text-[#1e3a8a]"
               >
                 ✕
               </button>
@@ -143,16 +145,17 @@ export default function ModalForAdding({
           <div className="flex justify-center gap-20">
             <div className="grid gap-5">
               {fields.map((field) => (
-                <div key={field} className="flex gap-6 text-lg">
+                <div key={field} className="flex gap-4 text-lg">
                   {renderInput(field, "am")}
                   {renderInput(field, "en")}
+                  {renderInput(field, "ru")}
                 </div>
               ))}
             </div>
 
             {imageRequired && (
               <div className="grid items-start w-[30%]">
-                <p className="text-xl font-bold">Upload an Image</p>
+                <p className="text-xl font-bold text-[#1e3a8a]">Վերբեռնել նկար</p>
                 {!image && (
                   <>
                     <input
@@ -164,10 +167,10 @@ export default function ModalForAdding({
                     />
                     <label
                       htmlFor="file-upload"
-                      className="w-full flex items-center justify-center px-4 py-6 bg-[#F3F4F6] text-gray-500 border-2 border-dashed border-gray-400 rounded-lg cursor-pointer hover:border-gray-600 hover:text-black transition"
+                      className="w-full flex items-center justify-center px-4 py-6 bg-gray-50 text-gray-500 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-[#1e3a8a] hover:text-[#1e3a8a] transition"
                     >
                       <span className="text-sm">
-                        Click to upload or drag file here
+                        Սեղմեք վերբեռնելու կամ քաշեք ֆայլը այստեղ
                       </span>
                     </label>
                   </>
@@ -188,7 +191,7 @@ export default function ModalForAdding({
                       onClick={removeImage}
                       className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition w-fit"
                     >
-                      Delete image
+                      Ջնջել նկարը
                     </button>
                   </div>
                 )}
@@ -201,16 +204,16 @@ export default function ModalForAdding({
               onClick={checkFilles}
               className="text-xl text-white   rounded-[20px] cursor-pointer px-6"
             >
-              Save Changes
+              Պահպանել փոփոխությունները
             </Button>
           </div> */}
 
           <div className=" text-right">
             <Button
               onClick={checkFilles}
-              className=" text-white text-lg px-6 py-3 rounded-lg"
+              className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white text-lg px-6 py-3 rounded-lg"
             >
-              Save Changes
+              Պահպանել փոփոխությունները
             </Button>
           </div>
 

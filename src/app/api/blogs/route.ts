@@ -20,19 +20,38 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     await connectDB();
-    const { image, title_en, title_am, description_am, description_en } =
-      await request.json();
-
-    const newBlog = new Blog({
-      image: image,
-      title_en: title_en,
-      title_am: title_am,
-      description_am: description_am,
-      description_en: description_en,
-      createTime: new Date(),
+    const requestData = await request.json();
+    console.log("API received data:", requestData);
+    
+    const { image, title_en, title_am, title_ru, description_am, description_en, description_ru } = requestData;
+    
+    console.log("Extracted fields:", {
+      title_ru,
+      description_ru,
+      title_am,
+      title_en,
+      description_am,
+      description_en
     });
 
+    const blogData = {
+      image: image,
+      title_en: title_en || "",
+      title_am: title_am || "",
+      title_ru: title_ru || "",
+      description_am: description_am || "",
+      description_en: description_en || "",
+      description_ru: description_ru || "",
+      createTime: new Date(),
+    };
+    
+    console.log("Creating blog with data:", blogData);
+    
+    const newBlog = new Blog(blogData);
+    console.log("Blog object before save:", newBlog.toObject());
+    
     await newBlog.save();
+    console.log("Blog object after save:", newBlog.toObject());
     return NextResponse.json(newBlog, { status: 201 });
   } catch (error) {
     return NextResponse.json(
@@ -45,13 +64,23 @@ export async function POST(request: NextRequest) {
 export async function PUT(request: NextRequest) {
   try {
     await connectDB();
-    const { id, image, description_am, description_en } = await request.json();
+    const { id, image, title_am, title_en, title_ru, description_am, description_en, description_ru } = await request.json();
 
-    const updateBlog = await Blog.findByIdAndUpdate(id, {
-      image,
-      description_am,
-      description_en,
-    });
+    const updateData: any = {
+      title_am: title_am || "",
+      title_en: title_en || "",
+      title_ru: title_ru || "",
+      description_am: description_am || "",
+      description_en: description_en || "",
+      description_ru: description_ru || "",
+    };
+    
+    // Only update image if provided
+    if (image) {
+      updateData.image = image;
+    }
+
+    const updateBlog = await Blog.findByIdAndUpdate(id, updateData);
 
     if (!updateBlog) {
       return NextResponse.json({ error: "Partner not found" }, { status: 404 });

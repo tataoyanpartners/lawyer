@@ -116,7 +116,7 @@ export default function NewsSlugPage() {
         >
           <div className="flex flex-col gap-3">
             <h1 className="text-3xl font-bold mobile:text-2xl">
-              {post[`title_${locale}` as keyof Blogs]}
+              {(post as any)[`title_${locale}`] || post.title_am || post.title_en || post.title_ru}
             </h1>
             <p className="text-muted-light">{formatDate(post.createTime)}</p>
           </div>
@@ -129,7 +129,7 @@ export default function NewsSlugPage() {
           />
           <div className="grid gap-6 mobile:gap-4">
             <p className="text-xl leading-[100%] font-medium text-muted mobile:text-lg">
-              {post[`description_${locale}` as keyof Blogs]}
+              {(post as any)[`description_${locale}`] || post.description_am || post.description_en || post.description_ru}
             </p>
           </div>
         </Area>
@@ -173,10 +173,10 @@ export default function NewsSlugPage() {
                       />
                       <div className="flex flex-col gap-2">
                         <h3 className="text-xl font-semibold text-muted-light text-center mobile:text-lg">
-                          {item[`title_${locale}` as keyof Blogs]}
+                          {(item as any)[`title_${locale}`] || item.title_am || item.title_en || item.title_ru}
                         </h3>
                         <p className="text-sm font-semibold leading-[120%] text-muted mobile:text-xs">
-                          {item[`description_${locale}` as keyof Blogs]}
+                          {(item as any)[`description_${locale}`] || item.description_am || item.description_en || item.description_ru}
                         </p>
                       </div>
                       <div className="flex justify-between items-center mobile:flex-col mobile:items-start mobile:gap-2">
@@ -224,7 +224,7 @@ export default function NewsSlugPage() {
                     className="object-cover h-[200px] w-full rounded-xl mobile:h-[150px]"
                   />
                   <h3 className="text-xl font-semibold text-muted-light text-center mobile:text-lg">
-                    {item[`title_${locale}` as keyof Blogs]}
+                    {(item as any)[`title_${locale}`] || item.title_am || item.title_en || item.title_ru}
                   </h3>
                   <div className="flex justify-between items-center  mobile:items-start mobile:gap-2">
                     <div className="flex items-center gap-3">

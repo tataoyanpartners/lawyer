@@ -1,15 +1,38 @@
 "use client";
-import ModalForAdding from "@/custom/ModalForAdding";
-import ModalForDelete from "@/custom/ModalForDelete";
-import ModalForEdit from "@/custom/ModalForEdit";
 import { useEffect, useState } from "react";
 import { fetchBlogs } from "@/lib/actions";
-import { Button } from "@/custom/Button";
-import { more } from "@/app/assets/svg";
-import { Area } from "@/custom/Area";
 import { Blogs } from "@/types/items";
 import { format } from "date-fns";
 import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  PlusIcon,
+  EllipsisVerticalIcon,
+  PencilIcon,
+  TrashIcon,
+  CalendarIcon,
+  EyeIcon,
+  DocumentTextIcon,
+} from "@heroicons/react/24/outline";
+
+// Import existing modals
+import ModalForAdding from "@/custom/ModalForAdding";
+import ModalForDelete from "@/custom/ModalForDelete";
+import ModalForEdit from "@/custom/ModalForEdit";
 
 export default function Blog() {
   const [addBlogIsOpen, setAddBlogIsOpen] = useState(false);
@@ -17,16 +40,19 @@ export default function Blog() {
   const [blogDelet, setBlogDelet] = useState<number | null>(null);
   const [blogs, setBlogs] = useState<Blogs[]>([]);
   const [blogId, setBlogId] = useState<string>("");
-  const [selectedPopupIndex, setSelectedPopupIndex] = useState<number | null>(
-    null
-  );
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchBlogsAndSet = async () => {
-    const data = await fetchBlogs();
-    console.log(data);
-
-    if (data) {
-      setBlogs(data);
+    setIsLoading(true);
+    try {
+      const data = await fetchBlogs();
+      if (data) {
+        setBlogs(data);
+      }
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -34,102 +60,261 @@ export default function Blog() {
     fetchBlogsAndSet();
   }, []);
 
-  return (
-    <>
-      <div className="grid gap-10 ">
-        <div className="flex justify-between font-semibold text-2xl p-10  items-center">
-          <h1 className="font-bold text-3xl">Our Blogs</h1>
-          <Button
-            className="px-10 py-5 rounded-2xl text-white"
-            onClick={() => setAddBlogIsOpen(true)}
-          >
-            Add Blog +
-          </Button>
-        </div>
-        <div className="p-10 grid grid-cols-3 gap-10">
-          {blogs.map((blog, index) => (
-            <div key={index}>
-              <Area className="rounded-[4px] grid gap-2 bg-white px-5 border-[#ad90de]">
-                <div className="relative flex justify-end">
-                  <button
-                    onClick={() =>
-                      setSelectedPopupIndex(
-                        selectedPopupIndex === index ? null : index
-                      )
-                    }
-                    className="cursor-pointer p-3 hover:bg-[#d0d0d0] rounded-[10px]"
-                  >
-                    {more}
-                  </button>
+  const handleEditClick = (index: number, blogId: string) => {
+    setBlogEdit(index);
+    setBlogId(blogId);
+  };
 
-                  {/* Popup по click */}
-                  {selectedPopupIndex === index && (
-                    <div className="absolute right-0 top-full mt-2 flex flex-col bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-[220px]">
-                      <button
-                        onClick={() => {
-                          setBlogEdit(index);
-                          setSelectedPopupIndex(null);
-                          setBlogId(blog._id);
-                        }}
-                        className="px-4 py-2 text-left text-2xl hover:bg-gray-100"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => {
-                          setBlogDelet(index);
-                          setSelectedPopupIndex(null);
-                          setBlogId(blog._id);
-                        }}
-                        className="px-4 py-2 text-left text-2xl text-red-600 hover:bg-gray-100"
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  )}
+  const handleDeleteClick = (index: number, blogId: string) => {
+    setBlogDelet(index);
+    setBlogId(blogId);
+  };
+
+  if (isLoading) {
+    return (
+      <div className="space-y-6">
+        {/* Header Skeleton */}
+        <div className="flex items-center justify-between">
+          <div className="space-y-2">
+            <div className="h-8 w-48 bg-gray-200 rounded-lg animate-pulse"></div>
+            <div className="h-4 w-96 bg-gray-100 rounded animate-pulse"></div>
+          </div>
+          <div className="h-10 w-32 bg-gray-200 rounded-lg animate-pulse"></div>
+        </div>
+
+        {/* Grid Skeleton */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <Card key={i} className="overflow-hidden">
+              <div className="aspect-video bg-gray-200 animate-pulse"></div>
+              <CardHeader className="space-y-2">
+                <div className="h-4 w-3/4 bg-gray-200 rounded animate-pulse"></div>
+                <div className="h-3 w-1/2 bg-gray-100 rounded animate-pulse"></div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <div className="h-3 w-full bg-gray-100 rounded animate-pulse"></div>
+                  <div className="h-3 w-2/3 bg-gray-100 rounded animate-pulse"></div>
                 </div>
-                <div className="grid text-center gap-5">
-                  <Image
-                    src={blog.image}
-                    alt={`Lawyer Image ${index + 1}`}
-                    priority
-                    width={100}
-                    height={50}
-                    className="rounded-[4px] object-cover"
-                  />
-                  <h2 className="font-bold text-base">
-                    {blog.title_am} {blog.title_en}
-                  </h2>
-                </div>
-                <p className="font-semibold text-sm text-muted">
-                  {blog.description_am} {blog.description_en}
-                </p>
-                <p className="text-sm text-muted">
-                  {blog.createTime
-                    ? format(new Date(blog.createTime), "MMMM d, yyyy")
-                    : null}
-                </p>
-              </Area>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
+    );
+  }
 
-      {/* Add Blog Modal */}
+  return (
+    <>
+      <div className="space-y-6">
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <div className="space-y-1">
+            <h1 className="text-3xl font-bold tracking-tight text-[#1e3a8a]">
+              Բլոգի կառավարում
+            </h1>
+            <p className="text-gray-600">
+              Ստեղծեք և կառավարեք բլոգային գրառումներ ձեր կայքի համար
+            </p>
+          </div>
+          <Button
+            onClick={() => setAddBlogIsOpen(true)}
+            className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white"
+          >
+            <PlusIcon className="w-4 h-4 mr-2" />
+            Ստեղծել նոր գրառում
+          </Button>
+        </div>
+
+        {/* Statistics */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <Card className="bg-gray-50 border-gray-200">
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                  <DocumentTextIcon className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-[#1e3a8a]">
+                    Ընդհանուր գրառումներ
+                  </p>
+                  <p className="text-2xl font-bold text-[#1e3a8a]">
+                    {blogs.length}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gray-50 border-gray-200">
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                  <EyeIcon className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-[#1e3a8a]">
+                    Հրապարակված
+                  </p>
+                  <p className="text-2xl font-bold text-[#1e3a8a]">
+                    {blogs.length}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gray-50 border-gray-200">
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                  <CalendarIcon className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-[#1e3a8a]">Այս ամիս</p>
+                  <p className="text-2xl font-bold text-[#1e3a8a]">
+                    {
+                      blogs.filter(
+                        (blog) =>
+                          blog.createTime &&
+                          new Date(blog.createTime).getMonth() ===
+                            new Date().getMonth()
+                      ).length
+                    }
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gray-50 border-gray-200">
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                  <PencilIcon className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-[#1e3a8a]">Նախագծեր</p>
+                  <p className="text-2xl font-bold text-[#1e3a8a]">0</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <Separator />
+
+        {/* Blog Posts Grid */}
+        {blogs.length === 0 ? (
+          <Card className="p-12 text-center">
+            <DocumentTextIcon className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold text-[#1e3a8a] mb-2">
+              Բլոգային գրառումներ չկան
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Սկսեք ճանապարհի վրա՝ ստեղծելով ձեր առաջին բլոգային գրառումը
+            </p>
+            <Button
+              onClick={() => setAddBlogIsOpen(true)}
+              className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white"
+            >
+              <PlusIcon className="w-4 h-4 mr-2" />
+              Ստեղծել ձեր առաջին գրառումը
+            </Button>
+          </Card>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {blogs.map((blog, index) => (
+              <Card
+                key={blog._id}
+                className="overflow-hidden hover:shadow-lg transition-all duration-200 group"
+              >
+                <div className="relative">
+                  <div className="aspect-video relative overflow-hidden bg-gray-100">
+                    <Image
+                      src={blog.image}
+                      alt={blog.title_am || blog.title_en || blog.title_ru}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-200"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="absolute top-3 right-3">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          className="h-8 w-8 p-0 bg-white/90 hover:bg-white backdrop-blur-sm"
+                        >
+                          <EllipsisVerticalIcon className="w-4 h-4" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end" className="w-40">
+                        <DropdownMenuItem
+                          onClick={() => handleEditClick(index, blog._id)}
+                          className="cursor-pointer"
+                        >
+                          <PencilIcon className="w-4 h-4 mr-2" />
+                          Խմբագրել
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => handleDeleteClick(index, blog._id)}
+                          className="cursor-pointer text-red-600 focus:text-red-600"
+                        >
+                          <TrashIcon className="w-4 h-4 mr-2" />
+                          Ջնջել
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
+                </div>
+
+                <CardHeader className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <Badge
+                      variant="secondary"
+                      className="text-xs bg-[#1e3a8a] text-white"
+                    >
+                      Հրապարակված
+                    </Badge>
+                    {blog.createTime && (
+                      <span className="text-xs text-gray-500 flex items-center gap-1">
+                        <CalendarIcon className="w-3 h-3" />
+                        {format(new Date(blog.createTime), "MMM d, yyyy")}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="font-semibold line-clamp-2 text-[#1e3a8a] group-hover:text-[#1e40af] transition-colors">
+                    {blog.title_am || blog.title_en || blog.title_ru}
+                  </h3>
+                </CardHeader>
+
+                <CardContent className="pt-0">
+                  <p className="text-sm text-gray-600 line-clamp-3">
+                    {blog.description_am || blog.description_en || blog.description_ru}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Modals */}
       <ModalForAdding
         isOpen={addBlogIsOpen}
         onClose={() => setAddBlogIsOpen(false)}
-        title="Add Blog"
+        title="Ստեղծել նոր բլոգային գրառում"
         fields={["title", "description"]}
         imageRequired={true}
         addType="blog"
         fetchAndUpdate={fetchBlogsAndSet}
       />
 
-      {/* Edit Modal — только 1 */}
       {blogEdit !== null && (
         <ModalForEdit
-          title="Blog Edit"
+          title="Խմբագրել բլոգային գրառումը"
           isOpen={blogEdit !== null}
           onClose={() => setBlogEdit(null)}
           imageRequired={true}
@@ -138,15 +323,18 @@ export default function Blog() {
           fetchAndUpdate={fetchBlogsAndSet}
           fields={[
             {
-              title_am: blogs[blogEdit].title_am,
-              title_en: blogs[blogEdit].title_en,
-              description_am: blogs[blogEdit].description_am,
-              description_en: blogs[blogEdit].description_en,
+              title_am: blogs[blogEdit].title_am || "",
+              title_en: blogs[blogEdit].title_en || "",
+              title_ru: blogs[blogEdit].title_ru || "",
+              description_am: blogs[blogEdit].description_am || "",
+              description_en: blogs[blogEdit].description_en || "",
+              description_ru: blogs[blogEdit].description_ru || "",
               image: blogs[blogEdit].image,
             },
           ]}
         />
       )}
+
       {blogDelet !== null && (
         <ModalForDelete
           id={blogId}

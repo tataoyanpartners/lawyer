@@ -83,14 +83,22 @@ export default function ModalForDelete({
     if (image) {
       imageUrl = await uploadImage(image);
     }
+    
+    const blogData = {
+      image: imageUrl,
+      description_en: formData.description_en,
+      description_am: formData.description_am,
+      description_ru: formData.description_ru,
+      title_en: formData.title_en,
+      title_am: formData.title_am,
+      title_ru: formData.title_ru,
+    };
+    
+    console.log("Blog data being sent:", blogData);
+    console.log("Form data:", formData);
+    
     try {
-      await axios.post("/api/blogs", {
-        image: imageUrl,
-        description_en: formData.description_en,
-        description_am: formData.description_am,
-        title_en: formData.title_en,
-        title_am: formData.title_am,
-      });
+      await axios.post("/api/blogs", blogData);
       await fetchAndUpdate();
     } catch (error) {
       console.error("Error fetching lawyers:", error);
@@ -143,13 +151,24 @@ export default function ModalForDelete({
     if (image) {
       imageUrl = await uploadImage(image);
     }
+    
+    const updateData: any = {
+      id: formData.id,
+      description_am: formData.description_am,
+      description_en: formData.description_en,
+      description_ru: formData.description_ru,
+      title_am: formData.title_am,
+      title_en: formData.title_en,
+      title_ru: formData.title_ru,
+    };
+    
+    // Only include image if a new one was uploaded
+    if (imageUrl) {
+      updateData.image = imageUrl;
+    }
+    
     try {
-      await axios.put("/api/blogs", {
-        id: formData.id,
-        image: imageUrl,
-        description_am: formData.description_am,
-        description_en: formData.description_en,
-      });
+      await axios.put("/api/blogs", updateData);
       await fetchAndUpdate();
     } catch (error) {
       console.error("Error fetching lawyers:", error);
@@ -185,33 +204,33 @@ export default function ModalForDelete({
   return (
     <div className="fixed inset-0 z-50 bg-black/20  flex items-center justify-center ">
       <div
-        className="bg-white p-8 rounded-xl shadow-xl min-w-[500px] relative text-center grid gap-16 animate-fadeIn"
+        className="bg-white p-8 rounded-xl shadow-xl min-w-[500px] relative text-center grid gap-16 animate-fadeIn border border-gray-200"
         ref={modalRef}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-black"
+          className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-[#1e3a8a]"
         >
           ✕
         </button>
-        <h2 className="text-3xl font-bold text-[#1D1D1F] pt-15">
-          Are you sure you want to save these changes?
+        <h2 className="text-3xl font-bold text-[#1e3a8a] pt-15">
+          Վստա՞հ եք, որ ցանկանում եք պահպանել այս փոփոխությունները:
         </h2>
 
         <div className="flex justify-center text-2xl gap-4">
           <Button
-            className="px-6 py-3 bg-white text-[#4040CDCC] rounded-lg hover:bg-gray-300 hover:text-[#4040cd]"
+            className="px-6 py-3 bg-white text-[#1e3a8a] border border-[#1e3a8a] rounded-lg hover:bg-gray-100"
             onClick={onClose}
           >
-            Cancel
+            Չեղարկել
           </Button>
           <Button
-            className="px-6 py-3 bg-[#4040CDCC] text-white rounded-lg hover:bg-[#4040cd]"
+            className="px-6 py-3 bg-[#1e3a8a] text-white rounded-lg hover:bg-[#1e40af]"
             onClick={() => {
               handleSave();
             }}
           >
-            Yes, Save
+            Այո, պահպանել
           </Button>
         </div>
       </div>

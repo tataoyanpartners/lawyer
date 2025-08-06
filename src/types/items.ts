@@ -24,6 +24,8 @@ export type Blogs = {
   createTime: string;
   title_en: string;
   title_am: string;
+  title_ru: string;
   description_en: string;
   description_am: string;
+  description_ru: string;
 };

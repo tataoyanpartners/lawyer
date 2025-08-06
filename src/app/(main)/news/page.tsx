@@ -80,10 +80,10 @@ export default function News() {
                     <div className="grid  gap-10">
                       <div className="grid gap-2">
                         <h3 className="font-semibold text-base text-muted-light text-center">
-                          {newss[`title_${locale}` as keyof Blogs]}
+                          {(newss as any)[`title_${locale}`] || newss.title_am || newss.title_en || newss.title_ru}
                         </h3>
                         <p className=" text-sm font-semibold h-[200px] overflow-hidden leading-[120%] text-muted">
-                          {newss[`description_${locale}` as keyof Blogs]}
+                          {(newss as any)[`description_${locale}`] || newss.description_am || newss.description_en || newss.description_ru}
                         </p>
                       </div>
                       <div className="flex justify-between items-center ">
