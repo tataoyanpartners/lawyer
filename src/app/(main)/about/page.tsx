@@ -25,7 +25,7 @@ export default function About() {
         <div className="flex flex-col gap-40 mobile:gap-12 bg-[#212121] shadow-2xl rounded-2xl p-10 mobile:p-5 mobile:rounded-none ">
           <div className="grid gap-6 text-center mobile:m-5">
             <h2 className="text-2xl font-bold">{t("information.title")}</h2>
-            <p className="text-muted-light leading-[120%]">
+            <p className="text-muted-light leading-[120%] text-justify">
               {t("information.description")}
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function About() {
                   {t("team.memberNames.0")}
                 </h2>
                 <p>{t("team.memberPositions.0")}</p>
-                <p className="text-sm text-muted-light">
+                <p className="text-sm text-muted-light text-justify">
                   {t("team.membersDescriptions.0")}
                 </p>
               </div>
@@ -64,7 +64,7 @@ export default function About() {
                 </h2>
 
                 <p>{t("team.memberPositions.1")}</p>
-                <p className="text-sm text-muted-light">
+                <p className="text-sm text-muted-light text-justify">
                   {t("team.membersDescriptions.1")}
                 </p>
               </div>
@@ -79,7 +79,7 @@ export default function About() {
                 </h2>
 
                 <p>{t("team.memberPositions.2")}</p>
-                <p className="text-sm text-muted-light">
+                <p className="text-sm text-muted-light text-justify">
                   {t("team.membersDescriptions.2")}
                 </p>
               </div>
@@ -96,7 +96,7 @@ export default function About() {
             <h2 className="font-bold text-3xl  text-muted-light mobile:text-xl">
               {t("mission")}
             </h2>
-            <p className="font-medium text-muted-light text-sm">
+            <p className="font-medium text-muted-light text-sm text-justify">
               {t("missionDescription")}
             </p>
           </div>

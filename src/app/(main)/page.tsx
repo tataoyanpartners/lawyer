@@ -25,7 +25,6 @@ import {
   telephone,
 } from "@/app/assets/svg";
 import ServicesSection from "@/components/ServiceSection";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export default function Home() {
   const [popUpContacte, setPopUpContacte] = useState<boolean>(false);
@@ -90,7 +89,7 @@ export default function Home() {
               <h1 className="font-bold text-4xl text-muted-light mobile:text-xl text-center">
                 {t("experiance")}
               </h1>
-              <p className="font-medium text-xl text-muted mobile:text-base mobile:text-center">
+              <p className="font-medium text-xl text-muted mobile:text-base text-justify">
                 {t("description-experiance")}
               </p>
             </div>

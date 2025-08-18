@@ -47,7 +47,7 @@ export default function PartnerPage() {
                 <div className="font-bold text-2xl mobile:text-xl text-muted-light">
                   {partner.name}
                 </div>
-                <p className="text-muted font-semibold leading-[120%] mobile:text-sm mobile:font-normal">
+                <p className="text-muted font-semibold leading-[120%] mobile:text-sm mobile:font-normal text-justify">
                   {partner.description}
                 </p>
               </div>

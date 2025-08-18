@@ -145,7 +145,7 @@ export default function ServicesSection() {
               {cards.map((card, idx) => (
                 <div
                   key={idx}
-                  className="flex-shrink-0 w-[360px] mobile:w-full"
+                  className="flex-shrink-0 w-[360px] mobile:w-full "
                 >
                   {card}
                 </div>
