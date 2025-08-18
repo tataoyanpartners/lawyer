@@ -43,14 +43,14 @@ export default function Home() {
     },
     {
       id: 2,
+      image: "/lawyers/armen-baghdasaryan.jpg",
       name: members("memberNames.1"),
-      image: "/lawyers/anna.JPG",
       description: "lorem ipsum",
     },
     {
       id: 3,
       name: members("memberNames.2"),
-      image: "/lawyers/armen-baghdasaryan.jpg",
+      image: "/lawyers/anna.JPG",
       description: "lorem ipsum",
     },
   ];

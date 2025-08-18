@@ -135,8 +135,8 @@ export const logo = (
         y2="177.296"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#BC1419" />
-        <stop offset="1" stopColor="#F51E25" />
+        <stop stopColor="#fff" />
+        <stop offset="1" stopColor="#fff" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_39_36"
