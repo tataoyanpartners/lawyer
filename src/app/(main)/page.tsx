@@ -263,7 +263,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-[1280px] mx-auto mobile:w-full">
+      {/* <section className="max-w-[1280px] mx-auto mobile:w-full">
         <div className="flex flex-col p-10 mobile:p-6 gap-10">
           <h2 className="text-muted-light text-3xl font-bold mobile:text-xl text-center">
             {t("clients-say")}
@@ -358,7 +358,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="max-w-[1280px] mx-auto mobile:w-full">
         <div className=" p-16 flex flex-col gap-10 mobile:px-5 mobile:py-12">

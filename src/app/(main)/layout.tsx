@@ -49,7 +49,7 @@ export default function MainLayout({
           <div
             className={`
               flex items-center
-              bg-green-500 text-white
+              bg-[#6A49A2] text-white
               rounded-tl-4xl rounded-bl-4xl
               overflow-hidden
               transition-all duration-300
@@ -68,14 +68,14 @@ export default function MainLayout({
               <div className="flex items-center gap-2">
                 <a
                   href="tel:+37494450054"
-                  className="p-2 hover:bg-green-600 rounded-full shadow-[1px_1px_1px_1px_#80808052] transition-all duration-300"
+                  className="p-2 hover:bg-[#6A49e2] rounded-full shadow-[1px_1px_1px_1px_#80808052] transition-all duration-300"
                   aria-label="Call us"
                 >
                   {phoneIcon}
                 </a>
                 <a
                   href="mailto:tatoyan.partners@gmail.com"
-                  className="p-2 hover:bg-green-600 rounded-full shadow-[1px_1px_1px_1px_#80808052] transition-all duration-300"
+                  className="p-2 hover:bg-[#6A49e2] rounded-full shadow-[1px_1px_1px_1px_#80808052] transition-all duration-300"
                   aria-label="Email us"
                 >
                   {emailIcon}
