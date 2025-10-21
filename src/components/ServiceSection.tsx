@@ -122,24 +122,47 @@ export default function ServicesSection() {
   const transformStyle = isMobile
     ? { transform: `translateX(-${currentIndex * 100}%)`, gap: gapValue }
     : {
-        transform: `translateX(-${currentIndex * (CARD_W + GAP_PX)}px)`,
-        gap: gapValue,
-      };
+      transform: `translateX(-${currentIndex * (CARD_W + GAP_PX)}px)`,
+      gap: gapValue,
+    };
 
   return (
-    <section className="max-w-[1280px] mx-auto mobile:w-full">
-      <div className="flex flex-col gap-12 mobile:gap-4 py-10">
-        <h1 className="text-4xl font-bold text-muted-light mobile:text-xl mobile:ml-6">
-          {t("services")}
-        </h1>
-        <div className="mobile:px-2">
+    <section className="max-w-[1280px] mx-auto mobile:w-full py-16 mobile:py-10">
+      <div className="flex flex-col gap-12 mobile:gap-6">
+        <div className="flex justify-between items-center px-4 mobile:px-6">
+          <div>
+            <h2 className="text-4xl font-bold text-[#0c0c0c] mobile:text-2xl">
+              {t("services")}
+            </h2>
+          </div>
+
+          {/* desktop arrows */}
+          <div className="gap-3 md:flex hidden">
+            <button
+              onClick={prev}
+              disabled={currentIndex === 0}
+              className="w-12 h-12 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-[#1e3a8a] hover:bg-[#1e3a8a] rounded-full z-20 disabled:opacity-30 disabled:cursor-not-allowed rotate-180 cursor-pointer transition-all duration-300 [&_svg]:w-5 [&_svg]:h-5 [&_svg_path]:stroke-[#0c0c0c] hover:[&_svg_path]:stroke-white disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:[&_svg_path]:stroke-[#0c0c0c]"
+            >
+              {arrowRight}
+            </button>
+            <button
+              onClick={next}
+              disabled={currentIndex === maxIndex}
+              className="w-12 h-12 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-[#1e3a8a] hover:bg-[#1e3a8a] rounded-full z-20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all duration-300 [&_svg]:w-5 [&_svg]:h-5 [&_svg_path]:stroke-[#0c0c0c] hover:[&_svg_path]:stroke-white disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:[&_svg_path]:stroke-[#0c0c0c]"
+            >
+              {arrowRight}
+            </button>
+          </div>
+        </div>
+
+        <div className="mobile:px-0 px-4">
           <div
             className="overflow-hidden"
             onTouchStart={(e) => setTouchStartX(e.changedTouches[0].screenX)}
             onTouchMove={(e) => setTouchEndX(e.changedTouches[0].screenX)}
           >
             <div
-              className={`flex gap-[${gapValue}px] mobile:gap-0 transition-transform duration-300`}
+              className={`flex gap-[${gapValue}px] mobile:gap-0 transition-transform duration-500 ease-out`}
               style={transformStyle}
             >
               {cards.map((card, idx) => (
@@ -153,33 +176,14 @@ export default function ServicesSection() {
             </div>
           </div>
 
-          {/* desktop arrows */}
-          <div className="mt-6 justify-end gap-6 md:flex hidden">
-            <button
-              onClick={prev}
-              disabled={currentIndex === 0}
-              className="bg-gray-200 hover:bg-gray-300 p-2 rounded-full z-20 disabled:opacity-50 rotate-180 cursor-pointer"
-            >
-              {arrowRight}
-            </button>
-            <button
-              onClick={next}
-              disabled={currentIndex === maxIndex}
-              className="bg-gray-200 hover:bg-gray-300 p-2 rounded-full z-20 disabled:opacity-50 cursor-pointer"
-            >
-              {arrowRight}
-            </button>
-          </div>
-
           {/* mobile dots */}
-          <div className="mt-4 flex justify-center space-x-2 md:hidden">
+          <div className="mt-6 flex justify-center space-x-2 md:hidden">
             {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`w-2 h-2 rounded-full ${
-                  idx === currentIndex ? "bg-gray-800" : "bg-gray-400"
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? "bg-[#1e3a8a] w-8" : "bg-gray-300 w-2"
+                  }`}
               />
             ))}
           </div>

@@ -5,9 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { useTranslations } from "next-intl";
-import { Button } from "@/custom/Button";
 import { Menu, X } from "lucide-react";
-import PopUp from "@/custom/PopUp";
 import Link from "next/link";
 import React from "react";
 import { phoneIcon } from "@/app/assets/svg";
@@ -17,7 +15,6 @@ export const NavBar = () => {
   const [locale, setLocale] = useState<string>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [open, setOpen] = useState(false);
-  const [popUpContacte, setPopUpContacte] = useState<boolean>(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const router = useRouter();
   const pathname = usePathname();
@@ -53,53 +50,51 @@ export const NavBar = () => {
   };
 
   return (
-    <nav className=" border-muted flex items-center gap-15 text-[#D0D0D0] sup-lg:flex sup-lg:justify-between sup-lg:gap-6">
+    <nav className=" border-muted flex items-center gap-15 text-[#0c0c0c] sup-lg:flex sup-lg:justify-between sup-lg:gap-6">
       <ul className="mobile:hidden sup-lg:hidden flex flex-row gap-6 text-lg font-medium">
         <li
-          className={`cursor-pointer hover:text-[#6A49A2] ${
-            pathname === "/about" ? "text-[#6A49A2]" : ""
+          className={`cursor-pointer hover:text-[#1e3a8a] ${
+            pathname === "/about" ? "text-[#1e3a8a]" : ""
           }`}
         >
           <Link href="/about">{t("about")}</Link>
         </li>
         <li
-          className={`cursor-pointer hover:text-[#6A49A2] ${
-            pathname === "/services" ? "text-[#6A49A2]" : ""
+          className={`cursor-pointer hover:text-[#1e3a8a] ${
+            pathname === "/services" ? "text-[#1e3a8a]" : ""
           }`}
         >
           <Link href="/services">{t("services")}</Link>
         </li>
         <li
-          className={`cursor-pointer hover:text-[#6A49A2] ${
-            pathname === "/partners" ? "text-[#6A49A2]" : ""
+          className={`cursor-pointer hover:text-[#1e3a8a] ${
+            pathname === "/partners" ? "text-[#1e3a8a]" : ""
           }`}
         >
           <Link href="/partners">{t("partners")}</Link>
         </li>
         <li
-          className={`cursor-pointer hover:text-[#6A49A2] ${
-            pathname === "/news" ? "text-[#6A49A2]" : ""
+          className={`cursor-pointer hover:text-[#1e3a8a] ${
+            pathname === "/news" ? "text-[#1e3a8a]" : ""
           }`}
         >
           <Link href="/news">{t("news")}</Link>
         </li>
       </ul>
       <div className="flex items-center gap-5  mobile:hidden ">
-        <Button
-          className="text-lg py-3 px-5  rounded-[50px] text-white flex items-center gap-2 smallIcon18 cursor-pointer"
-          onClick={() => setPopUpContacte(true)}
+        <Link
+          href="/contact"
+          className="text-lg py-3 px-5 bg-[#1e3a8a] hover:bg-[#172554] rounded-[50px] text-white flex items-center gap-2 smallIcon18 cursor-pointer transition-colors"
         >
           {phoneIcon} {t("contact")}
-        </Button>
-
-        {popUpContacte && <PopUp onClose={() => setPopUpContacte(false)} />}
+        </Link>
 
         <div className="relative w-36 text-sm font-medium " ref={modalRef}>
           <button
             onClick={() => setOpen(!open)}
             className="w-full px-4 py-3 flex items-center justify-between rounded-xl bg-none cursor-pointer"
           >
-            <span className="text-[#f2f2f2] flex items-center gap-2 cursor-pointer">
+            <span className="text-[#0c0c0c] flex items-center gap-2 cursor-pointer">
               {locale === "en" ? (
                 <>
                   🇺🇸 <span>{t("en")}</span>
@@ -114,14 +109,14 @@ export const NavBar = () => {
                 </>
               )}
             </span>
-            <FaChevronDown className="text-[#f2f2f2]" />
+            <FaChevronDown className="text-[#0c0c0c]" />
           </button>
 
           {open && (
-            <div className="absolute top-full left-0  w-full bg-[#413e3e] rounded-xl animate-fade-in grid p-1 gap-1">
+            <div className="absolute top-full left-0  w-full bg-white border border-gray-200 shadow-lg rounded-xl animate-fade-in grid p-1 gap-1">
               <div
-                className={`px-4 py-2 cursor-pointer hover:bg-[#937abd] rounded-xl  flex items-center gap-2 
-                  ${locale === "am" ? "bg-[#6A49A2]" : ""}`}
+                className={`px-4 py-2 cursor-pointer hover:bg-blue-50 rounded-xl  flex items-center gap-2
+                  ${locale === "am" ? "bg-[#1e3a8a] text-white" : "text-[#0c0c0c]"}`}
                 onClick={() => {
                   changeLocal("am");
                   setOpen(false);
@@ -132,8 +127,8 @@ export const NavBar = () => {
                 </>
               </div>
               <div
-                className={`px-4 py-2 cursor-pointer hover:bg-[#937abd] rounded-xl  flex items-center gap-2 
-                  ${locale === "en" ? "bg-[#6A49A2]" : ""}`}
+                className={`px-4 py-2 cursor-pointer hover:bg-blue-50 rounded-xl  flex items-center gap-2
+                  ${locale === "en" ? "bg-[#1e3a8a] text-white" : "text-[#0c0c0c]"}`}
                 onClick={() => {
                   changeLocal("en");
                   setOpen(false);
@@ -145,8 +140,8 @@ export const NavBar = () => {
               </div>
 
               <div
-                className={`px-4 py-2 cursor-pointer hover:bg-[#937abd] rounded-xl  flex items-center gap-2 
-                  ${locale === "ru" ? "bg-[#6A49A2]" : ""}`}
+                className={`px-4 py-2 cursor-pointer hover:bg-blue-50 rounded-xl  flex items-center gap-2
+                  ${locale === "ru" ? "bg-[#1e3a8a] text-white" : "text-[#0c0c0c]"}`}
                 onClick={() => {
                   changeLocal("ru");
                   setOpen(false);
@@ -168,25 +163,25 @@ export const NavBar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden absolute top-[70px] left-0 w-full h-screen bg-darkk p-10 grid text-lg font-medium z-50">
+        <div className="md:hidden absolute top-[70px] left-0 w-full h-screen bg-white p-10 grid text-lg font-medium z-50">
           <div>
-            <ul className="grid gap-4">
-              <li>
+            <ul className="grid gap-4 text-[#0c0c0c]">
+              <li className="hover:text-[#1e3a8a]">
                 <Link href="/about" onClick={toggleMenu}>
                   {t("about")}
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-[#1e3a8a]">
                 <Link href="/services" onClick={toggleMenu}>
                   {t("services")}
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-[#1e3a8a]">
                 <Link href="/partners" onClick={toggleMenu}>
                   {t("partners")}
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-[#1e3a8a]">
                 <Link href="/news" onClick={toggleMenu}>
                   {t("news")}
                 </Link>

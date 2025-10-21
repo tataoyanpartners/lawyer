@@ -6,8 +6,8 @@ import React from "react";
 export const Header = () => {
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-100 px-4 mobile:px-0  bg-[#121212] bg-darkk  transition-shadow duration-250
-        shadow-[0_3px_10px_rgba(255,255,255,0.1)]
+      className={`fixed top-0 left-0 right-0 z-100 px-4 mobile:px-0  bg-white  transition-shadow duration-250
+        shadow-[0_3px_10px_rgba(0,0,0,0.1)]
       `}
     >
       <div className="max-w-[1280px] mx-auto">

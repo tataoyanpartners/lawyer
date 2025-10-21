@@ -5,24 +5,15 @@ import { useEffect, useState } from "react";
 import { fetchBlogs } from "@/lib/actions";
 import { Blogs } from "@/types/items";
 import { useLocale, useTranslations } from "next-intl";
-import { Area } from "@/custom/Area";
 import Image from "next/image";
 import Link from "next/link";
-import { formatDate } from "@/utils/dateFormatter";
+import { format } from "date-fns";
 
 export default function NewsSlugPage() {
   const { slug } = useParams();
   const t = useTranslations("News");
   const [news, setNews] = useState<Blogs[]>([]);
   const otherNews = news.filter((n) => n._id !== slug);
-  const slidesToShow = 3;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const prevSlide = () =>
-    setCurrentIndex((i) =>
-      i <= 0 ? Math.max(otherNews.length - slidesToShow, 0) : i - 1
-    );
-  const nextSlide = () =>
-    setCurrentIndex((i) => (i >= otherNews.length - slidesToShow ? 0 : i + 1));
   const locale = useLocale();
 
   useEffect(() => {
@@ -34,52 +25,22 @@ export default function NewsSlugPage() {
 
   if (news.length === 0) {
     return (
-      <section className="max-w-[1224px] mx-auto mobile:w-full mobile:px-4 pt-12 mobile:pt-4">
-        <div className="pb-10 animate-pulse">
-          <div className="bg-gray-600 h-6 w-24 rounded" />
-        </div>
-        <div className="flex flex-col gap-6 animate-pulse">
-          <Area
-            variant="lower__shadow"
-            className="grid gap-8 p-10 mobile:p-6 w-full mobile:mx-auto"
-          >
-            <div className="flex flex-col gap-3">
-              <div className="bg-gray-600 h-8 w-1/3 rounded" />
-              <div className="bg-gray-600 h-4 w-1/4 rounded" />
-            </div>
-            <div className="bg-gray-600 h-[400px] w-full rounded-xl mobile:h-[200px]" />
-            <div className="grid gap-6 mobile:gap-4">
-              <div className="bg-gray-600 h-6 w-full rounded" />
-              <div className="bg-gray-600 h-6 w-3/4 rounded" />
-              <div className="bg-gray-600 h-6 w-1/2 rounded" />
-            </div>
-          </Area>
-          <div className="flex flex-col gap-4 w-full mobile:mx-auto">
-            <h3 className="text-xl font-medium text-muted-light mobile:text-lg">
-              {t("otherNews")}
-            </h3>
-            <div className="overflow-hidden">
-              <div className="flex gap-10 p-2">
-                {Array.from({ length: slidesToShow }).map((_, i) => (
-                  <Area
-                    key={i}
-                    variant="lower__shadow"
-                    className="flex-shrink-0 w-[300px] flex flex-col gap-4 p-3 mobile:p-4"
-                  >
-                    <div className="bg-gray-600 h-[200px] w-full rounded-xl mobile:h-[150px]" />
-                    <div className="flex flex-col gap-2 flex-1">
-                      <div className="bg-gray-600 h-4 w-full rounded" />
-                      <div className="bg-gray-600 h-4 w-3/4 rounded" />
-                    </div>
-                    <div className="flex justify-between items-center mobile:flex-col mobile:items-start mobile:gap-2">
-                      <div className="flex items-center gap-3">
-                        <div className="bg-gray-600 h-4 w-4 rounded-full" />
-                        <div className="bg-gray-600 h-4 w-20 rounded" />
-                      </div>
-                      <div className="bg-gray-600 h-6 w-6 rounded-full" />
-                    </div>
-                  </Area>
-                ))}
+      <section className="max-w-[1280px] mx-auto mobile:w-full py-16 mobile:py-10">
+        <div className="px-10 mobile:px-6">
+          <div className="pb-10 animate-pulse">
+            <div className="bg-gray-300 h-6 w-24 rounded" />
+          </div>
+          <div className="flex flex-col gap-8 animate-pulse">
+            <div className="bg-white border-2 border-gray-200 rounded-xl p-10 mobile:p-6">
+              <div className="flex flex-col gap-6">
+                <div className="bg-gray-300 h-8 w-1/3 rounded" />
+                <div className="bg-gray-300 h-4 w-1/4 rounded" />
+                <div className="bg-gray-300 h-[400px] w-full rounded-xl mobile:h-[300px]" />
+                <div className="flex flex-col gap-4">
+                  <div className="bg-gray-300 h-6 w-full rounded" />
+                  <div className="bg-gray-300 h-6 w-3/4 rounded" />
+                  <div className="bg-gray-300 h-6 w-1/2 rounded" />
+                </div>
               </div>
             </div>
           </div>
@@ -93,159 +54,113 @@ export default function NewsSlugPage() {
   }
 
   return (
-    <section className="max-w-[1224px] mx-auto mobile:w-full mobile:px-4 pt-12 mobile:pt-4">
-      <div className="pb-10">
-        <Link href={"/news"} className="flex items-center gap-2 text-[#6A49A2]">
-          <svg width="24" height="24">
-            <path
-              d="M21 12.013L3.211 12M9.988 19L3 12L9.988 5"
-              stroke="#6A49A2"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-          </svg>
-          {t("backBtn")}
-        </Link>
-      </div>
+    <section className="max-w-[1280px] mx-auto mobile:w-full py-16 mobile:py-10">
+      <div className="px-10 mobile:px-6">
+        <div className="pb-10">
+          <Link href={"/news"} className="flex items-center gap-2 text-[#1e3a8a] font-semibold hover:gap-3 transition-all duration-300">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M21 12.013L3.211 12M9.988 19L3 12L9.988 5"
+                stroke="#1e3a8a"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+            {t("backBtn")}
+          </Link>
+        </div>
 
-      <div className="flex flex-col gap-6">
-        <Area
-          variant="lower__shadow"
-          className="grid gap-8 p-10 mobile:p-6 w-full mobile:mx-auto"
-        >
-          <div className="flex flex-col gap-3">
-            <h1 className="text-3xl font-bold mobile:text-2xl">
-              {(post as any)[`title_${locale}`] || post.title_am || post.title_en || post.title_ru}
-            </h1>
-            <p className="text-muted-light">{formatDate(post.createTime)}</p>
-          </div>
-          <img
-            src={post.image}
-            alt={`Image ${post._id} not found`}
-            width={852}
-            height={400}
-            className="object-contain h-[400px] w-full rounded-xl mobile:h-[200px]"
-          />
-          <div className="grid gap-6 mobile:gap-4">
-            <p className="text-xl leading-[100%] font-medium text-muted mobile:text-lg">
-              {(post as any)[`description_${locale}`] || post.description_am || post.description_en || post.description_ru}
-            </p>
-          </div>
-        </Area>
-
-        <div className="flex flex-col gap-4 w-full mobile:px-0 mobile:gap-3">
-          {otherNews.length > 0 && (
-            <h3 className="text-xl font-medium text-muted-light mobile:text-lg">
-              {t("otherNews")}
-            </h3>
-          )}
-          <div className="mt-8 mobile:mt-4">
-            {/* Desktop carousel */}
-            <div className="hidden md:block relative">
-              {otherNews.length > 0 && (
-                <button
-                  onClick={prevSlide}
-                  className="absolute -left-[46px] top-1/2 transform -translate-y-1/2 z-10 rotate-180 bg-[#dac4ff] hover:opacity-95 transition-all duration-300 p-2 rounded-full cursor-pointer"
-                >
-                  {arrowRight}
-                </button>
-              )}{" "}
-              <div className="overflow-hidden">
-                <div
-                  className="flex gap-10 transition-transform duration-300"
-                  style={{
-                    transform: `translateX(-${currentIndex * (300 + 40)}px)`,
-                  }}
-                >
-                  {otherNews.map((item) => (
-                    <Area
-                      key={item._id}
-                      variant="lower__shadow"
-                      className="flex-shrink-0 w-[300px] flex flex-col gap-4 p-3 mobile:p-4"
-                    >
-                      <Image
-                        src={item.image}
-                        alt={`Image ${item._id}`}
-                        width={301}
-                        height={200}
-                        className="object-cover h-[200px] w-full rounded-xl mobile:h-[150px]"
-                      />
-                      <div className="flex flex-col gap-2">
-                        <h3 className="text-xl font-semibold text-muted-light text-center mobile:text-lg">
-                          {(item as any)[`title_${locale}`] || item.title_am || item.title_en || item.title_ru}
-                        </h3>
-                        <p className="text-sm font-semibold leading-[120%] text-muted mobile:text-xs">
-                          {(item as any)[`description_${locale}`] || item.description_am || item.description_en || item.description_ru}
-                        </p>
-                      </div>
-                      <div className="flex justify-between items-center mobile:flex-col mobile:items-start mobile:gap-2">
-                        <div className="flex items-center gap-3">
-                          {clock}
-                          <p className="text-base font-medium text-muted mobile:text-sm">
-                            {item.createTime ? formatDate(item.createTime) : ""}
-                          </p>
-                        </div>
-                        <Link
-                          href={`/news/${item._id}`}
-                          className="text-muted ml-auto mobile:ml-0"
-                        >
-                          <div className="p-1 text-muted rounded-full hover:bg-[#6A49A2] hover:text-white transition duration-300">
-                            {arrowRight}
-                          </div>
-                        </Link>
-                      </div>
-                    </Area>
-                  ))}
+        <div className="flex flex-col gap-12 mobile:gap-8">
+          <div className="bg-white border-2 border-gray-200 rounded-xl p-10 mobile:p-6 shadow-sm">
+            <div className="flex flex-col gap-8 mobile:gap-6">
+              <div className="flex flex-col gap-4">
+                <h1 className="text-3xl font-bold text-[#0c0c0c] mobile:text-xl leading-tight">
+                  {(post as any)[`title_${locale}`] || post.title_am || post.title_en || post.title_ru}
+                </h1>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
+                    <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#1e3a8a]">
+                      {clock}
+                    </div>
+                  </div>
+                  <p className="text-base text-[#6B7280] font-medium">
+                    {format(new Date(post.createTime), "MMMM d, yyyy")}
+                  </p>
                 </div>
               </div>
-              {otherNews.length > 0 && (
-                <button
-                  onClick={nextSlide}
-                  className="absolute -right-[50px] top-1/2 transform -translate-y-1/2 z-10 bg-[#dac4ff] hover:opacity-95 p-2 transition-all duration-300 rounded-full cursor-pointer"
-                >
-                  {arrowRight}
-                </button>
-              )}
-            </div>
-
-            <div className="md:hidden grid gap-4 mobile:px-2">
-              {otherNews.map((item) => (
-                <Area
-                  key={item._id}
-                  variant="lower__shadow"
-                  className="flex flex-col gap-4 p-3 mobile:p-4"
-                >
-                  <Image
-                    src={item.image}
-                    alt={`Image ${item._id}`}
-                    width={301}
-                    height={200}
-                    className="object-cover h-[200px] w-full rounded-xl mobile:h-[150px]"
-                  />
-                  <h3 className="text-xl font-semibold text-muted-light text-center mobile:text-lg">
-                    {(item as any)[`title_${locale}`] || item.title_am || item.title_en || item.title_ru}
-                  </h3>
-                  <div className="flex justify-between items-center  mobile:items-start mobile:gap-2">
-                    <div className="flex items-center gap-3">
-                      {clock}
-                      <p className="text-base font-medium text-muted mobile:text-sm">
-                        {item.createTime ? formatDate(item.createTime) : ""}
-                      </p>
-                    </div>
-                    <Link
-                      href={`/news/${item._id}`}
-                      className="text-muted ml-auto mobile:ml-0"
-                    >
-                      <div className="p-1 text-muted rounded-full hover:bg-[#6A49A2] hover:text-white transition duration-300">
-                        {arrowRight}
-                      </div>
-                    </Link>
-                  </div>
-                </Area>
-              ))}
+              <div className="relative overflow-hidden rounded-xl h-[420px] mobile:h-[240px]">
+                <Image
+                  src={post.image}
+                  alt={`Image ${post._id} not found`}
+                  width={1000}
+                  height={420}
+                  quality={100}
+                  priority
+                  className="object-cover w-full h-full rounded-xl"
+                />
+              </div>
+              <div className="prose max-w-none">
+                <p className="text-lg leading-relaxed text-[#6B7280] mobile:text-base">
+                  {(post as any)[`description_${locale}`] || post.description_am || post.description_en || post.description_ru}
+                </p>
+              </div>
             </div>
           </div>
+
+          {otherNews.length > 0 && (
+            <div className="flex flex-col gap-6">
+              <h3 className="text-3xl font-bold text-[#0c0c0c] mobile:text-2xl">
+                {t("otherNews")}
+              </h3>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mobile:gap-6">
+                {otherNews.slice(0, 3).map((item) => (
+                  <Link
+                    href={`/news/${item._id}`}
+                    key={item._id}
+                    className="group bg-white border-2 border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col"
+                  >
+                    <div className="relative overflow-hidden h-[240px]">
+                      <Image
+                        src={item.image}
+                        alt={item[`title_${locale}` as keyof Blogs] as string || "News"}
+                        width={400}
+                        height={240}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-6 mobile:p-5 flex flex-col gap-4 flex-1">
+                      <div className="flex flex-col gap-3 flex-1">
+                        <h4 className="text-xl font-bold text-[#0c0c0c] mobile:text-lg line-clamp-2 leading-tight">
+                          {item[`title_${locale}` as keyof Blogs] as string}
+                        </h4>
+                        <p className="text-base text-[#6B7280] mobile:text-sm line-clamp-3 leading-relaxed">
+                          {item[`description_${locale}` as keyof Blogs] as string}
+                        </p>
+                      </div>
+                      <div className="flex justify-between items-center pt-4 border-t border-gray-200">
+                        <div className="flex gap-3 items-center">
+                          <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
+                            <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#1e3a8a]">
+                              {clock}
+                            </div>
+                          </div>
+                          <p className="font-medium text-sm text-[#6B7280]">
+                            {item.createTime ? format(new Date(item.createTime), "MMM d, yyyy") : ""}
+                          </p>
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#1e3a8a] transition-all duration-300">
+                          <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:stroke-[#0c0c0c] group-hover:[&_svg_path]:stroke-white [&_svg_path]:transition-all [&_svg_path]:duration-300">
+                            {arrowRight}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

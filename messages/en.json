@@ -4,7 +4,15 @@
     "subtitle": "Law office",
     "information": {
       "title": "Why trust the law firm 'Tatoyan and Partners'?",
-      "description": "At Tatoyan and Partners Law Firm, we know how to find the right solutions and achieve the best possible outcomes for you—no matter how complex the legal issue may be. Our experienced lawyers resolve problems promptly and effectively, whether at the negotiation table or in the courtroom. Tatoyan and Partners Law Firm LLC provides legal services to both individuals and legal entities in the following areas: litigation (civil, criminal, commercial, and administrative cases), legal support for individuals and businesses, legal expertise and consulting, alternative dispute resolution, and legal drafting. Our goal is to offer cost-effective and result-oriented solutions while providing full legal protection to our clients. The firm’s attorneys have developed the skill to see problems from the client’s perspective, assess their needs, and identify and analyze all potential issues to offer the most appropriate solutions. Our team consists of highly qualified legal professionals who offer services in Armenian, Russian, English, and French. Tatoyan and Partners Law Firm highly values cooperation and partnership with its clients and stands by them until the full resolution of their legal matters."
+      "points": [
+        "We have years of experience and deep knowledge that guarantee the highest quality protection of your rights.",
+        "We approach each case individually, taking into account the client's needs and specific conditions.",
+        "We provide fast and effective legal solutions while maintaining affordable service prices.",
+        "Our team is always ready to listen, answer questions, and ensure continuous communication with clients.",
+        "We take responsibility for our decisions and actions, ensuring transparent and professional work.",
+        "Our partners are respected companies and organizations that trust our expertise.",
+        "For us, success means solving your problem and protecting your rights."
+      ]
     },
     "team": {
       "memberNames": [
@@ -12,10 +20,13 @@
         "Armen Baghdasaryan",
         "Karine Hovhannisyan"
       ],
-      "memberPositions": ["Chairman of the Board", "Director", "Lawyer"],
+      "memberPositions": [
+        "Chairman of the Board",
+        "Director",
+        "Lawyer"
+      ],
       "membersDescriptions": [
         "PhD in Law, Associate Professor, Professor. A highly qualified lawyer and advocate with extensive professional experience in governmental, international, and academic institutions. Served as Human Rights Defender (Ombudsman) of the Republic of Armenia (2016), Deputy Minister of Justice of RA, and Deputy Representative of the Government to the European Court of Human Rights. Collaborated with the UN, EU, Council of Europe, and other international organizations in human rights, criminal justice, and judicial reform. Lecturer at Yerevan State University, American University of Armenia, and the Academy of Justice. Author of several scientific monographs and over thirty scientific articles. Graduate of the University of Pennsylvania Law School (USA).",
-
         "Started legal practice in 1999, specializing in criminal and military cases. Since 2007, has actively worked in human rights protection, representing individuals and legal entities in civil, criminal, and administrative cases in Armenian courts. Experience spans both public and private sectors. Participated in numerous professional trainings abroad, strengthening skills and legal expertise. His years of experience and deep specialization form the foundation for leading a proactive and trustworthy team that maintains high-quality standards.",
         "Specialist in civil law. Her deep legal knowledge, professional experience, and meticulous attention to detail enable effective and dedicated protection of clients’ interests."
       ]
@@ -23,7 +34,6 @@
     "mission": "Our Mission",
     "missionDescription": "'Tatoyan and Partners Law Office' LLC offers legal services to individuals and legal entities in the following areas: judicial representation (in civil, criminal, economic and administrative cases), legal assistance to citizens and legal entities, legal expertise and consultation, alternative dispute resolution, consultation and preparation of documents related to citizenship and dual citizenship. The goal of our company is to provide cost-effective and expedient solutions, as well as provide legal protection to our clients. The company’s lawyers have acquired the skills to see problems from the perspective of clients, assess and understand their needs, as well as analyze all possible solutions in order to offer the best solution. Our team consists of experienced legal professionals who provide services in Armenian, Russian and English. “Tatoyan and Partners Law Office” highly values partnership and cooperation with its clients, and stands by their rights until all issues are resolved."
   },
-
   "Partners": {
     "title": "Our Trusted Partners",
     "title-description": "At Tatoyan, we collaborate with a network of highly respected partners across various industries. Our strong partnerships enhance the quality of services we provide, ensuring that our clients receive the best possible legal support.",
@@ -40,7 +50,6 @@
       "description": "Villamontan LLC promotes the development of tourism and pottery in Armenia and its regions by showcasing the country’s culture and landmarks to both local and foreign visitors. The company also operates hotels in Yerevan, Gyumri, and Syunik province. Tatoyan and Partners Law Firm provides legal advisory services to the company and represents its interests in various legal matters."
     }
   },
-
   "Navbar": {
     "about": "About us",
     "services": "Services",
@@ -166,7 +175,6 @@
         },
         "bottomDescription": "Our team includes seasoned legal professionals specializing in banking and financial law who offer practical, efficient, and targeted solutions tailored to each client’s specific needs and business environment."
       },
-
       "card6": {
         "title": "International Legal Representation",
         "description": "Tatoyan and Partners Law Firm offers services in international legal protection, utilizing treaty-based and precedent-based mechanisms of international law, as well as procedural tools tailored to the nature of the case, the competent jurisdiction, and the relevant field of law.",
@@ -241,15 +249,12 @@
     "makes-item4": "Flexibility",
     "attorneys": "Our Attorneys",
     "attorneys-description": "Our skilled attorneys are dedicated to delivering exceptional legal services, utilizing the latest technology to offer efficient and costeffective solutions tailored to your unique needs.",
-
     "experience": "Years of Experience",
     "case": "Cases Won",
     "client": "Client Satisfaction",
-
     "background-title": "Trusted by Many, Proven by Results",
     "background-description": "We understand that many people may be reluctant to contact a lawyer because they’re worried they won’t be able to afford the fees. They may be tempted to try to handle their legal matter themselves, but that’s often a recipe for a less-than-desirable outcome.",
     "background-btn": "Get in Toich",
-
     "clients-say": "Our Clients Say It Best",
     "clients-description": "Our skilled attorneys are dedicated to delivering exceptional legal services, utilizing the latest technology to offer efficient and cost-effective solutions tailored to your unique needs.",
     "clents-comments": {
@@ -266,25 +271,41 @@
         "thinks": "Great experience. Very communicative, pleasant, and knowledgeable all the way from the legal secretary to the paralegal to the attorney. Everyone was on the same page at the same time, very refreshing. Everything was done online as I was in NY and my transactions were for the state of AZ. TYVM"
       }
     },
-
     "stay": "Stay Informed",
     "stay-description": "Vel feugiat consectet cum fermentum ex consectetu exercitatio morbi occaecat, vestibulu nam congue exercitati ex minim vestibulu ubi quas-voluptate parturien voluptat ad saep tempor culpa.",
     "btn-learn": "Learn More"
   },
-
   "News": {
     "title": "News",
     "otherNews": "Other News",
     "backBtn": "Back"
   },
-
+  "Contact": {
+    "title": "Contact Us",
+    "getInTouch": "Get In Touch With Us",
+    "description": "Feel free to contact us if you have any questions, concerns, or need assistance with anything at all. We are here to help and are always happy to provide support.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressText": "67 Hanrapetutyan St., 3rd Floor, Room 306, Yerevan, Armenia",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help you",
+      "submit": "Send Message"
+    }
+  },
   "contactUs": {
     "title": "Contact Us",
     "lawyerInfo": "Director: Armen Baghdasaryan, Licensed Attorney, License No. 689",
     "addressDescription": "Our office is located in the center of Yerevan, at 67 Hanrapetutyan Street, 3rd floor, room 36",
     "address": "67 Hanrapetutyan St., 3rd Floor, Room 306"
   },
-
   "Footer": {
     "specialised": "Specialised Attorney With Experiance",
     "address": "Armenia, Erevan, St Abovyan 12/5",

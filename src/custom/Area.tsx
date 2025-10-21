@@ -13,7 +13,7 @@ export const Area: FC<Area> = ({
   children,
 }: Area) => {
   
-  const baseStyles = "rounded-[14px] p-2 bg-[#191a1d] shadow";
+  const baseStyles = "rounded-[14px] p-2 shadow";
   const variantStyles = {
     default:
       "",

@@ -1,12 +1,8 @@
 "use client";
 import { fetchBlogs } from "@/lib/actions";
 import { useLocale, useTranslations } from "next-intl";
-import AutoCarousel from "@/custom/AutoCarousel";
 import { Blogs } from "@/types/items";
 import { useEffect, useState } from "react";
-import { Button } from "@/custom/Button";
-import { Area } from "@/custom/Area";
-import PopUp from "@/custom/PopUp";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,21 +11,17 @@ import {
   afforable,
   approachable,
   arrowRight,
-  arrowUp,
   clock,
   experienced,
   flexible,
   mail,
   phoneIcon,
-  star,
   telephone,
 } from "@/app/assets/svg";
 import ServicesSection from "@/components/ServiceSection";
 
 export default function Home() {
-  const [popUpContacte, setPopUpContacte] = useState<boolean>(false);
   const [news, setNews] = useState<Blogs[] | undefined>([]);
-  const [openId, setOpenId] = useState<number | null>(null);
   const t = useTranslations("Home");
   const members = useTranslations("About.team");
   const locale = useLocale();
@@ -63,86 +55,95 @@ export default function Home() {
 
   return (
     <>
-      <section className="max-w-[1280px] mx-auto mobile:w-full">
-        <div className="flex items-center mobile:flex-col">
-          <div className="w-1/2 mobile:hidden">
-            <Image
-              src="/main.gif"
-              unoptimized
-              alt="GIF"
-              width={814.27}
-              height={768.44}
-            />
-          </div>
-          <div className="w-full mobile:block hidden">
-            <Image
-              src="/lawyer-home-background.jpg"
-              unoptimized
-              alt="GIF"
-              width={814}
-              height={768}
-              className="w-full"
-            />
-          </div>
-          <div className="w-1/2 flex flex-col justify-center p-3 gap-[32px] mobile:w-full mobile:px-5">
-            <div className="grid gap-3">
-              <h1 className="font-bold text-4xl text-muted-light mobile:text-xl text-center">
-                {t("experiance")}
-              </h1>
-              <p className="font-medium text-xl text-muted mobile:text-base text-justify">
-                {t("description-experiance")}
-              </p>
-            </div>
-            <div className="flex gap-15 mobile:justify-center mobile:gap-6 justify-center">
-              <Button
-                className="font-medium text-lg rounded-4xl py-3 px-5 hover:bg-[#937abd] mobile:text-base mobile:px-3 hover:transition-[200] text-white flex items-center gap-2 smallIcon18"
-                onClick={() => setPopUpContacte(true)}
+      <section className="relative w-full h-[600px] mobile:h-[450px] flex items-center mobile:items-end justify-center mobile:pb-8">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/lawyer-home-background.jpg"
+            alt="Hero Background"
+            fill
+            className="object-cover mobile:object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10 mobile:bg-gradient-to-t mobile:from-black/80 mobile:via-black/40 mobile:to-transparent"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-[1280px] mx-auto px-8 mobile:px-5 w-full">
+          <div className="max-w-[650px] mobile:max-w-full flex flex-col gap-8 mobile:gap-5">
+            <h1 className="font-bold text-4xl mobile:text-[28px] mobile:leading-tight text-white leading-tight">
+              {t("experiance")}
+            </h1>
+            <p className="font-medium text-base mobile:text-[15px] mobile:leading-relaxed text-white/90 leading-relaxed">
+              {t("description-experiance")}
+            </p>
+            <div className="flex gap-4 mobile:flex-col mobile:gap-3 mobile:w-full">
+              <Link
+                href="/contact"
+                className="font-medium text-lg rounded-[50px] py-3 px-8 bg-[#1e3a8a] hover:bg-[#172554] mobile:text-base mobile:py-3 mobile:px-6 mobile:w-full transition-all text-white flex items-center justify-center gap-3 smallIcon18 shadow-lg hover:shadow-xl"
               >
                 {phoneIcon}
                 {t("btn-consulation")}
-              </Button>
+              </Link>
             </div>
-            {popUpContacte && <PopUp onClose={() => setPopUpContacte(false)} />}
           </div>
         </div>
       </section>
 
       <ServicesSection />
 
-      <section className="max-w-[1280px] mx-auto mobile:w-full">
-        <div className="grid px-10 py-16 gap-10 mobile:gap-4 mobile:py-8">
-          <h2 className="text-muted-light text-4xl font-bold text-center mobile:text-xl">
-            {t("makes")}
-          </h2>
-          <ul className="grid grid-cols-4 justify-between gap-4 text-center mobile:grid-cols-1 mobile:gap-10 mobile:px-0">
-            <li>
-              <div className="flex flex-col items-center justify-center gap-6 rounded-xl cart-bg-grey py-6 px-4 border border-custom  gradient-border-main ">
-                {React.cloneElement(experienced)}
-                <p className="font-medium  text-muted-light mobile:text-base">
+      <section className="max-w-[1280px] mx-auto mobile:w-full py-16 mobile:py-10">
+        <div className="px-10 mobile:px-6 flex flex-col gap-12 mobile:gap-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-[#0c0c0c] mobile:text-2xl mb-3">
+              {t("makes")}
+            </h2>
+          </div>
+          <ul className="grid grid-cols-4 gap-6 mobile:grid-cols-1 mobile:gap-6">
+            <li className="group">
+              <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                  <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:fill-white">
+                    {React.cloneElement(experienced)}
+                  </div>
+                </div>
+                <p className="font-semibold text-base text-[#0c0c0c] mobile:text-base text-center leading-relaxed">
                   {t("makes-item1")}
                 </p>
               </div>
             </li>
-            <li>
-              <div className="flex flex-col items-center justify-center gap-6 rounded-xl cart-bg-grey py-6 px-4 border border-custom  gradient-border-main ">
-                {afforable}
-                <p className="font-medium text-muted-light mobile:text-base">
+            <li className="group">
+              <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                  <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:fill-white">
+                    {afforable}
+                  </div>
+                </div>
+                <p className="font-semibold text-base text-[#0c0c0c] mobile:text-base text-center leading-relaxed">
                   {t("makes-item2")}
                 </p>
               </div>
             </li>
-            <li>
-              <div className="flex flex-col items-center justify-center gap-6 rounded-xl cart-bg-grey py-6 px-4 border border-custom  gradient-border-main ">
-                {flexible}
-                <p className="font-medium text-muted-light mobile:text-base">
+            <li className="group">
+              <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                  <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:stroke-white [&_svg_path]:stroke-[1.5]">
+                    {flexible}
+                  </div>
+                </div>
+                <p className="font-semibold text-base text-[#0c0c0c] mobile:text-base text-center leading-relaxed">
                   {t("makes-item3")}
                 </p>
               </div>
             </li>
-            <li>
-              <div className="flex flex-col items-center justify-center gap-6 rounded-xl cart-bg-grey py-6 px-4 border border-custom  gradient-border-main ">
-                {approachable}
-                <p className="font-medium text-muted-light mobile:text-base">
+            <li className="group">
+              <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                  <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:stroke-white [&_svg_path]:!stroke-[6] [&_svg_g_path]:stroke-white [&_svg_g_path]:!stroke-[6]">
+                    {approachable}
+                  </div>
+                </div>
+                <p className="font-semibold text-base text-[#0c0c0c] mobile:text-base text-center leading-relaxed">
                   {t("makes-item4")}
                 </p>
               </div>
@@ -151,112 +152,109 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-[1280px] mx-auto mobile:w-full pt-8 pb-12">
-        <div className="grid gap-4">
+      <section className="max-w-[1280px] mx-auto mobile:w-full py-16 mobile:py-10">
+        <div className="px-10 mobile:px-6 flex flex-col gap-12 mobile:gap-8">
           {/* Header */}
-          <div className="flex flex-col gap-4 text-center items-center">
-            <h2 className="font-bold text-4xl text-muted-light mobile:text-xl">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-[#0c0c0c] mobile:text-2xl mb-3">
               {t("attorneys")}
             </h2>
-            <p className="font-medium text-xl text-muted text-center mobile:text-sm max-w-[800px]">
+            <p className="font-medium text-lg text-[#6B7280] mobile:text-base max-w-[800px] mx-auto">
               {t("attorneys-description")}
             </p>
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-3 gap-4 p-4 mobile:gap-0 mobile:grid-cols-1 sup-lg:grid-cols-2 items-center">
-            {lawyers.map((lawyer) => {
-              const isOpen = openId === lawyer.id;
-              return (
-                <Area
-                  key={lawyer.id}
-                  className="relative group overflow-hidden rounded-[4px] mobile:m-0"
-                >
-                  {/* Make the entire image tappable */}
-                  <div
-                    className="w-full h-full cursor-pointer"
-                    onClick={() => setOpenId(isOpen ? null : lawyer.id)}
+          <div className="grid grid-cols-3 gap-8 mobile:grid-cols-1 mobile:gap-6">
+            {lawyers.map((lawyer, index) => (
+              <div
+                key={lawyer.id}
+                className="group flex flex-col bg-white border-2 border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl"
+              >
+                <div className="relative overflow-hidden h-[400px] mobile:h-[300px]">
+                  <Image
+                    src={lawyer.image}
+                    alt={lawyer.name}
+                    width={400}
+                    height={400}
+                    quality={100}
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${index === lawyers.length - 1 ? 'object-[center_10%]' : ''}`}
+                  />
+                </div>
+                <div className="p-6 mobile:p-5 flex flex-col gap-4">
+                  <h3 className="text-xl font-bold text-[#0c0c0c] mobile:text-lg">
+                    {lawyer.name}
+                  </h3>
+                  <Link
+                    href="/about"
+                    className="flex items-center gap-2 text-[#1e3a8a] font-semibold text-base mobile:text-sm hover:gap-3 transition-all duration-300"
                   >
-                    <img
-                      src={lawyer.image}
-                      alt={lawyer.name}
-                      width={301}
-                      height={500}
-                      className="rounded-[4px] w-full h-[500px] object-cover"
-                    />
-                  </div>
-
-                  <div
-                    className={`
-                    absolute
-                    bottom-0 left-[8px] right-[8px]
-                    h-1/6 mobile:h-1/2
-                    bg-[#44424C]
-                    rounded-[4px]
-                    p-4 flex flex-col gap-3
-                    ${
-                      isOpen
-                        ? "translate-y-0 pointer-events-auto"
-                        : "translate-y-full pointer-events-none"
-                    }
-
-                    group-hover:translate-y-0 group-hover:pointer-events-auto
-
-                    transform transition-transform duration-300
-                  `}
-                  >
-                    <div className="flex justify-between gap-[6px]">
-                      <h3 className="text-xl font-semibold text-[#D0D0D0] mobile:text-base">
-                        {lawyer.name}
-                      </h3>
-                      <Link
-                        href="/about"
-                        className="hover:bg-gray-400 hover:cursor-pointer hover:rounded-full p-2"
-                      >
-                        {arrowUp}
-                      </Link>
-                    </div>
-                  </div>
-                </Area>
-              );
-            })}
+                    {t("btn-learn")}
+                    <span className="transition-transform duration-300">
+                      {arrowRight}
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section
-        className="bg-[url('/contact-us-background.jpg')] bg-cover bg-bottom bg-no-repeat w-full h-[628px] relative"
-        style={{
-          backgroundPosition: "1% 33%",
-        }}
-      >
-        <div className="absolute top-0 left-0 w-full h-full bg-[#1a1a1a] opacity-50"></div>
-        <div className="absolute left-3/6 top-1/2 -translate-x-1/6 -translate-y-1/2  max-w-[1280px] mobile:top-2/4 mobile:left-1/6 mobile:-translate-x-1/10 mobile:-translate-y-1/4 bg-blend-color-burn">
-          <div className="w-full py-6 px-8 grid gap-[42px] rounded-[4px] mobile:px-5 mobile:py-3">
-            <div className="flex flex-col gap-6 max-w-[700px]">
-              <h2 className="font-bold text-3xl text-center text-[#F5F5F5] mobile:text-base">
-                {t("background-title")}
-              </h2>
-              <p className="font-[400] text-xl text-[#F5F5F5CC] text-center mobile:text-sm ">
-                {t("background-description")}
-              </p>
-            </div>
-            <div className="flex items-center gap-8 mobile:flex-col mobile:gap-1">
-              <div className="flex gap-4 items-center">
-                {React.cloneElement(telephone, {
-                  className: "mobile:w-[24px] mobile:h-[24px] ",
-                })}
-                <p className="font-medium text-xl mobile:text-sm">
-                  +374 94 45 00 54
+      <section className="relative w-full h-[600px] mobile:h-[500px] flex items-center">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/contact-us-background.jpg"
+            alt="Contact Background"
+            fill
+            className="object-cover"
+            style={{ objectPosition: "1% 33%" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10 mobile:bg-gradient-to-t mobile:from-black/60 mobile:via-black/30 mobile:to-transparent"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-[1280px] mx-auto px-10 mobile:px-6 w-full">
+          <div className="flex justify-end mobile:justify-start">
+            <div className="flex flex-col gap-10 mobile:gap-8 max-w-[700px] mobile:max-w-full">
+              <div className="flex flex-col gap-6">
+                <h2 className="font-bold text-4xl text-white mobile:text-2xl leading-tight">
+                  {t("background-title")}
+                </h2>
+                <p className="font-medium text-lg text-white/90 mobile:text-base leading-relaxed">
+                  {t("background-description")}
                 </p>
               </div>
-              <div className="flex gap-4 items-center">
-                {React.cloneElement(mail, {
-                  className: "mobile:w-[24px] ",
-                })}
-                <p className="font-medium text-2xl mobile:text-sm">
-                  tatoyan.partners@gmail.com
-                </p>
+
+              <div className="flex flex-col gap-4">
+                <a
+                  href="tel:+37494450054"
+                  className="flex items-center gap-4 text-white"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                    <div className="[&_svg]:w-6 [&_svg]:h-6 [&_svg_path]:stroke-white">
+                      {telephone}
+                    </div>
+                  </div>
+                  <p className="font-semibold text-xl mobile:text-lg">
+                    +374 94 45 00 54
+                  </p>
+                </a>
+
+                <a
+                  href="mailto:tatoyan.partners@gmail.com"
+                  className="flex items-center gap-4 text-white"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                    <div className="[&_svg]:w-6 [&_svg]:h-6 [&_svg_path]:stroke-white">
+                      {mail}
+                    </div>
+                  </div>
+                  <p className="font-semibold text-xl mobile:text-lg">
+                    tatoyan.partners@gmail.com
+                  </p>
+                </a>
               </div>
             </div>
           </div>
@@ -360,87 +358,83 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="max-w-[1280px] mx-auto mobile:w-full">
-        <div className=" p-16 flex flex-col gap-10 mobile:px-5 mobile:py-12">
-          <div className="flex flex-col gap-6 text-center">
-            <h2 className="font-bold text-4xl text-muted-light  mobile:text-xl">
+      <section className="max-w-[1280px] mx-auto mobile:w-full py-16 mobile:py-10">
+        <div className="px-10 mobile:px-6 flex flex-col gap-12 mobile:gap-8">
+          <div className="text-center">
+            <h2 className="font-bold text-4xl text-[#0c0c0c] mobile:text-2xl mb-3">
               {t("stay")}
             </h2>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mobile:gap-6">
             {news?.length === 0
               ? Array.from({ length: 3 }).map((_, i) => (
-                  <Area
-                    key={i}
-                    variant="lower__shadow"
-                    className="grid gap-4 p-3 animate-pulse"
-                  >
-                    <div className="bg-gray-600 h-[200px] w-full rounded-xl" />
-                    <div className="grid gap-10">
-                      <div className="grid gap-2">
-                        <div className="bg-gray-600 h-6 w-3/4 rounded" />
-                        <div className="bg-gray-600 h-4 w-full rounded" />
+                <div
+                  key={i}
+                  className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden animate-pulse"
+                >
+                  <div className="bg-gray-300 h-[240px] w-full" />
+                  <div className="p-6 flex flex-col gap-4">
+                    <div className="bg-gray-300 h-6 w-3/4 rounded" />
+                    <div className="bg-gray-300 h-20 w-full rounded" />
+                    <div className="flex justify-between items-center pt-4">
+                      <div className="flex items-center gap-2">
+                        <div className="bg-gray-300 h-4 w-4 rounded-full" />
+                        <div className="bg-gray-300 h-4 w-24 rounded" />
                       </div>
-                      <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-3">
-                          <div className="bg-gray-600 h-4 w-4 rounded-full" />
-                          <div className="bg-gray-600 h-4 w-20 rounded" />
-                        </div>
-                        <div className="bg-gray-600 h-6 w-6 rounded-full" />
-                      </div>
+                      <div className="bg-gray-300 h-8 w-8 rounded-full" />
                     </div>
-                  </Area>
-                ))
-              : news?.map((news) => (
-                  <Area
-                    variant="lower__shadow"
-                    className="flex flex-col gap-4 p-4 mobile:p-1"
-                    key={news._id}
-                  >
+                  </div>
+                </div>
+              ))
+              : news?.map((newsItem) => (
+                <Link
+                  href={`/news/${newsItem._id}`}
+                  key={newsItem._id}
+                  className="group bg-white border-2 border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col"
+                >
+                  <div className="relative overflow-hidden h-[240px]">
                     <Image
-                      src={news.image}
-                      alt="GIF"
-                      width={301}
-                      height={200}
-                      className="object-cover h-[200px] w-full rounded-xl"
+                      src={newsItem.image}
+                      alt={newsItem[`title_${locale}` as keyof Blogs] as string || "News"}
+                      width={400}
+                      height={240}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="flex flex-col gap-6">
-                      <div className="flex flex-col gap-4">
-                        <p className="text-muted-light text-xl font-semibold leading-[120%] mobile:text-sm mobile:text-">
-                          {news[`title_${locale}` as keyof Blogs]}
-                        </p>
-                        <p className="text-muted text-sm font-semibold leading-[120%] h-[200px] overflow-hidden mobile:text-sm mobile:text-">
-                          {news[`description_${locale}` as keyof Blogs]}
+                  </div>
+                  <div className="p-6 mobile:p-5 flex flex-col gap-4 flex-1">
+                    <div className="flex flex-col gap-3 flex-1">
+                      <h3 className="text-xl font-bold text-[#0c0c0c] mobile:text-lg line-clamp-2 leading-tight">
+                        {newsItem[`title_${locale}` as keyof Blogs] as string}
+                      </h3>
+                      <p className="text-base text-[#6B7280] mobile:text-sm line-clamp-3 leading-relaxed">
+                        {newsItem[`description_${locale}` as keyof Blogs] as string}
+                      </p>
+                    </div>
+                    <div className="flex justify-between items-center pt-4 border-t border-gray-200">
+                      <div className="flex gap-3 items-center">
+                        <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
+                          <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#1e3a8a]">
+                            {clock}
+                          </div>
+                        </div>
+                        <p className="font-medium text-sm text-[#6B7280]">
+                          {newsItem?.createTime
+                            ? format(new Date(newsItem.createTime), "MMM d, yyyy")
+                            : null}
                         </p>
                       </div>
-                      <div className="flex justify-between">
-                        <div className="flex gap-2 items-center">
-                          {clock}
-                          <p className="font-medium text-base  text-muted mobile:text-sm">
-                            {news?.createTime
-                              ? format(
-                                  new Date(news.createTime),
-                                  "MMMM d, yyyy"
-                                )
-                              : null}
-                          </p>
+                      <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#1e3a8a] transition-all duration-300">
+                        <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:stroke-[#0c0c0c] group-hover:[&_svg_path]:stroke-white [&_svg_path]:transition-all [&_svg_path]:duration-300">
+                          {arrowRight}
                         </div>
-                        <Link href={`/news/${news._id}`}>
-                          <div className="p-1 text-muted  rounded-full hover:bg-[#6A49A2] hover:text-white transition duration-300">
-                            {arrowRight}
-                          </div>
-                        </Link>
                       </div>
                     </div>
-                  </Area>
-                ))}
+                  </div>
+                </Link>
+              ))}
           </div>
         </div>
       </section>
-
-      {/* <section className="w-full">
-        <AutoCarousel />
-      </section> */}
     </>
   );
 }

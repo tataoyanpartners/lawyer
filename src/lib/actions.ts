@@ -1,4 +1,4 @@
-import { Blogs, Partner } from "@/types/items";
+import { Blogs } from "@/types/items";
 import axios from "axios";
 
 export const fetchBlogs = async (): Promise<Blogs[]> => {
