@@ -3,7 +3,6 @@
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { Button } from "@/custom/Button";
 import React from "react";
 import Link from "next/link";
 import {
@@ -11,6 +10,7 @@ import {
   logo,
   mail_black,
   phoneIcon,
+  phoneIconWhite,
   telephone_black,
 } from "@/app/assets/svg";
 
@@ -37,7 +37,7 @@ export const Footer = () => {
               href="/contact"
               className="text-lg py-3 px-5 bg-[#486BAD] hover:bg-[#172554] rounded-[50px] md:hidden mobile:w-full text-white flex items-center justify-center gap-2 smallIcon18 cursor-pointer transition-colors"
             >
-              {phoneIcon}
+              {phoneIconWhite}
               {tNavbar("contact")}
             </Link>
           </div>
@@ -94,7 +94,7 @@ export const Footer = () => {
             href="/contact"
             className="text-lg py-3 px-5 bg-[#486BAD] hover:bg-[#172554] rounded-[50px] mobile:hidden text-white flex items-center gap-2 smallIcon18 cursor-pointer transition-colors"
           >
-            {phoneIcon}
+            {phoneIconWhite}
             {tNavbar("contact")}
           </Link>
           <div className="flex items-center gap-6 ">

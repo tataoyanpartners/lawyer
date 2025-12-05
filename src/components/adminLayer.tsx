@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname} from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -27,12 +27,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
-  BookOpenIcon,
   Cog6ToothIcon,
   ArrowRightOnRectangleIcon,
   UserIcon,
   ChevronDownIcon,
-  HomeIcon,
   DocumentTextIcon,
   KeyIcon,
   EnvelopeIcon,
@@ -40,7 +38,6 @@ import {
 
 export default function AdminLayer() {
   const pathname = usePathname();
-  const router = useRouter();
   const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");

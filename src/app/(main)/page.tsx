@@ -15,7 +15,7 @@ import {
   experienced,
   flexible,
   mail,
-  phoneIcon,
+  phoneIconWhite,
   telephone,
 } from "@/app/assets/svg";
 import ServicesSection from "@/components/ServiceSection";
@@ -80,9 +80,9 @@ export default function Home() {
             <div className="flex gap-4 mobile:flex-col mobile:gap-3 mobile:w-full">
               <Link
                 href="/contact"
-                className="font-medium text-lg rounded-[50px] py-3 px-8 bg-[#1e3a8a] hover:bg-[#172554] mobile:text-base mobile:py-3 mobile:px-6 mobile:w-full transition-all text-white flex items-center justify-center gap-3 smallIcon18 shadow-lg hover:shadow-xl"
+                className="font-medium text-lg rounded-[50px] py-3 px-8 bg-[#486BAD] hover:bg-[#172554] mobile:text-base mobile:py-3 mobile:px-6 mobile:w-full transition-all text-white flex items-center justify-center gap-3 smallIcon18 shadow-lg hover:shadow-xl"
               >
-                {phoneIcon}
+                {phoneIconWhite}
                 {t("btn-consulation")}
               </Link>
             </div>

@@ -186,6 +186,15 @@ export const NavBar = () => {
                   {t("news")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/contact"
+                  onClick={toggleMenu}
+                  className="inline-flex items-center gap-2 py-3 px-5 bg-[#486BAD] hover:bg-[#172554] rounded-[50px] text-white transition-colors smallIcon18"
+                >
+                  {phoneIconWhite} {t("contact")}
+                </Link>
+              </li>
             </ul>
           </div>
 
