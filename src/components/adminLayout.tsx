@@ -37,18 +37,18 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         <div className="md:hidden bg-white border-b border-gray-200 p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-[#486BAD] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Թ</span>
               </div>
               <div>
-                <h1 className="font-bold text-lg text-[#1e3a8a]">Թաթոյան և գործընկերներ</h1>
+                <h1 className="font-bold text-lg text-[#486BAD]">Թաթոյան և գործընկերներ</h1>
                 <p className="text-xs text-gray-600">Ադմինիստրատիվ վահանակ</p>
               </div>
             </div>
             <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="sm" className="md:hidden">
-                  <Bars3Icon className="w-6 h-6 text-[#1e3a8a]" />
+                  <Bars3Icon className="w-6 h-6 text-[#486BAD]" />
                 </Button>
               </SheetTrigger>
             </Sheet>

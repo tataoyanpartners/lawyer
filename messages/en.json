@@ -297,7 +297,10 @@
       "phonePlaceholder": "Enter your phone number",
       "message": "Message",
       "messagePlaceholder": "Tell us how we can help you",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "successMessage": "Your message has been sent successfully. We will contact you soon.",
+      "errorMessage": "Failed to send message. Please try again."
     }
   },
   "contactUs": {
@@ -308,7 +311,7 @@
   },
   "Footer": {
     "specialised": "Specialised Attorney With Experiance",
-    "address": "Armenia, Erevan, St Abovyan 12/5",
+    "address": "67 Hanrapetutyan St., 3rd floor, room 306",
     "about": "About",
     "resources": "Resources",
     "support": "Support",

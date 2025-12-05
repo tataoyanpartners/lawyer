@@ -98,12 +98,12 @@ export default function ModalForEdit({
 
         <div className="flex justify-between items-center">
           <div className="pl-[45%]">
-            <h2 className="text-[25px] font-bold text-center text-[#1e3a8a]">{title}</h2>
+            <h2 className="text-[25px] font-bold text-center text-[#486BAD]">{title}</h2>
           </div>
           <div>
             <button
               onClick={onClose}
-              className="text-[40px] text-gray-500 hover:text-[#1e3a8a]"
+              className="text-[40px] text-gray-500 hover:text-[#486BAD]"
             >
               ✕
             </button>
@@ -117,7 +117,7 @@ export default function ModalForEdit({
               Object.entries(fieldObj).map(([key]) =>
                 key === "image" ? null : (
                   <div key={`${key}-${i}`}>
-                    <label className="block text-[#1e3a8a] font-medium mb-2 text-base">
+                    <label className="block text-[#486BAD] font-medium mb-2 text-base">
                       {formatLabel(key)}
                     </label>
 
@@ -125,7 +125,7 @@ export default function ModalForEdit({
                       <textarea
                         placeholder={formatLabel(key)}
                         value={formData[key] || ""}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 text-base resize-none min-h-[150px] focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 text-base resize-none min-h-[150px] focus:outline-none focus:border-[#486BAD] focus:ring-1 focus:ring-[#486BAD]"
                         onChange={(e) =>
                           setFormData({ ...formData, [key]: e.target.value })
                         }
@@ -135,7 +135,7 @@ export default function ModalForEdit({
                         type="text"
                         placeholder={formatLabel(key)}
                         value={formData[key] || ""}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 text-base focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 text-base focus:outline-none focus:border-[#486BAD] focus:ring-1 focus:ring-[#486BAD]"
                         onChange={(e) => handleInputChange(e, key)}
                       />
                     )}
@@ -148,7 +148,7 @@ export default function ModalForEdit({
           {imageRequired && (
             <div className="flex-1 space-y-6">
               <div>
-                <p className="font-medium mb-2 text-[#1e3a8a]">Ընթացիկ նկարը</p>
+                <p className="font-medium mb-2 text-[#486BAD]">Ընթացիկ նկարը</p>
                 <Image
                   src={fields[0].image}
                   width={200}
@@ -160,7 +160,7 @@ export default function ModalForEdit({
 
               {!image ? (
                 <div>
-                  <label className="font-medium mb-2 block text-[#1e3a8a]">Վերբեռնել նկար</label>
+                  <label className="font-medium mb-2 block text-[#486BAD]">Վերբեռնել նկար</label>
                   <input
                     id="file-upload"
                     type="file"
@@ -170,14 +170,14 @@ export default function ModalForEdit({
                   />
                   <label
                     htmlFor="file-upload"
-                    className="block w-full border-2 border-dashed border-gray-300 px-4 py-8 text-center text-sm text-gray-500 bg-gray-50 rounded-lg cursor-pointer hover:border-[#1e3a8a] hover:text-[#1e3a8a] transition"
+                    className="block w-full border-2 border-dashed border-gray-300 px-4 py-8 text-center text-sm text-gray-500 bg-gray-50 rounded-lg cursor-pointer hover:border-[#486BAD] hover:text-[#486BAD] transition"
                   >
                     Սեղմեք վերբեռնելու կամ քաշեք ֆայլը այստեղ
                   </label>
                 </div>
               ) : (
                 <div>
-                  <p className="font-medium mb-2 text-[#1e3a8a]">Խմբագրվող նկարը</p>
+                  <p className="font-medium mb-2 text-[#486BAD]">Խմբագրվող նկարը</p>
                   <Image
                     src={URL.createObjectURL(image)}
                     width={200}
@@ -200,7 +200,7 @@ export default function ModalForEdit({
         <div className="text-right">
           <Button
             onClick={() => setIsSaveModalOpen(true)}
-            className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white text-lg px-6 py-3 rounded-lg"
+            className="bg-[#486BAD] hover:bg-[#1e40af] text-white text-lg px-6 py-3 rounded-lg"
           >
             Պահպանել փոփոխությունները
           </Button>

@@ -14,7 +14,7 @@ export const Button = ({
   const baseStyles = "";
 
   const variantStyles = {
-    default: "bg-[#1e3a8a] hover:bg-[#172554] rounded-1 cursor-pointer transition-all",
+    default: "bg-[#486BAD] hover:bg-[#172554] rounded-1 cursor-pointer transition-all",
   };
 
   return (

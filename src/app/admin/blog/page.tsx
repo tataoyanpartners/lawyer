@@ -110,7 +110,7 @@ export default function Blog() {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div className="space-y-1">
-            <h1 className="text-3xl font-bold tracking-tight text-[#1e3a8a]">
+            <h1 className="text-3xl font-bold tracking-tight text-[#486BAD]">
               Բլոգի կառավարում
             </h1>
             <p className="text-gray-600">
@@ -119,7 +119,7 @@ export default function Blog() {
           </div>
           <Button
             onClick={() => setAddBlogIsOpen(true)}
-            className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white"
+            className="bg-[#486BAD] hover:bg-[#1e40af] text-white"
           >
             <PlusIcon className="w-4 h-4 mr-2" />
             Ստեղծել նոր գրառում
@@ -131,14 +131,14 @@ export default function Blog() {
           <Card className="bg-gray-50 border-gray-200">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#486BAD] rounded-lg flex items-center justify-center">
                   <DocumentTextIcon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-[#1e3a8a]">
+                  <p className="text-sm font-medium text-[#486BAD]">
                     Ընդհանուր գրառումներ
                   </p>
-                  <p className="text-2xl font-bold text-[#1e3a8a]">
+                  <p className="text-2xl font-bold text-[#486BAD]">
                     {blogs.length}
                   </p>
                 </div>
@@ -149,14 +149,14 @@ export default function Blog() {
           <Card className="bg-gray-50 border-gray-200">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#486BAD] rounded-lg flex items-center justify-center">
                   <EyeIcon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-[#1e3a8a]">
+                  <p className="text-sm font-medium text-[#486BAD]">
                     Հրապարակված
                   </p>
-                  <p className="text-2xl font-bold text-[#1e3a8a]">
+                  <p className="text-2xl font-bold text-[#486BAD]">
                     {blogs.length}
                   </p>
                 </div>
@@ -167,12 +167,12 @@ export default function Blog() {
           <Card className="bg-gray-50 border-gray-200">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#486BAD] rounded-lg flex items-center justify-center">
                   <CalendarIcon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-[#1e3a8a]">Այս ամիս</p>
-                  <p className="text-2xl font-bold text-[#1e3a8a]">
+                  <p className="text-sm font-medium text-[#486BAD]">Այս ամիս</p>
+                  <p className="text-2xl font-bold text-[#486BAD]">
                     {
                       blogs.filter(
                         (blog) =>
@@ -190,12 +190,12 @@ export default function Blog() {
           <Card className="bg-gray-50 border-gray-200">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#486BAD] rounded-lg flex items-center justify-center">
                   <PencilIcon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-[#1e3a8a]">Նախագծեր</p>
-                  <p className="text-2xl font-bold text-[#1e3a8a]">0</p>
+                  <p className="text-sm font-medium text-[#486BAD]">Նախագծեր</p>
+                  <p className="text-2xl font-bold text-[#486BAD]">0</p>
                 </div>
               </div>
             </CardContent>
@@ -208,7 +208,7 @@ export default function Blog() {
         {blogs.length === 0 ? (
           <Card className="p-12 text-center">
             <DocumentTextIcon className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-[#1e3a8a] mb-2">
+            <h3 className="text-lg font-semibold text-[#486BAD] mb-2">
               Բլոգային գրառումներ չկան
             </h3>
             <p className="text-gray-600 mb-4">
@@ -216,7 +216,7 @@ export default function Blog() {
             </p>
             <Button
               onClick={() => setAddBlogIsOpen(true)}
-              className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white"
+              className="bg-[#486BAD] hover:bg-[#1e40af] text-white"
             >
               <PlusIcon className="w-4 h-4 mr-2" />
               Ստեղծել ձեր առաջին գրառումը
@@ -274,7 +274,7 @@ export default function Blog() {
                   <div className="flex items-center gap-2">
                     <Badge
                       variant="secondary"
-                      className="text-xs bg-[#1e3a8a] text-white"
+                      className="text-xs bg-[#486BAD] text-white"
                     >
                       Հրապարակված
                     </Badge>
@@ -285,7 +285,7 @@ export default function Blog() {
                       </span>
                     )}
                   </div>
-                  <h3 className="font-semibold line-clamp-2 text-[#1e3a8a] group-hover:text-[#1e40af] transition-colors">
+                  <h3 className="font-semibold line-clamp-2 text-[#486BAD] group-hover:text-[#1e40af] transition-colors">
                     {blog.title_am || blog.title_en || blog.title_ru}
                   </h3>
                 </CardHeader>

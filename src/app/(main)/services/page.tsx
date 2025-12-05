@@ -29,8 +29,8 @@ export default function ServicesPage() {
   const nestedGroups = active.subiItems
     ? Object.values(active.subiItems)
     : !Array.isArray(active.subItems) && active.subItems
-    ? Object.values(active.subItems as Record<string, any>)
-    : [];
+      ? Object.values(active.subItems as Record<string, any>)
+      : [];
 
   const iconMap: Record<string, React.ReactNode> = {
     card1: corporate,
@@ -73,10 +73,9 @@ export default function ServicesPage() {
               onClick={() => setActiveKey(key)}
               className={`
                 inline-block mx-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
-                ${
-                  key === activeKey
-                    ? "bg-gradient-to-br from-[#1e3a8a] to-[#172554] text-white"
-                    : "text-[#6B7280] hover:bg-gray-100"
+                ${key === activeKey
+                  ? "bg-gradient-to-br from-[#486BAD] to-[#172554] text-white"
+                  : "text-[#6B7280] hover:bg-gray-100"
                 }`}
             >
               {services[key].title}
@@ -96,10 +95,9 @@ export default function ServicesPage() {
                 onClick={() => setActiveKey(key)}
                 className={`
                   cursor-pointer p-4 rounded-xl transition-all duration-300 border-2
-                  ${
-                    key === activeKey
-                      ? "bg-gradient-to-br from-[#1e3a8a] to-[#172554] text-white border-transparent shadow-lg"
-                      : "text-[#0c0c0c] hover:bg-gray-50 border-gray-200"
+                  ${key === activeKey
+                    ? "bg-gradient-to-br from-[#486BAD] to-[#172554] text-white border-transparent shadow-lg"
+                    : "text-[#0c0c0c] hover:bg-gray-50 border-gray-200"
                   }`}
               >
                 <span className="font-medium">{services[key].title}</span>
@@ -112,7 +110,7 @@ export default function ServicesPage() {
         <div className="mt-6 md:mt-0 md:w-2/3">
           <div className="bg-white border-2 border-gray-200 p-8 mobile:p-6 rounded-xl shadow-sm">
             {/* Icon */}
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center mb-6">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#486BAD] to-[#172554] flex items-center justify-center mb-6">
               <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:fill-white [&_svg_g_path]:fill-white">
                 {iconMap[activeKey]}
               </div>
@@ -132,7 +130,7 @@ export default function ServicesPage() {
                 {flatItems.map((txt, idx) => (
                   <li key={idx} className="flex gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center mt-0.5">
-                      <svg className="w-3.5 h-3.5 text-[#1e3a8a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 text-[#486BAD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -145,14 +143,14 @@ export default function ServicesPage() {
             {/* Nested Groups */}
             {nestedGroups.map((group, i) => (
               <div key={i} className="mb-6">
-                <h3 className="font-bold text-xl mb-4 text-[#1e3a8a] mobile:text-lg">
+                <h3 className="font-bold text-xl mb-4 text-[#486BAD] mobile:text-lg">
                   {group.title}
                 </h3>
                 <ul className="text-[#6B7280] space-y-3">
                   {group.subiItems.map((txt: string, idx: number) => (
                     <li key={idx} className="flex gap-3">
                       <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center mt-0.5">
-                        <svg className="w-3.5 h-3.5 text-[#1e3a8a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 text-[#486BAD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>

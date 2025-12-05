@@ -82,12 +82,12 @@ export async function generateMetadata(): Promise<Metadata> {
         { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
       ],
       other: [
-        { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#1e3a8a" }
+        { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#486BAD" }
       ]
     },
     manifest: "/site.webmanifest",
     other: {
-      "msapplication-TileColor": "#1e3a8a",
+      "msapplication-TileColor": "#486BAD",
       "msapplication-config": "/browserconfig.xml",
       "theme-color": "#ffffff"
     },

@@ -141,14 +141,14 @@ export default function ServicesSection() {
             <button
               onClick={prev}
               disabled={currentIndex === 0}
-              className="w-12 h-12 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-[#1e3a8a] hover:bg-[#1e3a8a] rounded-full z-20 disabled:opacity-30 disabled:cursor-not-allowed rotate-180 cursor-pointer transition-all duration-300 [&_svg]:w-5 [&_svg]:h-5 [&_svg_path]:stroke-[#0c0c0c] hover:[&_svg_path]:stroke-white disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:[&_svg_path]:stroke-[#0c0c0c]"
+              className="w-12 h-12 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-[#486BAD] hover:bg-[#486BAD] rounded-full z-20 disabled:opacity-30 disabled:cursor-not-allowed rotate-180 cursor-pointer transition-all duration-300 [&_svg]:w-5 [&_svg]:h-5 [&_svg_path]:stroke-[#0c0c0c] hover:[&_svg_path]:stroke-white disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:[&_svg_path]:stroke-[#0c0c0c]"
             >
               {arrowRight}
             </button>
             <button
               onClick={next}
               disabled={currentIndex === maxIndex}
-              className="w-12 h-12 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-[#1e3a8a] hover:bg-[#1e3a8a] rounded-full z-20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all duration-300 [&_svg]:w-5 [&_svg]:h-5 [&_svg_path]:stroke-[#0c0c0c] hover:[&_svg_path]:stroke-white disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:[&_svg_path]:stroke-[#0c0c0c]"
+              className="w-12 h-12 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-[#486BAD] hover:bg-[#486BAD] rounded-full z-20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all duration-300 [&_svg]:w-5 [&_svg]:h-5 [&_svg_path]:stroke-[#0c0c0c] hover:[&_svg_path]:stroke-white disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:[&_svg_path]:stroke-[#0c0c0c]"
             >
               {arrowRight}
             </button>
@@ -182,7 +182,7 @@ export default function ServicesSection() {
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? "bg-[#1e3a8a] w-8" : "bg-gray-300 w-2"
+                className={`h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? "bg-[#486BAD] w-8" : "bg-gray-300 w-2"
                   }`}
               />
             ))}

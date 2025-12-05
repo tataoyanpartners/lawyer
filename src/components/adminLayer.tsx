@@ -35,6 +35,7 @@ import {
   HomeIcon,
   DocumentTextIcon,
   KeyIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 
 export default function AdminLayer() {
@@ -54,6 +55,12 @@ export default function AdminLayer() {
       href: "/admin/blog", 
       icon: <DocumentTextIcon className="w-5 h-5" />,
       description: "Կառավարել բլոգային գրառումները"
+    },
+    {
+      title: "Կապի հարցումներ",
+      href: "/admin/contacts",
+      icon: <EnvelopeIcon className="w-5 h-5" />,
+      description: "Դիտել կապի հարցումները"
     },
   ];
 

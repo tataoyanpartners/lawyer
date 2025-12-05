@@ -96,11 +96,11 @@ export default function ModalForAdding({
 
     return (
       <div className="w-[250px]">
-        <label className="text-[#1e3a8a] font-medium">{label}</label>
+        <label className="text-[#486BAD] font-medium">{label}</label>
         {field.includes("description") ? (
           <textarea
             placeholder={placeholder}
-            className="w-full px-3 py-3 bg-white border border-gray-300 rounded-lg min-h-[150px] resize-none focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
+            className="w-full px-3 py-3 bg-white border border-gray-300 rounded-lg min-h-[150px] resize-none focus:outline-none focus:border-[#486BAD] focus:ring-1 focus:ring-[#486BAD]"
             value={value}
             onChange={(e) => handleInputChange(e, field, lang)}
           />
@@ -108,7 +108,7 @@ export default function ModalForAdding({
           <input
             type="text"
             placeholder={placeholder}
-            className="w-full px-3 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
+            className="w-full px-3 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#486BAD] focus:ring-1 focus:ring-[#486BAD]"
             value={value}
             onChange={(e) => handleInputChange(e, field, lang)}
           />
@@ -125,15 +125,15 @@ export default function ModalForAdding({
         ref={modalRef}
         className="bg-white p-6 rounded-xl shadow-lg h-[650px] min-w-[1200px] grid gap-5 animate-fadeIn border border-gray-200"
       >
-        <div className="text-2xl leading-[100%] grid gap-6 p-5 text-[#1e3a8a]">
+        <div className="text-2xl leading-[100%] grid gap-6 p-5 text-[#486BAD]">
           <div className="flex justify-between">
             <div className="pl-[45%]">
-              <h2 className="text-[25px] font-bold text-center text-[#1e3a8a]">{title}</h2>
+              <h2 className="text-[25px] font-bold text-center text-[#486BAD]">{title}</h2>
             </div>
             <div>
               <button
                 onClick={onClose}
-                className="text-[40px] text-gray-500 hover:text-[#1e3a8a]"
+                className="text-[40px] text-gray-500 hover:text-[#486BAD]"
               >
                 ✕
               </button>
@@ -155,7 +155,7 @@ export default function ModalForAdding({
 
             {imageRequired && (
               <div className="grid items-start w-[30%]">
-                <p className="text-xl font-bold text-[#1e3a8a]">Վերբեռնել նկար</p>
+                <p className="text-xl font-bold text-[#486BAD]">Վերբեռնել նկար</p>
                 {!image && (
                   <>
                     <input
@@ -167,7 +167,7 @@ export default function ModalForAdding({
                     />
                     <label
                       htmlFor="file-upload"
-                      className="w-full flex items-center justify-center px-4 py-6 bg-gray-50 text-gray-500 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-[#1e3a8a] hover:text-[#1e3a8a] transition"
+                      className="w-full flex items-center justify-center px-4 py-6 bg-gray-50 text-gray-500 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-[#486BAD] hover:text-[#486BAD] transition"
                     >
                       <span className="text-sm">
                         Սեղմեք վերբեռնելու կամ քաշեք ֆայլը այստեղ
@@ -211,7 +211,7 @@ export default function ModalForAdding({
           <div className=" text-right">
             <Button
               onClick={checkFilles}
-              className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white text-lg px-6 py-3 rounded-lg"
+              className="bg-[#486BAD] hover:bg-[#1e40af] text-white text-lg px-6 py-3 rounded-lg"
             >
               Պահպանել փոփոխությունները
             </Button>

@@ -105,7 +105,7 @@ export default function News() {
                     <div className="flex justify-between items-center pt-4 border-t border-gray-200">
                       <div className="flex gap-3 items-center">
                         <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
-                          <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#1e3a8a]">
+                          <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#486BAD]">
                             {clock}
                           </div>
                         </div>
@@ -115,7 +115,7 @@ export default function News() {
                             : null}
                         </p>
                       </div>
-                      <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#1e3a8a] transition-all duration-300">
+                      <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#486BAD] transition-all duration-300">
                         <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:stroke-[#0c0c0c] group-hover:[&_svg_path]:stroke-white [&_svg_path]:transition-all [&_svg_path]:duration-300">
                           {arrowRight}
                         </div>
@@ -129,7 +129,7 @@ export default function News() {
             <div className="flex justify-center">
               <Button
                 onClick={handleLoadMore}
-                className="font-medium text-lg rounded-[50px] py-3 px-8 bg-[#1e3a8a] hover:bg-[#172554] mobile:text-base mobile:py-3 mobile:px-6 transition-all text-white shadow-lg hover:shadow-xl"
+                className="font-medium text-lg rounded-[50px] py-3 px-8 bg-[#486BAD] hover:bg-[#172554] mobile:text-base mobile:py-3 mobile:px-6 transition-all text-white shadow-lg hover:shadow-xl"
               >
                 {t("loadMore") || "Load More"}
               </Button>

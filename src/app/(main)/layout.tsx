@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
-import { phoneIcon, emailIcon, closeIcon } from "@/app/assets/svg";
+import { phoneIcon, emailIcon, closeIcon, phoneIconWhite } from "@/app/assets/svg";
 
 export default function MainLayout({
   children,
@@ -34,7 +34,7 @@ export default function MainLayout({
             className="
               fixed bottom-4 right-4
               w-12 h-12
-              bg-[#1e3a8a] hover:bg-[#172554]
+              bg-[#486BAD] hover:bg-[#172554]
               rounded-full
               flex items-center justify-center
               text-white shadow-lg z-50 cursor-pointer
@@ -49,7 +49,7 @@ export default function MainLayout({
           <div
             className={`
               flex items-center
-              bg-[#1e3a8a] text-white
+              bg-[#f00] text-white
               rounded-tl-4xl rounded-bl-4xl
               overflow-hidden
               transition-all duration-300
@@ -61,21 +61,21 @@ export default function MainLayout({
               className="w-12 h-12 flex items-center justify-center cursor-pointer"
               aria-label={contactOpen ? "Close contact" : "Open contact"}
             >
-              {contactOpen ? closeIcon : phoneIcon}
+              {contactOpen ? closeIcon : phoneIconWhite}
             </button>
             {!contactOpen && <span className="font-semibold"></span>}
             {contactOpen && (
               <div className="flex items-center gap-2">
                 <a
                   href="tel:+37494450054"
-                  className="p-2 hover:bg-[#172554] rounded-full shadow-[1px_1px_1px_1px_#80808052] transition-all duration-300"
+                  className="p-2 bg-[#fff] hover:bg-[#d3d3d3] rounded-full shadow-[1px_1px_1px_1px_#80808052] transition-all duration-300"
                   aria-label="Call us"
                 >
                   {phoneIcon}
                 </a>
                 <a
                   href="mailto:tatoyan.partners@gmail.com"
-                  className="p-2 hover:bg-[#172554] rounded-full shadow-[1px_1px_1px_1px_#80808052] transition-all duration-300"
+                  className="p-2 bg-[#fff] hover:bg-[#d3d3d3] rounded-full shadow-[1px_1px_1px_1px_#80808052] transition-all duration-300"
                   aria-label="Email us"
                 >
                   {emailIcon}

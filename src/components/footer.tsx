@@ -35,7 +35,7 @@ export const Footer = () => {
 
             <Link
               href="/contact"
-              className="text-lg py-3 px-5 bg-[#1e3a8a] hover:bg-[#172554] rounded-[50px] md:hidden mobile:w-full text-white flex items-center justify-center gap-2 smallIcon18 cursor-pointer transition-colors"
+              className="text-lg py-3 px-5 bg-[#486BAD] hover:bg-[#172554] rounded-[50px] md:hidden mobile:w-full text-white flex items-center justify-center gap-2 smallIcon18 cursor-pointer transition-colors"
             >
               {phoneIcon}
               {tNavbar("contact")}
@@ -43,27 +43,27 @@ export const Footer = () => {
           </div>
 
           <ul className="flex flex-col gap-3 font-medium text-[#0c0c0c] mobile:w-full mobile:text-base ">
-            <li className={`hover:text-[#1e3a8a] ${pathname === "/about" ? "text-[#1e3a8a]" : ""}`}>
+            <li className={`hover:text-[#486BAD] ${pathname === "/about" ? "text-[#486BAD]" : ""}`}>
               <Link href="/about">{tNavbar("about")}</Link>
             </li>
             <li
-              className={`hover:text-[#1e3a8a] ${pathname === "/services" ? "text-[#1e3a8a]" : ""}`}
+              className={`hover:text-[#486BAD] ${pathname === "/services" ? "text-[#486BAD]" : ""}`}
             >
               <Link href="/services">{tNavbar("services")}</Link>
             </li>
             <li
-              className={`hover:text-[#1e3a8a] ${pathname === "/partners" ? "text-[#1e3a8a]" : ""}`}
+              className={`hover:text-[#486BAD] ${pathname === "/partners" ? "text-[#486BAD]" : ""}`}
             >
               <Link href="/partners">{tNavbar("partners")}</Link>
             </li>
-            <li className={`hover:text-[#1e3a8a] ${pathname === "/news" ? "text-[#1e3a8a]" : ""}`}>
+            <li className={`hover:text-[#486BAD] ${pathname === "/news" ? "text-[#486BAD]" : ""}`}>
               <Link href="/news">{tNavbar("news")}</Link>
             </li>
           </ul>
 
           <div className="flex flex-col font-medium text-[#0c0c0c]">
             <div className="flex items-center gap-4">
-              <div className="[&_svg_path]:stroke-[#1e3a8a] [&_svg_rect]:fill-transparent">
+              <div className="[&_svg_path]:stroke-[#486BAD] [&_svg_rect]:fill-transparent">
                 {React.cloneElement(telephone_black, {
                   className: "mobile:w-[40px]",
                 })}
@@ -71,7 +71,7 @@ export const Footer = () => {
               <p>+374 94 45 00 54</p>
             </div>
             <div className="flex items-center gap-4">
-              <div className="[&_svg_path]:stroke-[#1e3a8a] [&_svg_rect]:fill-transparent">
+              <div className="[&_svg_path]:stroke-[#486BAD] [&_svg_rect]:fill-transparent">
                 {React.cloneElement(mail_black, {
                   className: "mobile:w-[40px]",
                 })}
@@ -79,7 +79,7 @@ export const Footer = () => {
               <p>tatoyan.partners@gmail.com</p>
             </div>
             <div className="flex items-center gap-4">
-              <div className="[&_svg_path]:stroke-[#1e3a8a] [&_svg_rect]:fill-transparent">
+              <div className="[&_svg_path]:stroke-[#486BAD] [&_svg_rect]:fill-transparent">
                 {React.cloneElement(location_black, {
                   className: "mobile:w-[40px]",
                 })}
@@ -92,7 +92,7 @@ export const Footer = () => {
         <div className="w-full bg-white rounded-2xl px-8 py-3 flex justify-between mobile:grid mobile:justify-center">
           <Link
             href="/contact"
-            className="text-lg py-3 px-5 bg-[#1e3a8a] hover:bg-[#172554] rounded-[50px] mobile:hidden text-white flex items-center gap-2 smallIcon18 cursor-pointer transition-colors"
+            className="text-lg py-3 px-5 bg-[#486BAD] hover:bg-[#172554] rounded-[50px] mobile:hidden text-white flex items-center gap-2 smallIcon18 cursor-pointer transition-colors"
           >
             {phoneIcon}
             {tNavbar("contact")}
@@ -103,21 +103,21 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="text-[#1e3a8a] text-4xl hover:text-[#172554] transition-colors duration-300" />
+              <FaLinkedin className="text-[#486BAD] text-4xl hover:text-[#172554] transition-colors duration-300" />
             </a>
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram className="text-[#1e3a8a] text-4xl hover:text-[#172554] transition-colors duration-300" />
+              <FaInstagram className="text-[#486BAD] text-4xl hover:text-[#172554] transition-colors duration-300" />
             </a>
             <a
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebook className="text-[#1e3a8a] text-4xl hover:text-[#172554] transition-colors duration-300" />
+              <FaFacebook className="text-[#486BAD] text-4xl hover:text-[#172554] transition-colors duration-300" />
             </a>
           </div>
         </div>

@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { phoneIcon } from "@/app/assets/svg";
+import { phoneIconWhite } from "@/app/assets/svg";
 
 export const NavBar = () => {
   const t = useTranslations("Navbar");
@@ -53,29 +53,29 @@ export const NavBar = () => {
     <nav className=" border-muted flex items-center gap-15 text-[#0c0c0c] sup-lg:flex sup-lg:justify-between sup-lg:gap-6">
       <ul className="mobile:hidden sup-lg:hidden flex flex-row gap-6 text-lg font-medium">
         <li
-          className={`cursor-pointer hover:text-[#1e3a8a] ${
-            pathname === "/about" ? "text-[#1e3a8a]" : ""
+          className={`cursor-pointer hover:text-[#486BAD] ${
+            pathname === "/about" ? "text-[#486BAD]" : ""
           }`}
         >
           <Link href="/about">{t("about")}</Link>
         </li>
         <li
-          className={`cursor-pointer hover:text-[#1e3a8a] ${
-            pathname === "/services" ? "text-[#1e3a8a]" : ""
+          className={`cursor-pointer hover:text-[#486BAD] ${
+            pathname === "/services" ? "text-[#486BAD]" : ""
           }`}
         >
           <Link href="/services">{t("services")}</Link>
         </li>
         <li
-          className={`cursor-pointer hover:text-[#1e3a8a] ${
-            pathname === "/partners" ? "text-[#1e3a8a]" : ""
+          className={`cursor-pointer hover:text-[#486BAD] ${
+            pathname === "/partners" ? "text-[#486BAD]" : ""
           }`}
         >
           <Link href="/partners">{t("partners")}</Link>
         </li>
         <li
-          className={`cursor-pointer hover:text-[#1e3a8a] ${
-            pathname === "/news" ? "text-[#1e3a8a]" : ""
+          className={`cursor-pointer hover:text-[#486BAD] ${
+            pathname === "/news" ? "text-[#486BAD]" : ""
           }`}
         >
           <Link href="/news">{t("news")}</Link>
@@ -84,9 +84,9 @@ export const NavBar = () => {
       <div className="flex items-center gap-5  mobile:hidden ">
         <Link
           href="/contact"
-          className="text-lg py-3 px-5 bg-[#1e3a8a] hover:bg-[#172554] rounded-[50px] text-white flex items-center gap-2 smallIcon18 cursor-pointer transition-colors"
+          className="text-lg py-3 px-5 bg-[#486BAD] hover:bg-[#172554] rounded-[50px] text-white flex items-center gap-2 smallIcon18 cursor-pointer transition-colors"
         >
-          {phoneIcon} {t("contact")}
+          {phoneIconWhite} {t("contact")}
         </Link>
 
         <div className="relative w-36 text-sm font-medium " ref={modalRef}>
@@ -115,8 +115,8 @@ export const NavBar = () => {
           {open && (
             <div className="absolute top-full left-0  w-full bg-white border border-gray-200 shadow-lg rounded-xl animate-fade-in grid p-1 gap-1">
               <div
-                className={`px-4 py-2 cursor-pointer hover:bg-blue-50 rounded-xl  flex items-center gap-2
-                  ${locale === "am" ? "bg-[#1e3a8a] text-white" : "text-[#0c0c0c]"}`}
+                className={`px-4 py-2 cursor-pointer rounded-xl flex items-center gap-2
+                  ${locale === "am" ? "bg-[#486BAD] text-white" : "text-[#0c0c0c] hover:bg-blue-50"}`}
                 onClick={() => {
                   changeLocal("am");
                   setOpen(false);
@@ -127,8 +127,8 @@ export const NavBar = () => {
                 </>
               </div>
               <div
-                className={`px-4 py-2 cursor-pointer hover:bg-blue-50 rounded-xl  flex items-center gap-2
-                  ${locale === "en" ? "bg-[#1e3a8a] text-white" : "text-[#0c0c0c]"}`}
+                className={`px-4 py-2 cursor-pointer rounded-xl flex items-center gap-2
+                  ${locale === "en" ? "bg-[#486BAD] text-white" : "text-[#0c0c0c] hover:bg-blue-50"}`}
                 onClick={() => {
                   changeLocal("en");
                   setOpen(false);
@@ -140,8 +140,8 @@ export const NavBar = () => {
               </div>
 
               <div
-                className={`px-4 py-2 cursor-pointer hover:bg-blue-50 rounded-xl  flex items-center gap-2
-                  ${locale === "ru" ? "bg-[#1e3a8a] text-white" : "text-[#0c0c0c]"}`}
+                className={`px-4 py-2 cursor-pointer rounded-xl flex items-center gap-2
+                  ${locale === "ru" ? "bg-[#486BAD] text-white" : "text-[#0c0c0c] hover:bg-blue-50"}`}
                 onClick={() => {
                   changeLocal("ru");
                   setOpen(false);
@@ -166,22 +166,22 @@ export const NavBar = () => {
         <div className="md:hidden absolute top-[70px] left-0 w-full h-screen bg-white p-10 grid text-lg font-medium z-50">
           <div>
             <ul className="grid gap-4 text-[#0c0c0c]">
-              <li className="hover:text-[#1e3a8a]">
+              <li className="hover:text-[#486BAD]">
                 <Link href="/about" onClick={toggleMenu}>
                   {t("about")}
                 </Link>
               </li>
-              <li className="hover:text-[#1e3a8a]">
+              <li className="hover:text-[#486BAD]">
                 <Link href="/services" onClick={toggleMenu}>
                   {t("services")}
                 </Link>
               </li>
-              <li className="hover:text-[#1e3a8a]">
+              <li className="hover:text-[#486BAD]">
                 <Link href="/partners" onClick={toggleMenu}>
                   {t("partners")}
                 </Link>
               </li>
-              <li className="hover:text-[#1e3a8a]">
+              <li className="hover:text-[#486BAD]">
                 <Link href="/news" onClick={toggleMenu}>
                   {t("news")}
                 </Link>

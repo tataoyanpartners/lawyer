@@ -57,11 +57,11 @@ export default function NewsSlugPage() {
     <section className="max-w-[1280px] mx-auto mobile:w-full py-16 mobile:py-10">
       <div className="px-10 mobile:px-6">
         <div className="pb-10">
-          <Link href={"/news"} className="flex items-center gap-2 text-[#1e3a8a] font-semibold hover:gap-3 transition-all duration-300">
+          <Link href={"/news"} className="flex items-center gap-2 text-[#486BAD] font-semibold hover:gap-3 transition-all duration-300">
             <svg width="24" height="24" viewBox="0 0 24 24">
               <path
                 d="M21 12.013L3.211 12M9.988 19L3 12L9.988 5"
-                stroke="#1e3a8a"
+                stroke="#486BAD"
                 strokeWidth={2}
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -80,7 +80,7 @@ export default function NewsSlugPage() {
                 </h1>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
-                    <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#1e3a8a]">
+                    <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#486BAD]">
                       {clock}
                     </div>
                   </div>
@@ -141,7 +141,7 @@ export default function NewsSlugPage() {
                       <div className="flex justify-between items-center pt-4 border-t border-gray-200">
                         <div className="flex gap-3 items-center">
                           <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
-                            <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#1e3a8a]">
+                            <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:fill-[#486BAD]">
                               {clock}
                             </div>
                           </div>
@@ -149,7 +149,7 @@ export default function NewsSlugPage() {
                             {item.createTime ? format(new Date(item.createTime), "MMM d, yyyy") : ""}
                           </p>
                         </div>
-                        <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#1e3a8a] transition-all duration-300">
+                        <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#486BAD] transition-all duration-300">
                           <div className="[&_svg]:w-4 [&_svg]:h-4 [&_svg_path]:stroke-[#0c0c0c] group-hover:[&_svg_path]:stroke-white [&_svg_path]:transition-all [&_svg_path]:duration-300">
                             {arrowRight}
                           </div>

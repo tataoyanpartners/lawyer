@@ -74,7 +74,7 @@ export default function Login() {
     return (
       <section className="h-screen grid justify-center items-center bg-white">
         <div className="w-[400px] p-8 bg-white rounded-xl shadow-xl border border-gray-200">
-          <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6 text-center">
+          <h2 className="text-2xl font-bold text-[#486BAD] mb-6 text-center">
             Վերականգնել գաղտնաբառը
           </h2>
 
@@ -92,14 +92,14 @@ export default function Login() {
 
           <form onSubmit={handleForgotPassword} className="space-y-4">
             <div>
-              <label className="block text-[#1e3a8a] text-sm font-medium mb-2">
+              <label className="block text-[#486BAD] text-sm font-medium mb-2">
                 Էլ. հասցե
               </label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-[#1e3a8a] focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
+                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-[#486BAD] focus:outline-none focus:border-[#486BAD] focus:ring-1 focus:ring-[#486BAD]"
                 placeholder="Մուտքագրեք ձեր էլ. հասցեն"
                 required
                 disabled={isLoading}
@@ -108,7 +108,7 @@ export default function Login() {
 
             <Button
               type="submit"
-              className="w-full bg-[#1e3a8a] hover:bg-[#1e40af] text-white py-3 rounded-lg font-medium transition-colors"
+              className="w-full bg-[#486BAD] hover:bg-[#1e40af] text-white py-3 rounded-lg font-medium transition-colors"
               disabled={isLoading}
             >
               {isLoading ? "Ուղարկվում է..." : "Ուղարկել վերականգնման հղումը"}
@@ -117,7 +117,7 @@ export default function Login() {
             <button
               type="button"
               onClick={() => setShowForgotPassword(false)}
-              className="w-full text-gray-600 hover:text-[#1e3a8a] transition-colors text-sm"
+              className="w-full text-gray-600 hover:text-[#486BAD] transition-colors text-sm"
             >
               Վերադառնալ մուտք
             </button>
@@ -130,7 +130,7 @@ export default function Login() {
   return (
     <section className="h-screen grid justify-center items-center bg-white">
       <div className="w-[400px] p-8 bg-white rounded-xl shadow-xl border border-gray-200">
-        <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6 text-center">
+        <h2 className="text-2xl font-bold text-[#486BAD] mb-6 text-center">
           Ադմինիստրատորի մուտք
         </h2>
 
@@ -142,14 +142,14 @@ export default function Login() {
 
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block text-[#1e3a8a] text-sm font-medium mb-2">
+            <label className="block text-[#486BAD] text-sm font-medium mb-2">
               Էլ. հասցե
             </label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-[#1e3a8a] focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
+              className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-[#486BAD] focus:outline-none focus:border-[#486BAD] focus:ring-1 focus:ring-[#486BAD]"
               placeholder="Մուտքագրեք ձեր էլ. հասցեն"
               required
               disabled={isLoading}
@@ -157,14 +157,14 @@ export default function Login() {
           </div>
 
           <div>
-            <label className="block text-[#1e3a8a] text-sm font-medium mb-2">
+            <label className="block text-[#486BAD] text-sm font-medium mb-2">
               Գաղտնաբառ
             </label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-[#1e3a8a] focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a]"
+              className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-[#486BAD] focus:outline-none focus:border-[#486BAD] focus:ring-1 focus:ring-[#486BAD]"
               placeholder="Մուտքագրեք ձեր գաղտնաբառը"
               required
               disabled={isLoading}
@@ -173,7 +173,7 @@ export default function Login() {
 
           <Button
             type="submit"
-            className="w-full bg-[#1e3a8a] hover:bg-[#1e40af] text-white py-3 rounded-lg font-medium transition-colors"
+            className="w-full bg-[#486BAD] hover:bg-[#1e40af] text-white py-3 rounded-lg font-medium transition-colors"
             disabled={isLoading}
           >
             {isLoading ? "Մուտք գործվում է..." : "Մուտք"}
@@ -182,7 +182,7 @@ export default function Login() {
           <button
             type="button"
             onClick={() => setShowForgotPassword(true)}
-            className="w-full text-gray-600 hover:text-[#1e3a8a] transition-colors text-sm"
+            className="w-full text-gray-600 hover:text-[#486BAD] transition-colors text-sm"
           >
             Մոռացե՞լ եք գաղտնաբառը:
           </button>

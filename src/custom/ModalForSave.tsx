@@ -209,23 +209,23 @@ export default function ModalForDelete({
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-[#1e3a8a]"
+          className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-[#486BAD]"
         >
           ✕
         </button>
-        <h2 className="text-3xl font-bold text-[#1e3a8a] pt-15">
+        <h2 className="text-3xl font-bold text-[#486BAD] pt-15">
           Վստա՞հ եք, որ ցանկանում եք պահպանել այս փոփոխությունները:
         </h2>
 
         <div className="flex justify-center text-2xl gap-4">
           <Button
-            className="px-6 py-3 bg-white text-[#1e3a8a] border border-[#1e3a8a] rounded-lg hover:bg-gray-100"
+            className="px-6 py-3 bg-white text-[#486BAD] border border-[#486BAD] rounded-lg hover:bg-gray-100"
             onClick={onClose}
           >
             Չեղարկել
           </Button>
           <Button
-            className="px-6 py-3 bg-[#1e3a8a] text-white rounded-lg hover:bg-[#1e40af]"
+            className="px-6 py-3 bg-[#486BAD] text-white rounded-lg hover:bg-[#1e40af]"
             onClick={() => {
               handleSave();
             }}

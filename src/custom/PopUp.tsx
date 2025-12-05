@@ -86,7 +86,7 @@ export default function PopUp({ onClose }: props) {
             rel="noopener noreferrer"
             className="inline-block p-4 mobile:p-2 bg-[#373639] rounded-4xl"
           >
-            <FaLinkedin className="text-white text-4xl mobile:text-2xl hover:text-[#1e3a8a]" />
+            <FaLinkedin className="text-white text-4xl mobile:text-2xl hover:text-[#486BAD]" />
           </a>
           <a
             href="https://www.instagram.com/tatoyan_and_partners?igsh=MTVkdXh6cjExeGE4ag%3D%3D&utm_source=qr"
@@ -94,7 +94,7 @@ export default function PopUp({ onClose }: props) {
             rel="noopener noreferrer"
             className="inline-block p-4 mobile:p-2 bg-[#373639] rounded-4xl"
           >
-            <FaInstagram className="text-white text-4xl mobile:text-2xl hover:text-[#1e3a8a]" />
+            <FaInstagram className="text-white text-4xl mobile:text-2xl hover:text-[#486BAD]" />
           </a>
           <a
             href="https://www.facebook.com/share/12CcQsbk4jC/?mibextid=wwXIfr"
@@ -102,7 +102,7 @@ export default function PopUp({ onClose }: props) {
             rel="noopener noreferrer"
             className="inline-block p-4 mobile:p-2 bg-[#373639] rounded-4xl"
           >
-            <FaFacebook className="text-white text-4xl mobile:text-2xl hover:text-[#1e3a8a]" />
+            <FaFacebook className="text-white text-4xl mobile:text-2xl hover:text-[#486BAD]" />
           </a>
         </div>
       </div>

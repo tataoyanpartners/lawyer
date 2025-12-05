@@ -44,7 +44,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {t.raw("information.points").map((point: string, index: number) => (
                 <div key={index} className="flex gap-4 bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#486BAD] to-[#172554] flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
@@ -65,7 +65,7 @@ export default function About() {
                 <h3 className="text-3xl font-bold text-[#0c0c0c] mobile:text-2xl">
                   {t("team.memberNames.0")}
                 </h3>
-                <p className="text-lg font-semibold text-[#1e3a8a] mobile:text-base">
+                <p className="text-lg font-semibold text-[#486BAD] mobile:text-base">
                   {t("team.memberPositions.0")}
                 </p>
                 <p className="text-base text-[#6B7280] leading-relaxed mobile:text-sm text-justify">
@@ -98,7 +98,7 @@ export default function About() {
                 <h3 className="text-3xl font-bold text-[#0c0c0c] mobile:text-2xl">
                   {t("team.memberNames.1")}
                 </h3>
-                <p className="text-lg font-semibold text-[#1e3a8a] mobile:text-base">
+                <p className="text-lg font-semibold text-[#486BAD] mobile:text-base">
                   {t("team.memberPositions.1")}
                 </p>
                 <p className="text-base text-[#6B7280] leading-relaxed mobile:text-sm text-justify">
@@ -113,7 +113,7 @@ export default function About() {
                 <h3 className="text-3xl font-bold text-[#0c0c0c] mobile:text-2xl">
                   {t("team.memberNames.2")}
                 </h3>
-                <p className="text-lg font-semibold text-[#1e3a8a] mobile:text-base">
+                <p className="text-lg font-semibold text-[#486BAD] mobile:text-base">
                   {t("team.memberPositions.2")}
                 </p>
                 <p className="text-base text-[#6B7280] leading-relaxed mobile:text-sm text-justify">
