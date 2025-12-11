@@ -100,6 +100,7 @@ export default function Home() {
               {t("makes")}
             </h2>
           </div>
+          
           <ul className="grid grid-cols-4 gap-6 mobile:grid-cols-1 mobile:gap-6">
             <li className="group">
               <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
