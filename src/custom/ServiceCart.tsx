@@ -32,7 +32,7 @@ export const ServiceCard: FC<ServiceCardProps> = ({
   return (
     <Area className="mobile:m-5 h-[450px] group border-2 border-gray-200 transition-all duration-300">
       <div className="h-full flex flex-col gap-4 justify-between p-6 mobile:p-5 mobile:w-full">
-        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#486BAD] to-[#172554] flex items-center justify-center">
+        <div className="w-14 h-14 rounded-xl bg-[#486BAD] flex items-center justify-center">
           <div className="[&_svg]:w-8 [&_svg]:h-8 [&_svg_path]:fill-white [&_svg_g_path]:fill-white">{icone}</div>
         </div>
         <h2 className="font-bold text-xl mobile:text-lg text-[#0c0c0c] leading-tight">

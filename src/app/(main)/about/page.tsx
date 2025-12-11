@@ -14,7 +14,7 @@ export default function About() {
       <section className="relative w-full h-[500px] mobile:h-[400px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/about-us-background-image.jpg"
+            src="/about-us-background-image.png"
             alt="About Us"
             fill
             className="object-cover"
@@ -44,7 +44,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {t.raw("information.points").map((point: string, index: number) => (
                 <div key={index} className="flex gap-4 bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#486BAD] to-[#172554] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#486BAD] flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>

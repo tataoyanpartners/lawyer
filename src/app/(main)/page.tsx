@@ -59,11 +59,12 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/lawyer-home-background.jpg"
+            src="/about-us-background-image.png"
             alt="Hero Background"
             fill
             className="object-cover mobile:object-center"
             priority
+            quality={100}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10 mobile:bg-gradient-to-t mobile:from-black/80 mobile:via-black/40 mobile:to-transparent"></div>
         </div>
@@ -102,7 +103,7 @@ export default function Home() {
           <ul className="grid grid-cols-4 gap-6 mobile:grid-cols-1 mobile:gap-6">
             <li className="group">
               <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                <div className="w-16 h-16 rounded-xl bg-[#486BAD] flex items-center justify-center">
                   <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:fill-white">
                     {React.cloneElement(experienced)}
                   </div>
@@ -114,7 +115,7 @@ export default function Home() {
             </li>
             <li className="group">
               <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                <div className="w-16 h-16 rounded-xl bg-[#486BAD] flex items-center justify-center">
                   <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:fill-white">
                     {afforable}
                   </div>
@@ -126,7 +127,7 @@ export default function Home() {
             </li>
             <li className="group">
               <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                <div className="w-16 h-16 rounded-xl bg-[#486BAD] flex items-center justify-center">
                   <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:stroke-white [&_svg_path]:stroke-[1.5]">
                     {flexible}
                   </div>
@@ -138,7 +139,7 @@ export default function Home() {
             </li>
             <li className="group">
               <div className="h-full flex flex-col items-center justify-center gap-6 rounded-xl bg-white border-2 border-gray-200 py-8 px-6 transition-all duration-300 hover:shadow-lg">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#172554] flex items-center justify-center">
+                <div className="w-16 h-16 rounded-xl bg-[#486BAD] flex items-center justify-center">
                   <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:stroke-white [&_svg_path]:!stroke-[6] [&_svg_g_path]:stroke-white [&_svg_g_path]:!stroke-[6]">
                     {approachable}
                   </div>
@@ -205,7 +206,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/contact-us-background.jpg"
+            src="/contact-us-background.png"
             alt="Contact Background"
             fill
             className="object-cover"

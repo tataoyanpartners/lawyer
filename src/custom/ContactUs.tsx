@@ -7,7 +7,7 @@ const ContactUs = () => {
   return (
     <section className="max-w-[1280px] mx-auto mobile:w-full py-16 mobile:py-10">
       <div className="mx-10 mobile:mx-6">
-        <div className="bg-gradient-to-br from-[#486BAD] to-[#172554] rounded-2xl p-10 mobile:p-6 shadow-xl">
+        <div className="bg-[#486BAD] rounded-2xl p-10 mobile:p-6 shadow-xl">
           <div className="flex flex-col gap-8 mobile:gap-6">
             <div className="flex flex-col gap-3">
               <h3 className="font-bold text-4xl text-white mobile:text-2xl">

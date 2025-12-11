@@ -38,7 +38,7 @@ export default function News() {
       <section className="relative w-full h-[500px] mobile:h-[400px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/contact-us-background.jpg"
+            src="/contact-us-background.png"
             alt="News"
             fill
             className="object-cover"

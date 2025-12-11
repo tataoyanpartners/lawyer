@@ -49,7 +49,7 @@ export default function ServicesPage() {
       <section className="relative w-full h-[500px] mobile:h-[400px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/services-background.webp"
+            src="/services-background.png"
             alt="Services"
             fill
             className="object-cover"
@@ -74,7 +74,7 @@ export default function ServicesPage() {
               className={`
                 inline-block mx-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
                 ${key === activeKey
-                  ? "bg-gradient-to-br from-[#486BAD] to-[#172554] text-white"
+                  ? "bg-[#486BAD] text-white"
                   : "text-[#6B7280] hover:bg-gray-100"
                 }`}
             >
@@ -96,7 +96,7 @@ export default function ServicesPage() {
                 className={`
                   cursor-pointer p-4 rounded-xl transition-all duration-300 border-2
                   ${key === activeKey
-                    ? "bg-gradient-to-br from-[#486BAD] to-[#172554] text-white border-transparent shadow-lg"
+                    ? "bg-[#486BAD] text-white border-transparent shadow-lg"
                     : "text-[#0c0c0c] hover:bg-gray-50 border-gray-200"
                   }`}
               >
@@ -110,7 +110,7 @@ export default function ServicesPage() {
         <div className="mt-6 md:mt-0 md:w-2/3">
           <div className="bg-white border-2 border-gray-200 p-8 mobile:p-6 rounded-xl shadow-sm">
             {/* Icon */}
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#486BAD] to-[#172554] flex items-center justify-center mb-6">
+            <div className="w-16 h-16 rounded-xl bg-[#486BAD] flex items-center justify-center mb-6">
               <div className="[&_svg]:w-9 [&_svg]:h-9 [&_svg_path]:fill-white [&_svg_g_path]:fill-white">
                 {iconMap[activeKey]}
               </div>
