@@ -134,12 +134,22 @@ export default function About() {
 
           {/* Mission Section */}
           <div className="bg-white border-2 border-gray-200 rounded-xl p-8 mobile:p-6">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-6">
               <h3 className="text-3xl font-bold text-[#0c0c0c] mobile:text-2xl">
                 {t("mission")}
               </h3>
               <p className="text-base text-[#6B7280] leading-relaxed mobile:text-sm text-justify">
                 {t("missionDescription")}
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                {t.raw("missionServices").map((service: string, index: number) => (
+                  <li key={index} className="text-base text-[#6B7280] leading-relaxed mobile:text-sm">
+                    {service}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base text-[#6B7280] leading-relaxed mobile:text-sm text-justify">
+                {t("missionDescriptionBottom")}
               </p>
             </div>
           </div>

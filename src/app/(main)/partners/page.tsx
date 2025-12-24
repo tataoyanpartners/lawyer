@@ -6,21 +6,36 @@ import ContactUs from "@/custom/ContactUs";
 
 export default function PartnerPage() {
   const t = useTranslations("Partners");
+
+  // Check if partnerAdv exists for partner2
+  let partner2Adv: string[] | null = null;
+  try {
+    const advData = t.raw("partner2.partnerAdv");
+    if (Array.isArray(advData)) {
+      partner2Adv = advData;
+    }
+  } catch {
+    partner2Adv = null;
+  }
+
   const partners = [
     {
       _id: 1,
       name: t("partner1.name"),
       description: t("partner1.description"),
+      advantages: null as string[] | null,
     },
     {
       _id: 2,
       name: t("partner2.name"),
       description: t("partner2.description"),
+      advantages: partner2Adv,
     },
     {
       _id: 3,
       name: t("partner3.name"),
       description: t("partner3.description"),
+      advantages: null as string[] | null,
     },
   ];
 
@@ -70,6 +85,15 @@ export default function PartnerPage() {
                   <p className="text-base text-[#6B7280] leading-relaxed mobile:text-sm text-justify">
                     {partner.description}
                   </p>
+                  {partner.advantages && partner.advantages.length > 0 && (
+                    <ul className="list-disc list-inside space-y-2 ml-4">
+                      {partner.advantages.map((adv, index) => (
+                        <li key={index} className="text-base text-[#6B7280] leading-relaxed mobile:text-sm">
+                          {adv}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             ))}

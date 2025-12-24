@@ -5,13 +5,13 @@
     "information": {
       "title": "Why trust the law firm 'Tatoyan and Partners'?",
       "points": [
-        "We have years of experience and deep knowledge that guarantee the highest quality protection of your rights.",
+        "We have years of experience and deep knowledge, guaranteeing the highest standard of protection for your rights.",
         "We approach each case individually, taking into account the client's needs and specific conditions.",
         "We provide fast and effective legal solutions while maintaining affordable service prices.",
         "Our team is always ready to listen, answer questions, and ensure continuous communication with clients.",
-        "We take responsibility for our decisions and actions, ensuring transparent and professional work.",
+        "We take responsibility for our decisions and actions, ensuring transparency and professionalism in our work.",
         "Our partners are respected companies and organizations that trust our expertise.",
-        "For us, success means solving your problem and protecting your rights."
+        "For us, success means solving your problem and ensuring your rights are fully protected."
       ]
     },
     "team": {
@@ -26,13 +26,21 @@
         "Lawyer"
       ],
       "membersDescriptions": [
-        "PhD in Law, Associate Professor, Professor. A highly qualified lawyer and advocate with extensive professional experience in governmental, international, and academic institutions. Served as Human Rights Defender (Ombudsman) of the Republic of Armenia (2016), Deputy Minister of Justice of RA, and Deputy Representative of the Government to the European Court of Human Rights. Collaborated with the UN, EU, Council of Europe, and other international organizations in human rights, criminal justice, and judicial reform. Lecturer at Yerevan State University, American University of Armenia, and the Academy of Justice. Author of several scientific monographs and over thirty scientific articles. Graduate of the University of Pennsylvania Law School (USA).",
-        "Started legal practice in 1999, specializing in criminal and military cases. Since 2007, has actively worked in human rights protection, representing individuals and legal entities in civil, criminal, and administrative cases in Armenian courts. Experience spans both public and private sectors. Participated in numerous professional trainings abroad, strengthening skills and legal expertise. His years of experience and deep specialization form the foundation for leading a proactive and trustworthy team that maintains high-quality standards.",
-        "Specialist in civil law. Her deep legal knowledge, professional experience, and meticulous attention to detail enable effective and dedicated protection of clients’ interests."
+        "PhD in Law, Associate Professor. A highly qualified lawyer and advocate with extensive professional experience in governmental, international, and academic institutions. Served as Human Rights Defender (Ombudsman) of the Republic of Armenia (2016), Deputy Minister of Justice of RA, and Deputy Representative of the Government to the European Court of Human Rights. Collaborated with the UN, EU, Council of Europe, and other international organizations in human rights, criminal justice, and judicial reform. Lecturer at Yerevan State University, American University of Armenia, and the Academy of Justice. Author of several scientific monographs and over thirty scientific articles. Graduate of the University of Pennsylvania Law School (USA).",
+        "Started legal practice in 1999, specializing in criminal and military cases. Since 2007, has actively worked in human rights protection, representing individuals and legal entities in civil, criminal, and administrative cases before Armenian courts. Experience spans both the public and private sectors. Participated in numerous professional trainings abroad, strengthening skills and legal expertise. His years of experience and deep specialization form the foundation for leading a proactive and trustworthy team that maintains high-quality standards.",
+        "Specialist in civil law. Her extensive legal knowledge, experience, and meticulous attention to detail enable her to provide effective and dedicated protection of clients’ interests."
       ]
     },
     "mission": "Our Mission",
-    "missionDescription": "'Tatoyan and Partners Law Office' LLC offers legal services to individuals and legal entities in the following areas: judicial representation (in civil, criminal, economic and administrative cases), legal assistance to citizens and legal entities, legal expertise and consultation, alternative dispute resolution, consultation and preparation of documents related to citizenship and dual citizenship. The goal of our company is to provide cost-effective and expedient solutions, as well as provide legal protection to our clients. The company’s lawyers have acquired the skills to see problems from the perspective of clients, assess and understand their needs, as well as analyze all possible solutions in order to offer the best solution. Our team consists of experienced legal professionals who provide services in Armenian, Russian and English. “Tatoyan and Partners Law Office” highly values partnership and cooperation with its clients, and stands by their rights until all issues are resolved."
+    "missionDescription": "'Tatoyan and Partners Law Office' LLC offers legal services to individuals and legal entities in the following areas:",
+    "missionServices": [
+      "judicial representation (in civil, criminal, economic and administrative cases),",
+      "legal assistance to citizens and legal entities,",
+      "legal expertise and consultation,",
+      "alternative dispute resolution,",
+      "consultation and preparation of documents related to citizenship and dual citizenship"
+    ],
+    "missionDescriptionBottom": "The goal of our company is to provide cost-effective and expedient solutions, as well as provide legal protection to our clients. Our lawyers are trained to view problems from the client’s perspective, assess their needs, and analyze all possible options to recommend the most effective course of action. Our team consists of experienced legal professionals who provide services in Armenian, Russian and English. “Tatoyan and Partners Law Office” highly values partnership and cooperation with its clients, and stands by their rights until all issues are resolved."
   },
   "Partners": {
     "title": "Our Trusted Partners",
@@ -43,11 +51,17 @@
     },
     "partner2": {
       "name": "DSA Advisory Group CJSC",
-      "description": "Within the framework of a memorandum of cooperation with Tatoyan and Partners, DSA Advisory Group offers the following services: a. Business Consulting Services – consulting on management of client businesses, feasibility and planning of new projects. b. Legal Advisory Services – consulting related to incorporation and legal matters of the client in Armenia and abroad. c. Tax Advisory Services – consulting related to national and international tax systems, regulations, and administration. d. Accounting and Financial Advisory Services – consulting on accounting management and preparation of financial reports, including practical application of both international and national standards."
+      "description": "Within the framework of a memorandum of cooperation with Tatoyan and Partners, DSA Advisory Group offers the following services:",
+      "partnerAdv": [
+        "a. Business Consulting Services – consulting on management of client businesses, feasibility and planning of new projects.",
+        "b. Legal Advisory Services – consulting related to incorporation and legal matters of the client in Armenia and abroad.",
+        "c. Tax Advisory Services – consulting related to national and international tax systems, regulations, and administration.",
+        "d. Accounting and Financial Advisory Services – consulting on accounting management and preparation of financial reports, including practical application of both international and national standards."
+      ]
     },
     "partner3": {
       "name": "Villamontan LLC",
-      "description": "Villamontan LLC promotes the development of tourism and pottery in Armenia and its regions by showcasing the country’s culture and landmarks to both local and foreign visitors. The company also operates hotels in Yerevan, Gyumri, and Syunik province. Tatoyan and Partners Law Firm provides legal advisory services to the company and represents its interests in various legal matters."
+      "description": "Villamontan LLC promotes the development of tourism and pottery throughout Armenia by showcasing the country’s culture and landmarks to both local and international visitors. The company also operates hotels in Yerevan, Gyumri, and Syunik Province. Tatoyan and Partners Law Firm provides legal advisory services and represents the company in various legal matters."
     }
   },
   "Navbar": {
@@ -69,7 +83,7 @@
     "serviceCard": {
       "card1": {
         "title": "Corporate Law",
-        "description": "Tatoyan and Partners Law Firm provides comprehensive legal services to legal entities, ensuring legal support both in day-to-day operations and strategic planning. Our services include:",
+        "description": "Tatoyan and Partners Law Firm provides comprehensive corporate legal services, supporting companies in both their daily operations and long-term strategic planning.",
         "subItems": [
           "Legal advice on corporate governance, organization, and operational activities",
           "Ongoing legal support by acting as a company’s legal advisor in resolving various legal matters",
@@ -81,7 +95,7 @@
           "Legal compliance monitoring, including updates on legislative changes and provision of tailored solutions"
         ],
         "bottomDescription": [
-          "Our professionals place a high priority on each client’s legal security and compliance with applicable laws and regulations. All data and documents received during cooperation are strictly treated with confidentiality.",
+          "Our professionals prioritize each client’s legal protection and ensure compliance with all applicable laws and regulations. All information and documents shared with us are treated with strict confidentiality. We highly value our clients’ trust and are committed to building long-term, reliable partnerships.",
           "We highly value the trust of our clients and strive to build long-term, stable partnerships."
         ]
       },
@@ -102,12 +116,12 @@
       },
       "card3": {
         "title": "Civil Law",
-        "description": "Our firm’s lawyers have extensive experience in civil law and civil litigation. Their caseload covers, but is not limited to, the following areas:",
+        "description": "Our lawyers have extensive experience in civil law and civil litigation. Their practice areas include, but are not limited to, the following:",
         "subItems": {
           "item1": {
             "title": "Property Disputes",
             "subiItems": [
-              "Recognition of ownership rights, including through acquisitive prescription; disputes regarding expropriation for public interest; division of jointly owned property, including community property between spouses."
+              "Recognition of ownership rights, including through acquisitive prescription; disputes regarding expropriation in the public interest; division of jointly owned property, including community property between spouses."
             ]
           },
           "item2": {
@@ -177,7 +191,7 @@
       },
       "card6": {
         "title": "International Legal Representation",
-        "description": "Tatoyan and Partners Law Firm offers services in international legal protection, utilizing treaty-based and precedent-based mechanisms of international law, as well as procedural tools tailored to the nature of the case, the competent jurisdiction, and the relevant field of law.",
+        "description": "Tatoyan and Partners Law Firm provides international legal protection services, utilizing treaty and case law mechanisms, as well as procedural tools adapted to the specific case, jurisdiction, and area of law.",
         "subiItems": {
           "item1": {
             "title": "Key areas of representation include:",
@@ -198,8 +212,8 @@
           "item1": {
             "title": "We offer ad hoc consultations tailored to each specific case, based on the substance of the issue, applicable legal acts, and factual circumstances.",
             "subiItems": [
-              "Our expert opinions are prepared following detailed legal research by experienced professionals, resulting in comprehensive, specialized, and multifaceted conclusions. We emphasize in-depth analysis, systematic application of the law, and the examination of all possible legal angles relevant to the client’s issue, ensuring truly valuable and reliable legal support.",
-              "We also have sector-specific expertise in legal examination, including:"
+              "Our expert opinions are based on detailed legal research conducted by experienced professionals, resulting in comprehensive and specialized conclusions.",
+              "We emphasize thorough analysis, systematic application of the law, and consideration of all relevant legal angles to provide reliable and practical legal guidance."
             ]
           },
           "item2": {
@@ -228,7 +242,7 @@
       },
       "card8": {
         "title": "Alternative Dispute Resolution",
-        "description": "Tatoyan and Partners Law Firm is guided by the conviction that not all disputes must be resolved in court. Often, effective and modern solutions are found through alternative dispute resolution (ADR), including mediation, conciliation, negotiation, and comprehensive or extended analysis of the dispute’s subject matter.",
+        "description": "Tatoyan and Partners Law Firm believes that not all disputes need to be resolved in court. Effective and modern solutions are often achieved through alternative dispute resolution (ADR), including mediation, conciliation, negotiation, and in-depth analysis of the dispute.",
         "subiItems": {
           "item1": {
             "title": "Our team offers high-quality legal support throughout the dispute resolution process, helping parties to:",
@@ -239,7 +253,7 @@
             ]
           }
         },
-        "bottomDescription": "Through mediation and negotiations, we present several legal and practical options for resolving the issue, from which the client may choose the most suitable solution. By turning to our firm, you can be confident that your matters will receive professional, interest-protecting approaches without escalating the conflict."
+        "bottomDescription": "Through mediation and negotiation, we present multiple legal and practical options, allowing clients to choose the most suitable solution. By working with our firm, you can be confident that your matters will be handled professionally, protecting your interests while avoiding unnecessary escalation."
       }
     },
     "makes": "MISSION & WHY CHOOSE US",
